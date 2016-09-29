@@ -1,8 +1,11 @@
 package berberyan;
 
+import java.util.List;
+
 public class NASDAQ {
-	//open file
-	//parse file
-	//questions
-	//export to json
+	
+	public static List<Company> oldestCompaniesInEachSector(String path){
+		
+		throw new IllegalArgumentException();
+	}
 }

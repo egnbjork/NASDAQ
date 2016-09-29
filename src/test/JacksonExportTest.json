@@ -1,0 +1,22 @@
+[ {
+  "symbol" : "PIH",
+  "name" : "1347 Property Insurance Holdings, Inc.",
+  "sector" : "Finance",
+  "industry" : "Property-Casualty Insurers",
+  "marketCap" : 36210000,
+  "ipo" : 2014
+}, {
+  "symbol" : "FLWS",
+  "name" : "1-800 FLOWERS.COM, Inc.",
+  "sector" : "Consumer Services",
+  "industry" : "Other Specialty Stores",
+  "marketCap" : -1,
+  "ipo" : -1
+}, {
+  "symbol" : "TWOU",
+  "name" : "2U, Inc.",
+  "sector" : "Technology",
+  "industry" : "Computer Software: Prepackaged Software",
+  "marketCap" : 1750000000,
+  "ipo" : 2014
+} ]

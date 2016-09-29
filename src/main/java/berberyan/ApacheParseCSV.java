@@ -27,7 +27,7 @@ public class ApacheParseCSV {
 		}
 	}
 
-	public static List<Company> parseRecords(CSVParser records){
+	private static List<Company> parseRecords(CSVParser records){
 		Integer count = 0;
 		List<Company> companyList = new ArrayList<Company>();
 		for (CSVRecord record: records){

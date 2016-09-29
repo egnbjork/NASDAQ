@@ -12,5 +12,23 @@
     <Root level="error">
       <AppenderRef ref="Console"/>
     </Root>
+  <Logger name="berberyan.ApacheParseCSVTest" level="trace" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+  <Logger name="berberyan.Export2JSON" level="debug" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+    <Logger name="berberyan.Export2JSONTest" level="trace" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
   </Loggers>
 </Configuration>

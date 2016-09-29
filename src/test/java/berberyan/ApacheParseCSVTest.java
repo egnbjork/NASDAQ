@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class ApacheParseCSVTest 
 {
-	private static final Logger logger = LogManager.getLogger(ApacheParseCSV.class); 
+	private static final Logger logger = LogManager.getLogger(ApacheParseCSVTest.class); 
 
 	@Test
 	public void test_no_file_exists(){
@@ -107,5 +107,21 @@ public class ApacheParseCSVTest
 		BigInteger parsed = ApacheParseCSV.parseFile("src/test/short_list.csv").get(1).getMarketCap();
 		BigInteger marketCap = BigInteger.valueOf(-1);
 		assertEquals(marketCap, parsed);
+	}
+	
+	@Test
+	public void test_company_list_csv_parsing(){
+		logger.trace("company parsing test");
+		
+		Company company = new Company("PIH", //symbol
+				"1347 Property Insurance Holdings, Inc.", //name
+				"Finance", //sector
+				"Property-Casualty Insurers", //Industry
+				"$36.21M", //market cap
+				"2014"); //ipo year
+		
+		Company parsed = ApacheParseCSV.parseFile("src/test/short_list.csv").get(0);
+		
+		assertEquals(company,parsed);
 	}
 }
