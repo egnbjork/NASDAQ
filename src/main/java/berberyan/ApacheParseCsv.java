@@ -12,9 +12,9 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class ApacheParseCSV {
+public class ApacheParseCsv {
 
-	private static final Logger logger = LogManager.getLogger(ApacheParseCSV.class); 
+	private static final Logger logger = LogManager.getLogger(ApacheParseCsv.class); 
 
 	public static List<Company> parseFile(String filePath){
 		try(Reader in = new FileReader(filePath)) {
