@@ -65,7 +65,6 @@ public class Export2JsonTest {
 		List <Company> emptyList = new ArrayList<Company>();
 		Export2Json.company2Json(emptyList, fileName, filePath);
 		boolean isEmpty = export.length() == 3 ? true : false;
-		logger.trace(export.length());
 		assertTrue(isEmpty);
 	}
 }
