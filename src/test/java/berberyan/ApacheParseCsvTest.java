@@ -113,12 +113,7 @@ public class ApacheParseCsvTest
 	public void test_company_list_csv_parsing(){
 		logger.trace("company parsing test");
 		
-		Company company = new Company("PIH", //symbol
-				"1347 Property Insurance Holdings, Inc.", //name
-				"Finance", //sector
-				"Property-Casualty Insurers", //Industry
-				"$36.21M", //market cap
-				"2014"); //ipo year
+		Company company = new Company("PIH","1347 Property Insurance Holdings, Inc.","6.0079","$36.21M","2014","Finance","Property-Casualty Insurers","http://www.nasdaq.com/symbol/pih");
 		
 		Company parsed = ApacheParseCsv.parseFile("src/test/short_list.csv").get(0);
 		

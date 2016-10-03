@@ -6,23 +6,33 @@ import lombok.Data;
 
 public @Data class Company {
 	
-	Company(String symbol, String name, String sector, 
-			String industry, String marketCap,
-			String ipo){
+	Company(String symbol, 
+			String name, 
+			String lastSale, 
+			String marketCap,
+			String ipo,
+			String sector, 
+			String industry,
+			String summaryQuote
+			){
 		this.symbol = symbol;
 		this.name = name;
-		this.sector = sector;
-		this.industry = industry;
+		this.lastSale = lastSale;
 		this.marketCap = marketCapConvertion(marketCap);
 		this.ipo = yearConvertion(ipo);
+		this.sector = sector;
+		this.industry = industry;
+		this.summaryQuote = summaryQuote;
 	}
 	
 	Company(){};
 	
 	private String symbol;
 	private String name;
+	private String lastSale;
 	private String sector;
 	private String industry;
+	private String summaryQuote;
 	private BigInteger marketCap;
 	private Integer ipo;
 	

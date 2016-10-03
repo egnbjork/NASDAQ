@@ -345,4 +345,36 @@ public class NasdaqTest {
 		expected.add(companies.get(2));
 		assertEquals(expected, found);
 	}
+	
+	@Test
+	public void test_ten_oldest_companies_from_empty_list(){
+		List<Company>actual = Nasdaq
+				.tenOldestCompaniesInSector("Technology", "src/test/empty_file.csv");
+		List<Company>expected = new ArrayList<Company>();
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_ten_oldest_companies_from_empty_list_with_header_only(){
+		List<Company>actual = Nasdaq
+				.tenOldestCompaniesInSector("Technology", "src/test/header_only.csv");
+		List<Company>expected = new ArrayList<Company>();
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_ten_oldest_companies_from_list_of_three_companies(){
+		List<Company>actual = Nasdaq
+				.tenOldestCompaniesInSector("Technology", "src/test/header_only.csv");
+		List<Company>expected = new ArrayList<Company>();
+		expected.add(new Company("TWOU",
+				"2U, Inc.",
+				"Technology",
+				"Computer Software: Prepackaged Software",
+				"$1.75B",
+				"2014"));
+		assertEquals(expected, actual);
+	}
+	
+	
 }

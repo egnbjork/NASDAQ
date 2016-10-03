@@ -34,10 +34,12 @@ public class ApacheParseCsv {
 			companyList.add(
 					new Company(record.get(0),
 							record.get("Name"),
+							record.get("LastSale"),
+							record.get("MarketCap"),
+							record.get("IPOyear"),
 							record.get("Sector"),
 							record.get("industry"),
-							record.get("MarketCap"),
-							record.get("IPOyear")));
+							record.get("Summary Quote")));
 			count++;
 		}
 

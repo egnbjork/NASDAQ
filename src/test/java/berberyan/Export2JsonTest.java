@@ -25,12 +25,7 @@ public class Export2JsonTest {
 	@Before
 	public void SetUp(){
 		passedList = new ArrayList<Company>();
-		passedList.add(new Company("PIH", //symbol
-				"1347 Property Insurance Holdings, Inc.", //name
-				"Finance", //sector
-				"Property-Casualty Insurers", //Industry
-				"$36.21M", //market cap
-				"2014")); //ipo year
+		passedList.add(new Company("PIH","1347 Property Insurance Holdings, Inc.","6.0079","$36.21M","2014","Finance","Property-Casualty Insurers","http://www.nasdaq.com/symbol/pih"));
 		fileName = "JacksonExportTest.json";
 		filePath = "src/test/";
 		tearDown();
@@ -53,6 +48,14 @@ public class Export2JsonTest {
 	}
 	
 	@Test
+	public void test_jackson_json_empty_file_export(){
+		List <Company> emptyList = new ArrayList<Company>();
+		Export2Json.company2Json(emptyList, fileName, filePath);
+		boolean isEmpty = export.length() == 3 ? true : false;
+		assertTrue(isEmpty);
+	}
+	
+	@Test
 	public void test_jackson_json_file_export() throws IOException{
 		Export2Json.company2Json(passedList, fileName, filePath);
 		File example = new File(filePath,"json_company_verified.json");
@@ -60,11 +63,4 @@ public class Export2JsonTest {
 		assertTrue(compareFiles);
 	}
 	
-	@Test
-	public void test_jackson_json_empty_file_export(){
-		List <Company> emptyList = new ArrayList<Company>();
-		Export2Json.company2Json(emptyList, fileName, filePath);
-		boolean isEmpty = export.length() == 3 ? true : false;
-		assertTrue(isEmpty);
-	}
 }

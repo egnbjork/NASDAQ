@@ -1,8 +1,10 @@
 [ {
   "symbol" : "PIH",
   "name" : "1347 Property Insurance Holdings, Inc.",
+  "lastSale" : "6.0079",
   "sector" : "Finance",
   "industry" : "Property-Casualty Insurers",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/pih",
   "marketCap" : 36210000,
   "ipo" : 2014
 } ]

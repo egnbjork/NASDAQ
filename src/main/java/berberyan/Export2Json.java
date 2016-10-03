@@ -27,13 +27,13 @@ public class Export2Json {
 			}
 			else{
 				export.createNewFile();
-				logger.info("file " + fileName + "created in the " + filePath);
+				logger.info("file " + fileName + " created in the " + filePath);
 			}
 			
 			mapper.writerWithDefaultPrettyPrinter().writeValue(export, passedList);
 		
 			logger.info(passedList.size() + " items stored");
-			logger.debug(mapper.writeValueAsString(passedList));
+			logger.debug(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(passedList));
 			logger.trace("JSON file saved to " + filePath +fileName);
 			
 			return 0;
