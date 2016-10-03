@@ -30,7 +30,19 @@
     <Root level="error">
       <AppenderRef ref="Console"/>
     </Root>
+    <Logger name="berberyan.Nasdaq" level="debug" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
     <Logger name="berberyan.NasdaqTest" level="trace" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+    <Logger name="berberyan.Tasks" level="trace" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="error">
