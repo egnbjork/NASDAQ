@@ -41,7 +41,7 @@ public class CompanyTest {
 				"$36.21M", //market cap
 				"2014"); //ipo year
 		String sector = company.getSector();
-		assertEquals(sector, "Finance");
+		assertEquals("Finance", sector);
 	}
 	
 	@Test
@@ -53,7 +53,7 @@ public class CompanyTest {
 				"$36.21M", //market cap
 				"2014"); //ipo year
 		String industry = company.getIndustry();
-		assertEquals(industry, "Property-Casualty Insurers");
+		assertEquals("Property-Casualty Insurers", industry);
 	}
 	
 	@Test
@@ -65,7 +65,7 @@ public class CompanyTest {
 				"$1M", //market cap
 				"2014"); //ipo year
 		BigInteger marketCap = company.getMarketCap();
-		assertEquals(marketCap, BigInteger.valueOf(1000000));
+		assertEquals(BigInteger.valueOf(1000000), marketCap);
 	}
 	
 	@Test
@@ -77,7 +77,7 @@ public class CompanyTest {
 				"$1B", //market cap
 				"2014"); //ipo year
 		BigInteger marketCap = company.getMarketCap();
-		assertEquals(marketCap, BigInteger.valueOf(1000000000));
+		assertEquals(BigInteger.valueOf(1000000000), marketCap);
 	}
 	
 	@Test
@@ -89,7 +89,7 @@ public class CompanyTest {
 				"n/a", //market cap
 				"2014"); //ipo year
 		BigInteger marketCap = company.getMarketCap();
-		assertEquals(marketCap, BigInteger.valueOf(-1));
+		assertEquals(BigInteger.valueOf(-1), marketCap);
 	}
 	
 	@Test
@@ -101,7 +101,7 @@ public class CompanyTest {
 				"21", //market cap
 				"2014"); //ipo year
 		BigInteger marketCap = company.getMarketCap();
-		assertEquals(marketCap, BigInteger.valueOf(0));
+		assertEquals(BigInteger.valueOf(0), marketCap);
 	}
 	
 	@Test
