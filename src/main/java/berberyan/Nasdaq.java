@@ -4,8 +4,7 @@ import java.util.List;
 
 public class Nasdaq {
 	
-	public static List<List<Company>> tenOldestCompaniesBySector(List<String> sectors, 
-			String path){
+	public static List<List<Company>> tenOldestCompaniesBySector(String path){
 		
 		throw new IllegalArgumentException();
 	}
