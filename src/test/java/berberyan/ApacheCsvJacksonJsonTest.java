@@ -17,7 +17,7 @@ public class ApacheCsvJacksonJsonTest {
 		List<Company> shortList = ApacheParseCsv.parseFile("src/test/short_list.csv");
 		Export2Json.company2Json(shortList, "src/test/json_short_list.json");
 		File example = new File(filePath,"json_short_list_verified.json");
-		File export = new File(filePath, "json_short_list.json");
+		File export = new File("src/test/json_short_list.json");
 		boolean compareFiles = FileUtils.contentEquals(example,export);
 		assertTrue(compareFiles);
 	}

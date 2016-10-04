@@ -1,7 +1,7 @@
 [ {
   "symbol" : "CME",
   "name" : "CME Group Inc.",
-  "lastSale" : "106.5",
+  "lastSale" : 106.5,
   "sector" : "Finance",
   "industry" : "Investment Bankers/Brokers/Service",
   "summaryQuote" : "http://www.nasdaq.com/symbol/cme",
@@ -10,7 +10,7 @@
 }, {
   "symbol" : "HBANO",
   "name" : "Huntington Bancshares Incorporated",
-  "lastSale" : "28.36",
+  "lastSale" : 28.36,
   "sector" : "Finance",
   "industry" : "Major Banks",
   "summaryQuote" : "http://www.nasdaq.com/symbol/hbano",
@@ -19,7 +19,7 @@
 }, {
   "symbol" : "WLTW",
   "name" : "Willis Towers Watson Public Limited Company",
-  "lastSale" : "128.09",
+  "lastSale" : 128.09,
   "sector" : "Finance",
   "industry" : "Specialty Insurers",
   "summaryQuote" : "http://www.nasdaq.com/symbol/wltw",
@@ -28,7 +28,7 @@
 }, {
   "symbol" : "AMTD",
   "name" : "TD Ameritrade Holding Corporation",
-  "lastSale" : "33.12",
+  "lastSale" : 33.12,
   "sector" : "Finance",
   "industry" : "Investment Bankers/Brokers/Service",
   "summaryQuote" : "http://www.nasdaq.com/symbol/amtd",
@@ -37,7 +37,7 @@
 }, {
   "symbol" : "TROW",
   "name" : "T. Rowe Price Group, Inc.",
-  "lastSale" : "65.93",
+  "lastSale" : 65.93,
   "sector" : "Finance",
   "industry" : "Investment Bankers/Brokers/Service",
   "summaryQuote" : "http://www.nasdaq.com/symbol/trow",
@@ -46,7 +46,7 @@
 }, {
   "symbol" : "FITB",
   "name" : "Fifth Third Bancorp",
-  "lastSale" : "20.91",
+  "lastSale" : 20.91,
   "sector" : "Finance",
   "industry" : "Major Banks",
   "summaryQuote" : "http://www.nasdaq.com/symbol/fitb",
@@ -55,7 +55,7 @@
 }, {
   "symbol" : "NTRS",
   "name" : "Northern Trust Corporation",
-  "lastSale" : "69.31",
+  "lastSale" : 69.31,
   "sector" : "Finance",
   "industry" : "Major Banks",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ntrs",
@@ -64,7 +64,7 @@
 }, {
   "symbol" : "IBKR",
   "name" : "Interactive Brokers Group, Inc.",
-  "lastSale" : "36.21",
+  "lastSale" : 36.21,
   "sector" : "Finance",
   "industry" : "Investment Bankers/Brokers/Service",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ibkr",
@@ -73,7 +73,7 @@
 }, {
   "symbol" : "CINF",
   "name" : "Cincinnati Financial Corporation",
-  "lastSale" : "74.96",
+  "lastSale" : 74.96,
   "sector" : "Finance",
   "industry" : "Property-Casualty Insurers",
   "summaryQuote" : "http://www.nasdaq.com/symbol/cinf",
@@ -82,7 +82,7 @@
 }, {
   "symbol" : "NDAQ",
   "name" : "Nasdaq, Inc.",
-  "lastSale" : "69.46",
+  "lastSale" : 69.46,
   "sector" : "Finance",
   "industry" : "Investment Bankers/Brokers/Service",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ndaq",
@@ -91,7 +91,7 @@
 }, {
   "symbol" : "AMZN",
   "name" : "Amazon.com, Inc.",
-  "lastSale" : "805.75",
+  "lastSale" : 805.75,
   "sector" : "Consumer Services",
   "industry" : "Catalog/Specialty Distribution",
   "summaryQuote" : "http://www.nasdaq.com/symbol/amzn",
@@ -100,7 +100,7 @@
 }, {
   "symbol" : "CMCSA",
   "name" : "Comcast Corporation",
-  "lastSale" : "67.15",
+  "lastSale" : 67.15,
   "sector" : "Consumer Services",
   "industry" : "Television Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/cmcsa",
@@ -109,7 +109,7 @@
 }, {
   "symbol" : "SBUX",
   "name" : "Starbucks Corporation",
-  "lastSale" : "54.43",
+  "lastSale" : 54.43,
   "sector" : "Consumer Services",
   "industry" : "Restaurants",
   "summaryQuote" : "http://www.nasdaq.com/symbol/sbux",
@@ -118,7 +118,7 @@
 }, {
   "symbol" : "CHTR",
   "name" : "Charter Communications, Inc.",
-  "lastSale" : "276.08",
+  "lastSale" : 276.08,
   "sector" : "Consumer Services",
   "industry" : "Television Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/chtr",
@@ -127,7 +127,7 @@
 }, {
   "symbol" : "COST",
   "name" : "Costco Wholesale Corporation",
-  "lastSale" : "152.54",
+  "lastSale" : 152.54,
   "sector" : "Consumer Services",
   "industry" : "Department/Specialty Retail Stores",
   "summaryQuote" : "http://www.nasdaq.com/symbol/cost",
@@ -136,7 +136,7 @@
 }, {
   "symbol" : "FOX",
   "name" : "Twenty-First Century Fox, Inc.",
-  "lastSale" : "24.485",
+  "lastSale" : 24.485,
   "sector" : "Consumer Services",
   "industry" : "Television Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/fox",
@@ -145,7 +145,7 @@
 }, {
   "symbol" : "NFLX",
   "name" : "Netflix, Inc.",
-  "lastSale" : "95.94",
+  "lastSale" : 95.94,
   "sector" : "Consumer Services",
   "industry" : "Consumer Electronics/Video Chains",
   "summaryQuote" : "http://www.nasdaq.com/symbol/nflx",
@@ -154,7 +154,7 @@
 }, {
   "symbol" : "JD",
   "name" : "JD.com, Inc.",
-  "lastSale" : "26.835",
+  "lastSale" : 26.835,
   "sector" : "Consumer Services",
   "industry" : "Other Specialty Stores",
   "summaryQuote" : "http://www.nasdaq.com/symbol/jd",
@@ -163,7 +163,7 @@
 }, {
   "symbol" : "LBTYB",
   "name" : "Liberty Global plc",
-  "lastSale" : "36.49",
+  "lastSale" : 36.49,
   "sector" : "Consumer Services",
   "industry" : "Television Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/lbtyb",
@@ -172,7 +172,7 @@
 }, {
   "symbol" : "LBTYA",
   "name" : "Liberty Global plc",
-  "lastSale" : "34.43",
+  "lastSale" : 34.43,
   "sector" : "Consumer Services",
   "industry" : "Television Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/lbtya",
@@ -181,7 +181,7 @@
 }, {
   "symbol" : "AAPL",
   "name" : "Apple Inc.",
-  "lastSale" : "112.7",
+  "lastSale" : 112.7,
   "sector" : "Technology",
   "industry" : "Computer Manufacturing",
   "summaryQuote" : "http://www.nasdaq.com/symbol/aapl",
@@ -190,7 +190,7 @@
 }, {
   "symbol" : "GOOGL",
   "name" : "Alphabet Inc.",
-  "lastSale" : "814.96",
+  "lastSale" : 814.96,
   "sector" : "Technology",
   "industry" : "Computer Software: Programming, Data Processing",
   "summaryQuote" : "http://www.nasdaq.com/symbol/googl",
@@ -199,7 +199,7 @@
 }, {
   "symbol" : "GOOG",
   "name" : "Alphabet Inc.",
-  "lastSale" : "786.9",
+  "lastSale" : 786.9,
   "sector" : "Technology",
   "industry" : "Computer Software: Programming, Data Processing",
   "summaryQuote" : "http://www.nasdaq.com/symbol/goog",
@@ -208,7 +208,7 @@
 }, {
   "symbol" : "MSFT",
   "name" : "Microsoft Corporation",
-  "lastSale" : "57.43",
+  "lastSale" : 57.43,
   "sector" : "Technology",
   "industry" : "Computer Software: Prepackaged Software",
   "summaryQuote" : "http://www.nasdaq.com/symbol/msft",
@@ -217,7 +217,7 @@
 }, {
   "symbol" : "FB",
   "name" : "Facebook, Inc.",
-  "lastSale" : "127.96",
+  "lastSale" : 127.96,
   "sector" : "Technology",
   "industry" : "Computer Software: Programming, Data Processing",
   "summaryQuote" : "http://www.nasdaq.com/symbol/fb",
@@ -226,7 +226,7 @@
 }, {
   "symbol" : "INTC",
   "name" : "Intel Corporation",
-  "lastSale" : "37.19",
+  "lastSale" : 37.19,
   "sector" : "Technology",
   "industry" : "Semiconductors",
   "summaryQuote" : "http://www.nasdaq.com/symbol/intc",
@@ -235,7 +235,7 @@
 }, {
   "symbol" : "CSCO",
   "name" : "Cisco Systems, Inc.",
-  "lastSale" : "31.34",
+  "lastSale" : 31.34,
   "sector" : "Technology",
   "industry" : "Computer Communications Equipment",
   "summaryQuote" : "http://www.nasdaq.com/symbol/csco",
@@ -244,7 +244,7 @@
 }, {
   "symbol" : "QCOM",
   "name" : "QUALCOMM Incorporated",
-  "lastSale" : "62.75",
+  "lastSale" : 62.75,
   "sector" : "Technology",
   "industry" : "Radio And Television Broadcasting And Communications Equipment",
   "summaryQuote" : "http://www.nasdaq.com/symbol/qcom",
@@ -253,7 +253,7 @@
 }, {
   "symbol" : "TXN",
   "name" : "Texas Instruments Incorporated",
-  "lastSale" : "68.98",
+  "lastSale" : 68.98,
   "sector" : "Technology",
   "industry" : "Semiconductors",
   "summaryQuote" : "http://www.nasdaq.com/symbol/txn",
@@ -262,7 +262,7 @@
 }, {
   "symbol" : "BIDU",
   "name" : "Baidu, Inc.",
-  "lastSale" : "191.72",
+  "lastSale" : 191.72,
   "sector" : "Technology",
   "industry" : "Computer Software: Programming, Data Processing",
   "summaryQuote" : "http://www.nasdaq.com/symbol/bidu",
@@ -271,7 +271,7 @@
 }, {
   "symbol" : "VOD",
   "name" : "Vodafone Group Plc",
-  "lastSale" : "29.15",
+  "lastSale" : 29.15,
   "sector" : "Public Utilities",
   "industry" : "Telecommunications Equipment",
   "summaryQuote" : "http://www.nasdaq.com/symbol/vod",
@@ -280,7 +280,7 @@
 }, {
   "symbol" : "TMUS",
   "name" : "T-Mobile US, Inc.",
-  "lastSale" : "47.29",
+  "lastSale" : 47.29,
   "sector" : "Public Utilities",
   "industry" : "Telecommunications Equipment",
   "summaryQuote" : "http://www.nasdaq.com/symbol/tmus",
@@ -289,7 +289,7 @@
 }, {
   "symbol" : "AMOV",
   "name" : "America Movil, S.A.B. de C.V.",
-  "lastSale" : "11.5081",
+  "lastSale" : 11.5081,
   "sector" : "Public Utilities",
   "industry" : "Telecommunications Equipment",
   "summaryQuote" : "http://www.nasdaq.com/symbol/amov",
@@ -298,7 +298,7 @@
 }, {
   "symbol" : "VIP",
   "name" : "VimpelCom Ltd.",
-  "lastSale" : "3.53",
+  "lastSale" : 3.53,
   "sector" : "Public Utilities",
   "industry" : "Telecommunications Equipment",
   "summaryQuote" : "http://www.nasdaq.com/symbol/vip",
@@ -307,7 +307,7 @@
 }, {
   "symbol" : "FTR",
   "name" : "Frontier Communications Corporation",
-  "lastSale" : "4.33",
+  "lastSale" : 4.33,
   "sector" : "Public Utilities",
   "industry" : "Telecommunications Equipment",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ftr",
@@ -316,7 +316,7 @@
 }, {
   "symbol" : "BBRY",
   "name" : "BlackBerry Limited",
-  "lastSale" : "7.91",
+  "lastSale" : 7.91,
   "sector" : "Public Utilities",
   "industry" : "Telecommunications Equipment",
   "summaryQuote" : "http://www.nasdaq.com/symbol/bbry",
@@ -325,7 +325,7 @@
 }, {
   "symbol" : "PEGI",
   "name" : "Pattern Energy Group Inc.",
-  "lastSale" : "23.82",
+  "lastSale" : 23.82,
   "sector" : "Public Utilities",
   "industry" : "Electric Utilities: Central",
   "summaryQuote" : "http://www.nasdaq.com/symbol/pegi",
@@ -334,7 +334,7 @@
 }, {
   "symbol" : "TERP",
   "name" : "TerraForm Power, Inc.",
-  "lastSale" : "14.47",
+  "lastSale" : 14.47,
   "sector" : "Public Utilities",
   "industry" : "Electric Utilities: Central",
   "summaryQuote" : "http://www.nasdaq.com/symbol/terp",
@@ -343,7 +343,7 @@
 }, {
   "symbol" : "NTGR",
   "name" : "NETGEAR, Inc.",
-  "lastSale" : "59.5",
+  "lastSale" : 59.5,
   "sector" : "Public Utilities",
   "industry" : "Telecommunications Equipment",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ntgr",
@@ -352,7 +352,7 @@
 }, {
   "symbol" : "ABY",
   "name" : "Atlantica Yield plc",
-  "lastSale" : "19",
+  "lastSale" : 19,
   "sector" : "Public Utilities",
   "industry" : "Electric Utilities: Central",
   "summaryQuote" : "http://www.nasdaq.com/symbol/aby",
@@ -361,7 +361,7 @@
 }, {
   "symbol" : "TSLA",
   "name" : "Tesla Motors, Inc.",
-  "lastSale" : "207.45",
+  "lastSale" : 207.45,
   "sector" : "Capital Goods",
   "industry" : "Auto Manufacturing",
   "summaryQuote" : "http://www.nasdaq.com/symbol/tsla",
@@ -370,7 +370,7 @@
 }, {
   "symbol" : "ILMN",
   "name" : "Illumina, Inc.",
-  "lastSale" : "179.33",
+  "lastSale" : 179.33,
   "sector" : "Capital Goods",
   "industry" : "Biotechnology: Laboratory Analytical Instruments",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ilmn",
@@ -379,7 +379,7 @@
 }, {
   "symbol" : "PCAR",
   "name" : "PACCAR Inc.",
-  "lastSale" : "57.92",
+  "lastSale" : 57.92,
   "sector" : "Capital Goods",
   "industry" : "Auto Manufacturing",
   "summaryQuote" : "http://www.nasdaq.com/symbol/pcar",
@@ -388,7 +388,7 @@
 }, {
   "symbol" : "KLAC",
   "name" : "KLA-Tencor Corporation",
-  "lastSale" : "69.32",
+  "lastSale" : 69.32,
   "sector" : "Capital Goods",
   "industry" : "Electronic Components",
   "summaryQuote" : "http://www.nasdaq.com/symbol/klac",
@@ -397,7 +397,7 @@
 }, {
   "symbol" : "GRMN",
   "name" : "Garmin Ltd.",
-  "lastSale" : "48.5",
+  "lastSale" : 48.5,
   "sector" : "Capital Goods",
   "industry" : "Industrial Machinery/Components",
   "summaryQuote" : "http://www.nasdaq.com/symbol/grmn",
@@ -406,7 +406,7 @@
 }, {
   "symbol" : "TRMB",
   "name" : "Trimble Navigation Limited",
-  "lastSale" : "27.96",
+  "lastSale" : 27.96,
   "sector" : "Capital Goods",
   "industry" : "Industrial Machinery/Components",
   "summaryQuote" : "http://www.nasdaq.com/symbol/trmb",
@@ -415,7 +415,7 @@
 }, {
   "symbol" : "IEP",
   "name" : "Icahn Enterprises L.P.",
-  "lastSale" : "50.34",
+  "lastSale" : 50.34,
   "sector" : "Capital Goods",
   "industry" : "Auto Parts:O.E.M.",
   "summaryQuote" : "http://www.nasdaq.com/symbol/iep",
@@ -424,7 +424,7 @@
 }, {
   "symbol" : "NDSN",
   "name" : "Nordson Corporation",
-  "lastSale" : "98.43",
+  "lastSale" : 98.43,
   "sector" : "Capital Goods",
   "industry" : "Industrial Machinery/Components",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ndsn",
@@ -433,7 +433,7 @@
 }, {
   "symbol" : "GNTX",
   "name" : "Gentex Corporation",
-  "lastSale" : "17.62",
+  "lastSale" : 17.62,
   "sector" : "Capital Goods",
   "industry" : "Auto Parts:O.E.M.",
   "summaryQuote" : "http://www.nasdaq.com/symbol/gntx",
@@ -442,7 +442,7 @@
 }, {
   "symbol" : "CGNX",
   "name" : "Cognex Corporation",
-  "lastSale" : "51.03",
+  "lastSale" : 51.03,
   "sector" : "Capital Goods",
   "industry" : "Industrial Machinery/Components",
   "summaryQuote" : "http://www.nasdaq.com/symbol/cgnx",
@@ -451,7 +451,7 @@
 }, {
   "symbol" : "GOLD",
   "name" : "Randgold Resources Limited",
-  "lastSale" : "101.1",
+  "lastSale" : 101.1,
   "sector" : "Basic Industries",
   "industry" : "Precious Metals",
   "summaryQuote" : "http://www.nasdaq.com/symbol/gold",
@@ -460,7 +460,7 @@
 }, {
   "symbol" : "SRCL",
   "name" : "Stericycle, Inc.",
-  "lastSale" : "79.55",
+  "lastSale" : 79.55,
   "sector" : "Basic Industries",
   "industry" : "Environmental Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/srcl",
@@ -469,7 +469,7 @@
 }, {
   "symbol" : "STLD",
   "name" : "Steel Dynamics, Inc.",
-  "lastSale" : "24.84",
+  "lastSale" : 24.84,
   "sector" : "Basic Industries",
   "industry" : "Steel/Iron Ore",
   "summaryQuote" : "http://www.nasdaq.com/symbol/stld",
@@ -478,7 +478,7 @@
 }, {
   "symbol" : "RGLD",
   "name" : "Royal Gold, Inc.",
-  "lastSale" : "81.42",
+  "lastSale" : 81.42,
   "sector" : "Basic Industries",
   "industry" : "Precious Metals",
   "summaryQuote" : "http://www.nasdaq.com/symbol/rgld",
@@ -487,7 +487,7 @@
 }, {
   "symbol" : "MEOH",
   "name" : "Methanex Corporation",
-  "lastSale" : "30.76",
+  "lastSale" : 30.76,
   "sector" : "Basic Industries",
   "industry" : "Major Chemicals",
   "summaryQuote" : "http://www.nasdaq.com/symbol/meoh",
@@ -496,7 +496,7 @@
 }, {
   "symbol" : "PAAS",
   "name" : "Pan American Silver Corp.",
-  "lastSale" : "17.79",
+  "lastSale" : 17.79,
   "sector" : "Basic Industries",
   "industry" : "Precious Metals",
   "summaryQuote" : "http://www.nasdaq.com/symbol/paas",
@@ -505,7 +505,7 @@
 }, {
   "symbol" : "BCPC",
   "name" : "Balchem Corporation",
-  "lastSale" : "70.45",
+  "lastSale" : 70.45,
   "sector" : "Basic Industries",
   "industry" : "Major Chemicals",
   "summaryQuote" : "http://www.nasdaq.com/symbol/bcpc",
@@ -514,7 +514,7 @@
 }, {
   "symbol" : "UFPI",
   "name" : "Universal Forest Products, Inc.",
-  "lastSale" : "102.32",
+  "lastSale" : 102.32,
   "sector" : "Basic Industries",
   "industry" : "Forest Products",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ufpi",
@@ -523,7 +523,7 @@
 }, {
   "symbol" : "SCTY",
   "name" : "SolarCity Corporation",
-  "lastSale" : "19.24",
+  "lastSale" : 19.24,
   "sector" : "Basic Industries",
   "industry" : "Engineering & Construction",
   "summaryQuote" : "http://www.nasdaq.com/symbol/scty",
@@ -532,7 +532,7 @@
 }, {
   "symbol" : "WDFC",
   "name" : "WD-40 Company",
-  "lastSale" : "116.79",
+  "lastSale" : 116.79,
   "sector" : "Basic Industries",
   "industry" : "Major Chemicals",
   "summaryQuote" : "http://www.nasdaq.com/symbol/wdfc",
@@ -541,7 +541,7 @@
 }, {
   "symbol" : "AMGN",
   "name" : "Amgen Inc.",
-  "lastSale" : "174.8",
+  "lastSale" : 174.8,
   "sector" : "Health Care",
   "industry" : "Biotechnology: Biological Products (No Diagnostic Substances)",
   "summaryQuote" : "http://www.nasdaq.com/symbol/amgn",
@@ -550,7 +550,7 @@
 }, {
   "symbol" : "GILD",
   "name" : "Gilead Sciences, Inc.",
-  "lastSale" : "81.37",
+  "lastSale" : 81.37,
   "sector" : "Health Care",
   "industry" : "Biotechnology: Biological Products (No Diagnostic Substances)",
   "summaryQuote" : "http://www.nasdaq.com/symbol/gild",
@@ -559,7 +559,7 @@
 }, {
   "symbol" : "WBA",
   "name" : "Walgreens Boots Alliance, Inc.",
-  "lastSale" : "82.05",
+  "lastSale" : 82.05,
   "sector" : "Health Care",
   "industry" : "Medical/Nursing Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/wba",
@@ -568,7 +568,7 @@
 }, {
   "symbol" : "CELG",
   "name" : "Celgene Corporation",
-  "lastSale" : "109.43",
+  "lastSale" : 109.43,
   "sector" : "Health Care",
   "industry" : "Major Pharmaceuticals",
   "summaryQuote" : "http://www.nasdaq.com/symbol/celg",
@@ -577,7 +577,7 @@
 }, {
   "symbol" : "BIIB",
   "name" : "Biogen Inc.",
-  "lastSale" : "312.58",
+  "lastSale" : 312.58,
   "sector" : "Health Care",
   "industry" : "Biotechnology: Biological Products (No Diagnostic Substances)",
   "summaryQuote" : "http://www.nasdaq.com/symbol/biib",
@@ -586,7 +586,7 @@
 }, {
   "symbol" : "SHPG",
   "name" : "Shire plc",
-  "lastSale" : "203.01",
+  "lastSale" : 203.01,
   "sector" : "Health Care",
   "industry" : "Major Pharmaceuticals",
   "summaryQuote" : "http://www.nasdaq.com/symbol/shpg",
@@ -595,7 +595,7 @@
 }, {
   "symbol" : "ESRX",
   "name" : "Express Scripts Holding Company",
-  "lastSale" : "71.34",
+  "lastSale" : 71.34,
   "sector" : "Health Care",
   "industry" : "Medical/Nursing Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/esrx",
@@ -604,7 +604,7 @@
 }, {
   "symbol" : "REGN",
   "name" : "Regeneron Pharmaceuticals, Inc.",
-  "lastSale" : "410.39",
+  "lastSale" : 410.39,
   "sector" : "Health Care",
   "industry" : "Major Pharmaceuticals",
   "summaryQuote" : "http://www.nasdaq.com/symbol/regn",
@@ -613,7 +613,7 @@
 }, {
   "symbol" : "ALXN",
   "name" : "Alexion Pharmaceuticals, Inc.",
-  "lastSale" : "127.22",
+  "lastSale" : 127.22,
   "sector" : "Health Care",
   "industry" : "Major Pharmaceuticals",
   "summaryQuote" : "http://www.nasdaq.com/symbol/alxn",
@@ -622,7 +622,7 @@
 }, {
   "symbol" : "ISRG",
   "name" : "Intuitive Surgical, Inc.",
-  "lastSale" : "710.42",
+  "lastSale" : 710.42,
   "sector" : "Health Care",
   "industry" : "Industrial Specialties",
   "summaryQuote" : "http://www.nasdaq.com/symbol/isrg",
@@ -631,7 +631,7 @@
 }, {
   "symbol" : "FANG",
   "name" : "Diamondback Energy, Inc.",
-  "lastSale" : "88.97",
+  "lastSale" : 88.97,
   "sector" : "Energy",
   "industry" : "Oil & Gas Production",
   "summaryQuote" : "http://www.nasdaq.com/symbol/fang",
@@ -640,7 +640,7 @@
 }, {
   "symbol" : "WWD",
   "name" : "Woodward, Inc.",
-  "lastSale" : "61.32",
+  "lastSale" : 61.32,
   "sector" : "Energy",
   "industry" : "Industrial Machinery/Components",
   "summaryQuote" : "http://www.nasdaq.com/symbol/wwd",
@@ -649,7 +649,7 @@
 }, {
   "symbol" : "GPOR",
   "name" : "Gulfport Energy Corporation",
-  "lastSale" : "27.45",
+  "lastSale" : 27.45,
   "sector" : "Energy",
   "industry" : "Oil & Gas Production",
   "summaryQuote" : "http://www.nasdaq.com/symbol/gpor",
@@ -658,7 +658,7 @@
 }, {
   "symbol" : "PDCE",
   "name" : "PDC Energy, Inc.",
-  "lastSale" : "65.02",
+  "lastSale" : 65.02,
   "sector" : "Energy",
   "industry" : "Oil & Gas Production",
   "summaryQuote" : "http://www.nasdaq.com/symbol/pdce",
@@ -667,7 +667,7 @@
 }, {
   "symbol" : "PTEN",
   "name" : "Patterson-UTI Energy, Inc.",
-  "lastSale" : "18.8",
+  "lastSale" : 18.8,
   "sector" : "Energy",
   "industry" : "Oil & Gas Production",
   "summaryQuote" : "http://www.nasdaq.com/symbol/pten",
@@ -676,7 +676,7 @@
 }, {
   "symbol" : "MGEE",
   "name" : "MGE Energy Inc.",
-  "lastSale" : "58.82",
+  "lastSale" : 58.82,
   "sector" : "Energy",
   "industry" : "Electric Utilities: Central",
   "summaryQuote" : "http://www.nasdaq.com/symbol/mgee",
@@ -685,7 +685,7 @@
 }, {
   "symbol" : "CRZO",
   "name" : "Carrizo Oil & Gas, Inc.",
-  "lastSale" : "34.21",
+  "lastSale" : 34.21,
   "sector" : "Energy",
   "industry" : "Oil & Gas Production",
   "summaryQuote" : "http://www.nasdaq.com/symbol/crzo",
@@ -694,7 +694,7 @@
 }, {
   "symbol" : "ARLP",
   "name" : "Alliance Resource Partners, L.P.",
-  "lastSale" : "21.1999",
+  "lastSale" : 21.1999,
   "sector" : "Energy",
   "industry" : "Coal Mining",
   "summaryQuote" : "http://www.nasdaq.com/symbol/arlp",
@@ -703,7 +703,7 @@
 }, {
   "symbol" : "AHGP",
   "name" : "Alliance Holdings GP, L.P.",
-  "lastSale" : "25.25",
+  "lastSale" : 25.25,
   "sector" : "Energy",
   "industry" : "Coal Mining",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ahgp",
@@ -712,7 +712,7 @@
 }, {
   "symbol" : "VNOM",
   "name" : "Viper Energy Partners LP",
-  "lastSale" : "16.2",
+  "lastSale" : 16.2,
   "sector" : "Energy",
   "industry" : "Oil & Gas Production",
   "summaryQuote" : "http://www.nasdaq.com/symbol/vnom",
@@ -721,7 +721,7 @@
 }, {
   "symbol" : "QQQ",
   "name" : "PowerShares QQQ Trust, Series 1",
-  "lastSale" : "118.32",
+  "lastSale" : 118.32,
   "sector" : "n/a",
   "industry" : "n/a",
   "summaryQuote" : "http://www.nasdaq.com/symbol/qqq",
@@ -730,7 +730,7 @@
 }, {
   "symbol" : "VCSH",
   "name" : "Vanguard Short-Term Corporate Bond ETF",
-  "lastSale" : "80.54",
+  "lastSale" : 80.54,
   "sector" : "n/a",
   "industry" : "n/a",
   "summaryQuote" : "http://www.nasdaq.com/symbol/vcsh",
@@ -739,7 +739,7 @@
 }, {
   "symbol" : "VCIT",
   "name" : "Vanguard Intermediate-Term Corporate Bond ETF",
-  "lastSale" : "89.33",
+  "lastSale" : 89.33,
   "sector" : "n/a",
   "industry" : "n/a",
   "summaryQuote" : "http://www.nasdaq.com/symbol/vcit",
@@ -748,7 +748,7 @@
 }, {
   "symbol" : "TLT",
   "name" : "iShares 20+ Year Treasury Bond ETF",
-  "lastSale" : "136.8",
+  "lastSale" : 136.8,
   "sector" : "n/a",
   "industry" : "n/a",
   "summaryQuote" : "http://www.nasdaq.com/symbol/tlt",
@@ -757,7 +757,7 @@
 }, {
   "symbol" : "IBB",
   "name" : "iShares Nasdaq Biotechnology Index Fund",
-  "lastSale" : "298.14",
+  "lastSale" : 298.14,
   "sector" : "n/a",
   "industry" : "n/a",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ibb",
@@ -766,7 +766,7 @@
 }, {
   "symbol" : "VXUS",
   "name" : "Vanguard Total International Stock ETF",
-  "lastSale" : "47.26",
+  "lastSale" : 47.26,
   "sector" : "n/a",
   "industry" : "n/a",
   "summaryQuote" : "http://www.nasdaq.com/symbol/vxus",
@@ -775,7 +775,7 @@
 }, {
   "symbol" : "SCZ",
   "name" : "iShares MSCI EAFE Small-Cap ETF",
-  "lastSale" : "52.3",
+  "lastSale" : 52.3,
   "sector" : "n/a",
   "industry" : "n/a",
   "summaryQuote" : "http://www.nasdaq.com/symbol/scz",
@@ -784,7 +784,7 @@
 }, {
   "symbol" : "BNDX",
   "name" : "Vanguard Total International Bond ETF",
-  "lastSale" : "55.91",
+  "lastSale" : 55.91,
   "sector" : "n/a",
   "industry" : "n/a",
   "summaryQuote" : "http://www.nasdaq.com/symbol/bndx",
@@ -793,7 +793,7 @@
 }, {
   "symbol" : "ACWI",
   "name" : "iShares MSCI ACWI Index Fund",
-  "lastSale" : "59.13",
+  "lastSale" : 59.13,
   "sector" : "n/a",
   "industry" : "n/a",
   "summaryQuote" : "http://www.nasdaq.com/symbol/acwi",
@@ -802,7 +802,7 @@
 }, {
   "symbol" : "ARCC",
   "name" : "Ares Capital Corporation",
-  "lastSale" : "15.56",
+  "lastSale" : 15.56,
   "sector" : "n/a",
   "industry" : "n/a",
   "summaryQuote" : "http://www.nasdaq.com/symbol/arcc",
@@ -811,7 +811,7 @@
 }, {
   "symbol" : "PCLN",
   "name" : "The Priceline Group Inc. ",
-  "lastSale" : "1456.76",
+  "lastSale" : 1456.76,
   "sector" : "Miscellaneous",
   "industry" : "Business Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/pcln",
@@ -820,7 +820,7 @@
 }, {
   "symbol" : "PYPL",
   "name" : "PayPal Holdings, Inc.",
-  "lastSale" : "40.07",
+  "lastSale" : 40.07,
   "sector" : "Miscellaneous",
   "industry" : "Business Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/pypl",
@@ -829,7 +829,7 @@
 }, {
   "symbol" : "EBAY",
   "name" : "eBay Inc.",
-  "lastSale" : "32.08",
+  "lastSale" : 32.08,
   "sector" : "Miscellaneous",
   "industry" : "Business Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ebay",
@@ -838,7 +838,7 @@
 }, {
   "symbol" : "NTES",
   "name" : "NetEase, Inc.",
-  "lastSale" : "247.35",
+  "lastSale" : 247.35,
   "sector" : "Miscellaneous",
   "industry" : "Business Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ntes",
@@ -847,7 +847,7 @@
 }, {
   "symbol" : "CTRP",
   "name" : "Ctrip.com International, Ltd.",
-  "lastSale" : "46.01",
+  "lastSale" : 46.01,
   "sector" : "Miscellaneous",
   "industry" : "Business Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ctrp",
@@ -856,7 +856,7 @@
 }, {
   "symbol" : "AKAM",
   "name" : "Akamai Technologies, Inc.",
-  "lastSale" : "52.2599",
+  "lastSale" : 52.2599,
   "sector" : "Miscellaneous",
   "industry" : "Business Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/akam",
@@ -865,7 +865,7 @@
 }, {
   "symbol" : "CDK",
   "name" : "CDK Global, Inc.",
-  "lastSale" : "57.76",
+  "lastSale" : 57.76,
   "sector" : "Miscellaneous",
   "industry" : "Business Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/cdk",
@@ -874,7 +874,7 @@
 }, {
   "symbol" : "MELI",
   "name" : "MercadoLibre, Inc.",
-  "lastSale" : "187.03",
+  "lastSale" : 187.03,
   "sector" : "Miscellaneous",
   "industry" : "Business Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/meli",
@@ -883,7 +883,7 @@
 }, {
   "symbol" : "CSGP",
   "name" : "CoStar Group, Inc.",
-  "lastSale" : "218",
+  "lastSale" : 218,
   "sector" : "Miscellaneous",
   "industry" : "Business Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/csgp",
@@ -892,7 +892,7 @@
 }, {
   "symbol" : "Z",
   "name" : "Zillow Group, Inc.",
-  "lastSale" : "35.21",
+  "lastSale" : 35.21,
   "sector" : "Miscellaneous",
   "industry" : "Business Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/z",
@@ -901,7 +901,7 @@
 }, {
   "symbol" : "CSX",
   "name" : "CSX Corporation",
-  "lastSale" : "29.64",
+  "lastSale" : 29.64,
   "sector" : "Transportation",
   "industry" : "Railroads",
   "summaryQuote" : "http://www.nasdaq.com/symbol/csx",
@@ -910,7 +910,7 @@
 }, {
   "symbol" : "AAL",
   "name" : "American Airlines Group, Inc.",
-  "lastSale" : "35.55",
+  "lastSale" : 35.55,
   "sector" : "Transportation",
   "industry" : "Air Freight/Delivery Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/aal",
@@ -919,7 +919,7 @@
 }, {
   "symbol" : "RYAAY",
   "name" : "Ryanair Holdings plc",
-  "lastSale" : "75.07",
+  "lastSale" : 75.07,
   "sector" : "Transportation",
   "industry" : "Air Freight/Delivery Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ryaay",
@@ -928,7 +928,7 @@
 }, {
   "symbol" : "CHRW",
   "name" : "C.H. Robinson Worldwide, Inc.",
-  "lastSale" : "69.59",
+  "lastSale" : 69.59,
   "sector" : "Transportation",
   "industry" : "Oil Refining/Marketing",
   "summaryQuote" : "http://www.nasdaq.com/symbol/chrw",
@@ -937,7 +937,7 @@
 }, {
   "symbol" : "EXPD",
   "name" : "Expeditors International of Washington, Inc.",
-  "lastSale" : "50.88",
+  "lastSale" : 50.88,
   "sector" : "Transportation",
   "industry" : "Oil Refining/Marketing",
   "summaryQuote" : "http://www.nasdaq.com/symbol/expd",
@@ -946,7 +946,7 @@
 }, {
   "symbol" : "JBHT",
   "name" : "J.B. Hunt Transport Services, Inc.",
-  "lastSale" : "78.82",
+  "lastSale" : 78.82,
   "sector" : "Transportation",
   "industry" : "Trucking Freight/Courier Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/jbht",
@@ -955,7 +955,7 @@
 }, {
   "symbol" : "JBLU",
   "name" : "JetBlue Airways Corporation",
-  "lastSale" : "17.27",
+  "lastSale" : 17.27,
   "sector" : "Transportation",
   "industry" : "Air Freight/Delivery Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/jblu",
@@ -964,7 +964,7 @@
 }, {
   "symbol" : "ODFL",
   "name" : "Old Dominion Freight Line, Inc.",
-  "lastSale" : "66.98",
+  "lastSale" : 66.98,
   "sector" : "Transportation",
   "industry" : "Trucking Freight/Courier Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/odfl",
@@ -973,7 +973,7 @@
 }, {
   "symbol" : "LSTR",
   "name" : "Landstar System, Inc.",
-  "lastSale" : "66.46",
+  "lastSale" : 66.46,
   "sector" : "Transportation",
   "industry" : "Trucking Freight/Courier Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/lstr",
@@ -982,7 +982,7 @@
 }, {
   "symbol" : "SAVE",
   "name" : "Spirit Airlines, Inc.",
-  "lastSale" : "39.73",
+  "lastSale" : 39.73,
   "sector" : "Transportation",
   "industry" : "Air Freight/Delivery Services",
   "summaryQuote" : "http://www.nasdaq.com/symbol/save",
@@ -991,7 +991,7 @@
 }, {
   "symbol" : "KHC",
   "name" : "The Kraft Heinz Company",
-  "lastSale" : "88.83",
+  "lastSale" : 88.83,
   "sector" : "Consumer Non-Durables",
   "industry" : "Packaged Foods",
   "summaryQuote" : "http://www.nasdaq.com/symbol/khc",
@@ -1000,7 +1000,7 @@
 }, {
   "symbol" : "MDLZ",
   "name" : "Mondelez International, Inc.",
-  "lastSale" : "43.16",
+  "lastSale" : 43.16,
   "sector" : "Consumer Non-Durables",
   "industry" : "Packaged Foods",
   "summaryQuote" : "http://www.nasdaq.com/symbol/mdlz",
@@ -1009,7 +1009,7 @@
 }, {
   "symbol" : "MNST",
   "name" : "Monster Beverage Corporation",
-  "lastSale" : "148.48",
+  "lastSale" : 148.48,
   "sector" : "Consumer Non-Durables",
   "industry" : "Beverages (Production/Distribution)",
   "summaryQuote" : "http://www.nasdaq.com/symbol/mnst",
@@ -1018,7 +1018,7 @@
 }, {
   "symbol" : "CTAS",
   "name" : "Cintas Corporation",
-  "lastSale" : "114.17",
+  "lastSale" : 114.17,
   "sector" : "Consumer Non-Durables",
   "industry" : "Apparel",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ctas",
@@ -1027,7 +1027,7 @@
 }, {
   "symbol" : "MAT",
   "name" : "Mattel, Inc.",
-  "lastSale" : "31.97",
+  "lastSale" : 31.97,
   "sector" : "Consumer Non-Durables",
   "industry" : "Recreational Products/Toys",
   "summaryQuote" : "http://www.nasdaq.com/symbol/mat",
@@ -1036,7 +1036,7 @@
 }, {
   "symbol" : "HAS",
   "name" : "Hasbro, Inc.",
-  "lastSale" : "80.17",
+  "lastSale" : 80.17,
   "sector" : "Consumer Non-Durables",
   "industry" : "Recreational Products/Toys",
   "summaryQuote" : "http://www.nasdaq.com/symbol/has",
@@ -1045,7 +1045,7 @@
 }, {
   "symbol" : "LULU",
   "name" : "lululemon athletica inc.",
-  "lastSale" : "65.19",
+  "lastSale" : 65.19,
   "sector" : "Consumer Non-Durables",
   "industry" : "Apparel",
   "summaryQuote" : "http://www.nasdaq.com/symbol/lulu",
@@ -1054,7 +1054,7 @@
 }, {
   "symbol" : "WOOF",
   "name" : "VCA Inc. ",
-  "lastSale" : "67.5",
+  "lastSale" : 67.5,
   "sector" : "Consumer Non-Durables",
   "industry" : "Farming/Seeds/Milling",
   "summaryQuote" : "http://www.nasdaq.com/symbol/woof",
@@ -1063,7 +1063,7 @@
 }, {
   "symbol" : "PPC",
   "name" : "Pilgrim&#39;s Pride Corporation",
-  "lastSale" : "20.96",
+  "lastSale" : 20.96,
   "sector" : "Consumer Non-Durables",
   "industry" : "Meat/Poultry/Fish",
   "summaryQuote" : "http://www.nasdaq.com/symbol/ppc",
@@ -1072,7 +1072,7 @@
 }, {
   "symbol" : "BUFF",
   "name" : "Blue Buffalo Pet Products, Inc.",
-  "lastSale" : "23.75",
+  "lastSale" : 23.75,
   "sector" : "Consumer Non-Durables",
   "industry" : "Packaged Foods",
   "summaryQuote" : "http://www.nasdaq.com/symbol/buff",
@@ -1081,7 +1081,7 @@
 }, {
   "symbol" : "GT",
   "name" : "The Goodyear Tire & Rubber Company",
-  "lastSale" : "32.3",
+  "lastSale" : 32.3,
   "sector" : "Consumer Durables",
   "industry" : "Automotive Aftermarket",
   "summaryQuote" : "http://www.nasdaq.com/symbol/gt",
@@ -1090,7 +1090,7 @@
 }, {
   "symbol" : "CPRT",
   "name" : "Copart, Inc.",
-  "lastSale" : "54.04",
+  "lastSale" : 54.04,
   "sector" : "Consumer Durables",
   "industry" : "Automotive Aftermarket",
   "summaryQuote" : "http://www.nasdaq.com/symbol/cprt",
@@ -1099,7 +1099,7 @@
 }, {
   "symbol" : "BEAV",
   "name" : "B/E Aerospace, Inc.",
-  "lastSale" : "50",
+  "lastSale" : 50,
   "sector" : "Consumer Durables",
   "industry" : "Industrial Specialties",
   "summaryQuote" : "http://www.nasdaq.com/symbol/beav",
@@ -1108,7 +1108,7 @@
 }, {
   "symbol" : "CASY",
   "name" : "Caseys General Stores, Inc.",
-  "lastSale" : "117.93",
+  "lastSale" : 117.93,
   "sector" : "Consumer Durables",
   "industry" : "Automotive Aftermarket",
   "summaryQuote" : "http://www.nasdaq.com/symbol/casy",
@@ -1117,7 +1117,7 @@
 }, {
   "symbol" : "POOL",
   "name" : "Pool Corporation",
-  "lastSale" : "94.56",
+  "lastSale" : 94.56,
   "sector" : "Consumer Durables",
   "industry" : "Industrial Specialties",
   "summaryQuote" : "http://www.nasdaq.com/symbol/pool",
@@ -1126,7 +1126,7 @@
 }, {
   "symbol" : "VWR",
   "name" : "VWR Corporation",
-  "lastSale" : "28.43",
+  "lastSale" : 28.43,
   "sector" : "Consumer Durables",
   "industry" : "Diversified Electronic Products",
   "summaryQuote" : "http://www.nasdaq.com/symbol/vwr",
@@ -1135,7 +1135,7 @@
 }, {
   "symbol" : "SLGN",
   "name" : "Silgan Holdings Inc.",
-  "lastSale" : "49.86",
+  "lastSale" : 49.86,
   "sector" : "Consumer Durables",
   "industry" : "Containers/Packaging",
   "summaryQuote" : "http://www.nasdaq.com/symbol/slgn",
@@ -1144,7 +1144,7 @@
 }, {
   "symbol" : "LFUS",
   "name" : "Littelfuse, Inc.",
-  "lastSale" : "126.59",
+  "lastSale" : 126.59,
   "sector" : "Consumer Durables",
   "industry" : "Electrical Products",
   "summaryQuote" : "http://www.nasdaq.com/symbol/lfus",
@@ -1153,7 +1153,7 @@
 }, {
   "symbol" : "LITE",
   "name" : "Lumentum Holdings Inc.",
-  "lastSale" : "40.97",
+  "lastSale" : 40.97,
   "sector" : "Consumer Durables",
   "industry" : "Telecommunications Equipment",
   "summaryQuote" : "http://www.nasdaq.com/symbol/lite",
@@ -1162,7 +1162,7 @@
 }, {
   "symbol" : "HELE",
   "name" : "Helen of Troy Limited",
-  "lastSale" : "87.07",
+  "lastSale" : 87.07,
   "sector" : "Consumer Durables",
   "industry" : "Home Furnishings",
   "summaryQuote" : "http://www.nasdaq.com/symbol/hele",

@@ -1,7 +1,6 @@
 package berberyan;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,6 +15,31 @@ import org.apache.logging.log4j.Logger;
 
 public class Nasdaq {
 	private static Logger logger = LogManager.getLogger(Nasdaq.class);
+	
+	public static Map<String,Integer> countIndustries(String importPath){
+		List<Company>companies = ApacheParseCsv.parseFile(importPath);
+		List<String>sectors = extractSector(companies);
+		Map<String,Integer> industriesCount= new LinkedHashMap<String,Integer>();
+		for (String sector : sectors){
+			Integer count = (int) companies
+					.stream()
+					.filter(n->n.getSector().equals(sector))
+					.map(n->n.getIndustry())
+					.distinct()
+					.count();
+			industriesCount.put(sector, count);
+		}
+		
+		return industriesCount.entrySet()
+							.stream()
+							.sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
+							.collect(Collectors
+									.toMap(
+											Map.Entry::getKey,
+											Map.Entry::getValue,
+											(a,b)->a,
+											LinkedHashMap::new));
+	}
 	
 	public static void tenBiggestShareAmount(String importPath, String exportPath){
 		List<Company>companies = ApacheParseCsv.parseFile(importPath);

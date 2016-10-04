@@ -10,6 +10,13 @@ public class Tasks {
 	private static final Logger logger = LogManager.getLogger(Tasks.class);
 	
 	@Test
+	public void test_how_many_industries_in_sectors(){
+		Map<String,Integer> countIndustries =
+				Nasdaq.countIndustries("src/test/companylist.csv");
+		logger.info(countIndustries);
+	}
+	
+	@Test
 	public void test_ten_oldest_companies_from_each_sector_companyList(){
 		Nasdaq.tenOldestBySector("src/test/companylist.csv",
 						"src/test/companies_by_sector.json");
