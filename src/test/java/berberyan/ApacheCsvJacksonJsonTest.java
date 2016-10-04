@@ -15,7 +15,7 @@ public class ApacheCsvJacksonJsonTest {
 	public void test_short_list_convertion() throws IOException{
 		String filePath = "src/test/";
 		List<Company> shortList = ApacheParseCsv.parseFile("src/test/short_list.csv");
-		Export2Json.company2Json(shortList, "json_short_list.json", filePath);
+		Export2Json.company2Json(shortList, "src/test/json_short_list.json");
 		File example = new File(filePath,"json_short_list_verified.json");
 		File export = new File(filePath, "json_short_list.json");
 		boolean compareFiles = FileUtils.contentEquals(example,export);

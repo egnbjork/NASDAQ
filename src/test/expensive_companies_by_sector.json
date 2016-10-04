@@ -1,0 +1,1171 @@
+[ {
+  "symbol" : "CME",
+  "name" : "CME Group Inc.",
+  "lastSale" : "106.5",
+  "sector" : "Finance",
+  "industry" : "Investment Bankers/Brokers/Service",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/cme",
+  "marketCap" : 36090000000,
+  "ipo" : 2002
+}, {
+  "symbol" : "HBANO",
+  "name" : "Huntington Bancshares Incorporated",
+  "lastSale" : "28.36",
+  "sector" : "Finance",
+  "industry" : "Major Banks",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/hbano",
+  "marketCap" : 22590000000,
+  "ipo" : -1
+}, {
+  "symbol" : "WLTW",
+  "name" : "Willis Towers Watson Public Limited Company",
+  "lastSale" : "128.09",
+  "sector" : "Finance",
+  "industry" : "Specialty Insurers",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/wltw",
+  "marketCap" : 17680000000,
+  "ipo" : -1
+}, {
+  "symbol" : "AMTD",
+  "name" : "TD Ameritrade Holding Corporation",
+  "lastSale" : "33.12",
+  "sector" : "Finance",
+  "industry" : "Investment Bankers/Brokers/Service",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/amtd",
+  "marketCap" : 17430000000,
+  "ipo" : 1997
+}, {
+  "symbol" : "TROW",
+  "name" : "T. Rowe Price Group, Inc.",
+  "lastSale" : "65.93",
+  "sector" : "Finance",
+  "industry" : "Investment Bankers/Brokers/Service",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/trow",
+  "marketCap" : 16390000000,
+  "ipo" : 1986
+}, {
+  "symbol" : "FITB",
+  "name" : "Fifth Third Bancorp",
+  "lastSale" : "20.91",
+  "sector" : "Finance",
+  "industry" : "Major Banks",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/fitb",
+  "marketCap" : 16020000000,
+  "ipo" : -1
+}, {
+  "symbol" : "NTRS",
+  "name" : "Northern Trust Corporation",
+  "lastSale" : "69.31",
+  "sector" : "Finance",
+  "industry" : "Major Banks",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ntrs",
+  "marketCap" : 15710000000,
+  "ipo" : -1
+}, {
+  "symbol" : "IBKR",
+  "name" : "Interactive Brokers Group, Inc.",
+  "lastSale" : "36.21",
+  "sector" : "Finance",
+  "industry" : "Investment Bankers/Brokers/Service",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ibkr",
+  "marketCap" : 14860000000,
+  "ipo" : -1
+}, {
+  "symbol" : "CINF",
+  "name" : "Cincinnati Financial Corporation",
+  "lastSale" : "74.96",
+  "sector" : "Finance",
+  "industry" : "Property-Casualty Insurers",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/cinf",
+  "marketCap" : 12340000000,
+  "ipo" : -1
+}, {
+  "symbol" : "NDAQ",
+  "name" : "Nasdaq, Inc.",
+  "lastSale" : "69.46",
+  "sector" : "Finance",
+  "industry" : "Investment Bankers/Brokers/Service",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ndaq",
+  "marketCap" : 11490000000,
+  "ipo" : -1
+}, {
+  "symbol" : "AMZN",
+  "name" : "Amazon.com, Inc.",
+  "lastSale" : "805.75",
+  "sector" : "Consumer Services",
+  "industry" : "Catalog/Specialty Distribution",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/amzn",
+  "marketCap" : 381980000000,
+  "ipo" : 1997
+}, {
+  "symbol" : "CMCSA",
+  "name" : "Comcast Corporation",
+  "lastSale" : "67.15",
+  "sector" : "Consumer Services",
+  "industry" : "Television Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/cmcsa",
+  "marketCap" : 161950000000,
+  "ipo" : -1
+}, {
+  "symbol" : "SBUX",
+  "name" : "Starbucks Corporation",
+  "lastSale" : "54.43",
+  "sector" : "Consumer Services",
+  "industry" : "Restaurants",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/sbux",
+  "marketCap" : 79830000000,
+  "ipo" : 1992
+}, {
+  "symbol" : "CHTR",
+  "name" : "Charter Communications, Inc.",
+  "lastSale" : "276.08",
+  "sector" : "Consumer Services",
+  "industry" : "Television Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/chtr",
+  "marketCap" : 74800000000,
+  "ipo" : -1
+}, {
+  "symbol" : "COST",
+  "name" : "Costco Wholesale Corporation",
+  "lastSale" : "152.54",
+  "sector" : "Consumer Services",
+  "industry" : "Department/Specialty Retail Stores",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/cost",
+  "marketCap" : 66819999999,
+  "ipo" : -1
+}, {
+  "symbol" : "FOX",
+  "name" : "Twenty-First Century Fox, Inc.",
+  "lastSale" : "24.485",
+  "sector" : "Consumer Services",
+  "industry" : "Television Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/fox",
+  "marketCap" : 45600000000,
+  "ipo" : -1
+}, {
+  "symbol" : "NFLX",
+  "name" : "Netflix, Inc.",
+  "lastSale" : "95.94",
+  "sector" : "Consumer Services",
+  "industry" : "Consumer Electronics/Video Chains",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/nflx",
+  "marketCap" : 41130000000,
+  "ipo" : 2002
+}, {
+  "symbol" : "JD",
+  "name" : "JD.com, Inc.",
+  "lastSale" : "26.835",
+  "sector" : "Consumer Services",
+  "industry" : "Other Specialty Stores",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/jd",
+  "marketCap" : 38730000000,
+  "ipo" : 2014
+}, {
+  "symbol" : "LBTYB",
+  "name" : "Liberty Global plc",
+  "lastSale" : "36.49",
+  "sector" : "Consumer Services",
+  "industry" : "Television Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/lbtyb",
+  "marketCap" : 33570000000,
+  "ipo" : -1
+}, {
+  "symbol" : "LBTYA",
+  "name" : "Liberty Global plc",
+  "lastSale" : "34.43",
+  "sector" : "Consumer Services",
+  "industry" : "Television Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/lbtya",
+  "marketCap" : 31670000000,
+  "ipo" : -1
+}, {
+  "symbol" : "AAPL",
+  "name" : "Apple Inc.",
+  "lastSale" : "112.7",
+  "sector" : "Technology",
+  "industry" : "Computer Manufacturing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/aapl",
+  "marketCap" : 607280000000,
+  "ipo" : 1980
+}, {
+  "symbol" : "GOOGL",
+  "name" : "Alphabet Inc.",
+  "lastSale" : "814.96",
+  "sector" : "Technology",
+  "industry" : "Computer Software: Programming, Data Processing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/googl",
+  "marketCap" : 560100000000,
+  "ipo" : -1
+}, {
+  "symbol" : "GOOG",
+  "name" : "Alphabet Inc.",
+  "lastSale" : "786.9",
+  "sector" : "Technology",
+  "industry" : "Computer Software: Programming, Data Processing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/goog",
+  "marketCap" : 540820000000,
+  "ipo" : 2004
+}, {
+  "symbol" : "MSFT",
+  "name" : "Microsoft Corporation",
+  "lastSale" : "57.43",
+  "sector" : "Technology",
+  "industry" : "Computer Software: Prepackaged Software",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/msft",
+  "marketCap" : 447520000000,
+  "ipo" : 1986
+}, {
+  "symbol" : "FB",
+  "name" : "Facebook, Inc.",
+  "lastSale" : "127.96",
+  "sector" : "Technology",
+  "industry" : "Computer Software: Programming, Data Processing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/fb",
+  "marketCap" : 367460000000,
+  "ipo" : 2012
+}, {
+  "symbol" : "INTC",
+  "name" : "Intel Corporation",
+  "lastSale" : "37.19",
+  "sector" : "Technology",
+  "industry" : "Semiconductors",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/intc",
+  "marketCap" : 175950000000,
+  "ipo" : -1
+}, {
+  "symbol" : "CSCO",
+  "name" : "Cisco Systems, Inc.",
+  "lastSale" : "31.34",
+  "sector" : "Technology",
+  "industry" : "Computer Communications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/csco",
+  "marketCap" : 157150000000,
+  "ipo" : 1990
+}, {
+  "symbol" : "QCOM",
+  "name" : "QUALCOMM Incorporated",
+  "lastSale" : "62.75",
+  "sector" : "Technology",
+  "industry" : "Radio And Television Broadcasting And Communications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/qcom",
+  "marketCap" : 92470000000,
+  "ipo" : 1991
+}, {
+  "symbol" : "TXN",
+  "name" : "Texas Instruments Incorporated",
+  "lastSale" : "68.98",
+  "sector" : "Technology",
+  "industry" : "Semiconductors",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/txn",
+  "marketCap" : 69200000000,
+  "ipo" : -1
+}, {
+  "symbol" : "BIDU",
+  "name" : "Baidu, Inc.",
+  "lastSale" : "191.72",
+  "sector" : "Technology",
+  "industry" : "Computer Software: Programming, Data Processing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/bidu",
+  "marketCap" : 66450000000,
+  "ipo" : 2005
+}, {
+  "symbol" : "VOD",
+  "name" : "Vodafone Group Plc",
+  "lastSale" : "29.15",
+  "sector" : "Public Utilities",
+  "industry" : "Telecommunications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/vod",
+  "marketCap" : 77420000000,
+  "ipo" : -1
+}, {
+  "symbol" : "TMUS",
+  "name" : "T-Mobile US, Inc.",
+  "lastSale" : "47.29",
+  "sector" : "Public Utilities",
+  "industry" : "Telecommunications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/tmus",
+  "marketCap" : 38910000000,
+  "ipo" : -1
+}, {
+  "symbol" : "AMOV",
+  "name" : "America Movil, S.A.B. de C.V.",
+  "lastSale" : "11.5081",
+  "sector" : "Public Utilities",
+  "industry" : "Telecommunications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/amov",
+  "marketCap" : 37980000000,
+  "ipo" : -1
+}, {
+  "symbol" : "VIP",
+  "name" : "VimpelCom Ltd.",
+  "lastSale" : "3.53",
+  "sector" : "Public Utilities",
+  "industry" : "Telecommunications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/vip",
+  "marketCap" : 6200000000,
+  "ipo" : -1
+}, {
+  "symbol" : "FTR",
+  "name" : "Frontier Communications Corporation",
+  "lastSale" : "4.33",
+  "sector" : "Public Utilities",
+  "industry" : "Telecommunications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ftr",
+  "marketCap" : 5080000000,
+  "ipo" : -1
+}, {
+  "symbol" : "BBRY",
+  "name" : "BlackBerry Limited",
+  "lastSale" : "7.91",
+  "sector" : "Public Utilities",
+  "industry" : "Telecommunications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/bbry",
+  "marketCap" : 4139999999,
+  "ipo" : -1
+}, {
+  "symbol" : "PEGI",
+  "name" : "Pattern Energy Group Inc.",
+  "lastSale" : "23.82",
+  "sector" : "Public Utilities",
+  "industry" : "Electric Utilities: Central",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/pegi",
+  "marketCap" : 2089999999,
+  "ipo" : 2013
+}, {
+  "symbol" : "TERP",
+  "name" : "TerraForm Power, Inc.",
+  "lastSale" : "14.47",
+  "sector" : "Public Utilities",
+  "industry" : "Electric Utilities: Central",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/terp",
+  "marketCap" : 2029999999,
+  "ipo" : 2014
+}, {
+  "symbol" : "NTGR",
+  "name" : "NETGEAR, Inc.",
+  "lastSale" : "59.5",
+  "sector" : "Public Utilities",
+  "industry" : "Telecommunications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ntgr",
+  "marketCap" : 1950000000,
+  "ipo" : 2003
+}, {
+  "symbol" : "ABY",
+  "name" : "Atlantica Yield plc",
+  "lastSale" : "19",
+  "sector" : "Public Utilities",
+  "industry" : "Electric Utilities: Central",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/aby",
+  "marketCap" : 1900000000,
+  "ipo" : 2014
+}, {
+  "symbol" : "TSLA",
+  "name" : "Tesla Motors, Inc.",
+  "lastSale" : "207.45",
+  "sector" : "Capital Goods",
+  "industry" : "Auto Manufacturing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/tsla",
+  "marketCap" : 30850000000,
+  "ipo" : 2010
+}, {
+  "symbol" : "ILMN",
+  "name" : "Illumina, Inc.",
+  "lastSale" : "179.33",
+  "sector" : "Capital Goods",
+  "industry" : "Biotechnology: Laboratory Analytical Instruments",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ilmn",
+  "marketCap" : 26290000000,
+  "ipo" : 2000
+}, {
+  "symbol" : "PCAR",
+  "name" : "PACCAR Inc.",
+  "lastSale" : "57.92",
+  "sector" : "Capital Goods",
+  "industry" : "Auto Manufacturing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/pcar",
+  "marketCap" : 20300000000,
+  "ipo" : -1
+}, {
+  "symbol" : "KLAC",
+  "name" : "KLA-Tencor Corporation",
+  "lastSale" : "69.32",
+  "sector" : "Capital Goods",
+  "industry" : "Electronic Components",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/klac",
+  "marketCap" : 10810000000,
+  "ipo" : 1980
+}, {
+  "symbol" : "GRMN",
+  "name" : "Garmin Ltd.",
+  "lastSale" : "48.5",
+  "sector" : "Capital Goods",
+  "industry" : "Industrial Machinery/Components",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/grmn",
+  "marketCap" : 9160000000,
+  "ipo" : 2000
+}, {
+  "symbol" : "TRMB",
+  "name" : "Trimble Navigation Limited",
+  "lastSale" : "27.96",
+  "sector" : "Capital Goods",
+  "industry" : "Industrial Machinery/Components",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/trmb",
+  "marketCap" : 6970000000,
+  "ipo" : 1990
+}, {
+  "symbol" : "IEP",
+  "name" : "Icahn Enterprises L.P.",
+  "lastSale" : "50.34",
+  "sector" : "Capital Goods",
+  "industry" : "Auto Parts:O.E.M.",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/iep",
+  "marketCap" : 6950000000,
+  "ipo" : -1
+}, {
+  "symbol" : "NDSN",
+  "name" : "Nordson Corporation",
+  "lastSale" : "98.43",
+  "sector" : "Capital Goods",
+  "industry" : "Industrial Machinery/Components",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ndsn",
+  "marketCap" : 5630000000,
+  "ipo" : -1
+}, {
+  "symbol" : "GNTX",
+  "name" : "Gentex Corporation",
+  "lastSale" : "17.62",
+  "sector" : "Capital Goods",
+  "industry" : "Auto Parts:O.E.M.",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/gntx",
+  "marketCap" : 5050000000,
+  "ipo" : -1
+}, {
+  "symbol" : "CGNX",
+  "name" : "Cognex Corporation",
+  "lastSale" : "51.03",
+  "sector" : "Capital Goods",
+  "industry" : "Industrial Machinery/Components",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/cgnx",
+  "marketCap" : 4340000000,
+  "ipo" : 1989
+}, {
+  "symbol" : "GOLD",
+  "name" : "Randgold Resources Limited",
+  "lastSale" : "101.1",
+  "sector" : "Basic Industries",
+  "industry" : "Precious Metals",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/gold",
+  "marketCap" : 9470000000,
+  "ipo" : -1
+}, {
+  "symbol" : "SRCL",
+  "name" : "Stericycle, Inc.",
+  "lastSale" : "79.55",
+  "sector" : "Basic Industries",
+  "industry" : "Environmental Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/srcl",
+  "marketCap" : 6770000000,
+  "ipo" : 1996
+}, {
+  "symbol" : "STLD",
+  "name" : "Steel Dynamics, Inc.",
+  "lastSale" : "24.84",
+  "sector" : "Basic Industries",
+  "industry" : "Steel/Iron Ore",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/stld",
+  "marketCap" : 6060000000,
+  "ipo" : 1996
+}, {
+  "symbol" : "RGLD",
+  "name" : "Royal Gold, Inc.",
+  "lastSale" : "81.42",
+  "sector" : "Basic Industries",
+  "industry" : "Precious Metals",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/rgld",
+  "marketCap" : 5310000000,
+  "ipo" : -1
+}, {
+  "symbol" : "MEOH",
+  "name" : "Methanex Corporation",
+  "lastSale" : "30.76",
+  "sector" : "Basic Industries",
+  "industry" : "Major Chemicals",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/meoh",
+  "marketCap" : 2760000000,
+  "ipo" : -1
+}, {
+  "symbol" : "PAAS",
+  "name" : "Pan American Silver Corp.",
+  "lastSale" : "17.79",
+  "sector" : "Basic Industries",
+  "industry" : "Precious Metals",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/paas",
+  "marketCap" : 2710000000,
+  "ipo" : -1
+}, {
+  "symbol" : "BCPC",
+  "name" : "Balchem Corporation",
+  "lastSale" : "70.45",
+  "sector" : "Basic Industries",
+  "industry" : "Major Chemicals",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/bcpc",
+  "marketCap" : 2230000000,
+  "ipo" : -1
+}, {
+  "symbol" : "UFPI",
+  "name" : "Universal Forest Products, Inc.",
+  "lastSale" : "102.32",
+  "sector" : "Basic Industries",
+  "industry" : "Forest Products",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ufpi",
+  "marketCap" : 2080000000,
+  "ipo" : 1993
+}, {
+  "symbol" : "SCTY",
+  "name" : "SolarCity Corporation",
+  "lastSale" : "19.24",
+  "sector" : "Basic Industries",
+  "industry" : "Engineering & Construction",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/scty",
+  "marketCap" : 1930000000,
+  "ipo" : 2012
+}, {
+  "symbol" : "WDFC",
+  "name" : "WD-40 Company",
+  "lastSale" : "116.79",
+  "sector" : "Basic Industries",
+  "industry" : "Major Chemicals",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/wdfc",
+  "marketCap" : 1660000000,
+  "ipo" : 1973
+}, {
+  "symbol" : "AMGN",
+  "name" : "Amgen Inc.",
+  "lastSale" : "174.8",
+  "sector" : "Health Care",
+  "industry" : "Biotechnology: Biological Products (No Diagnostic Substances)",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/amgn",
+  "marketCap" : 130810000000,
+  "ipo" : 1983
+}, {
+  "symbol" : "GILD",
+  "name" : "Gilead Sciences, Inc.",
+  "lastSale" : "81.37",
+  "sector" : "Health Care",
+  "industry" : "Biotechnology: Biological Products (No Diagnostic Substances)",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/gild",
+  "marketCap" : 107380000000,
+  "ipo" : 1992
+}, {
+  "symbol" : "WBA",
+  "name" : "Walgreens Boots Alliance, Inc.",
+  "lastSale" : "82.05",
+  "sector" : "Health Care",
+  "industry" : "Medical/Nursing Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/wba",
+  "marketCap" : 88800000000,
+  "ipo" : -1
+}, {
+  "symbol" : "CELG",
+  "name" : "Celgene Corporation",
+  "lastSale" : "109.43",
+  "sector" : "Health Care",
+  "industry" : "Major Pharmaceuticals",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/celg",
+  "marketCap" : 84820000000,
+  "ipo" : 1987
+}, {
+  "symbol" : "BIIB",
+  "name" : "Biogen Inc.",
+  "lastSale" : "312.58",
+  "sector" : "Health Care",
+  "industry" : "Biotechnology: Biological Products (No Diagnostic Substances)",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/biib",
+  "marketCap" : 68489999999,
+  "ipo" : -1
+}, {
+  "symbol" : "SHPG",
+  "name" : "Shire plc",
+  "lastSale" : "203.01",
+  "sector" : "Health Care",
+  "industry" : "Major Pharmaceuticals",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/shpg",
+  "marketCap" : 60920000000,
+  "ipo" : -1
+}, {
+  "symbol" : "ESRX",
+  "name" : "Express Scripts Holding Company",
+  "lastSale" : "71.34",
+  "sector" : "Health Care",
+  "industry" : "Medical/Nursing Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/esrx",
+  "marketCap" : 44960000000,
+  "ipo" : 1992
+}, {
+  "symbol" : "REGN",
+  "name" : "Regeneron Pharmaceuticals, Inc.",
+  "lastSale" : "410.39",
+  "sector" : "Health Care",
+  "industry" : "Major Pharmaceuticals",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/regn",
+  "marketCap" : 43210000000,
+  "ipo" : 1991
+}, {
+  "symbol" : "ALXN",
+  "name" : "Alexion Pharmaceuticals, Inc.",
+  "lastSale" : "127.22",
+  "sector" : "Health Care",
+  "industry" : "Major Pharmaceuticals",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/alxn",
+  "marketCap" : 28530000000,
+  "ipo" : 1996
+}, {
+  "symbol" : "ISRG",
+  "name" : "Intuitive Surgical, Inc.",
+  "lastSale" : "710.42",
+  "sector" : "Health Care",
+  "industry" : "Industrial Specialties",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/isrg",
+  "marketCap" : 27350000000,
+  "ipo" : 2000
+}, {
+  "symbol" : "FANG",
+  "name" : "Diamondback Energy, Inc.",
+  "lastSale" : "88.97",
+  "sector" : "Energy",
+  "industry" : "Oil & Gas Production",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/fang",
+  "marketCap" : 6940000000,
+  "ipo" : 2012
+}, {
+  "symbol" : "WWD",
+  "name" : "Woodward, Inc.",
+  "lastSale" : "61.32",
+  "sector" : "Energy",
+  "industry" : "Industrial Machinery/Components",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/wwd",
+  "marketCap" : 3770000000,
+  "ipo" : -1
+}, {
+  "symbol" : "GPOR",
+  "name" : "Gulfport Energy Corporation",
+  "lastSale" : "27.45",
+  "sector" : "Energy",
+  "industry" : "Oil & Gas Production",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/gpor",
+  "marketCap" : 3440000000,
+  "ipo" : -1
+}, {
+  "symbol" : "PDCE",
+  "name" : "PDC Energy, Inc.",
+  "lastSale" : "65.02",
+  "sector" : "Energy",
+  "industry" : "Oil & Gas Production",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/pdce",
+  "marketCap" : 3070000000,
+  "ipo" : -1
+}, {
+  "symbol" : "PTEN",
+  "name" : "Patterson-UTI Energy, Inc.",
+  "lastSale" : "18.8",
+  "sector" : "Energy",
+  "industry" : "Oil & Gas Production",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/pten",
+  "marketCap" : 2780000000,
+  "ipo" : 1993
+}, {
+  "symbol" : "MGEE",
+  "name" : "MGE Energy Inc.",
+  "lastSale" : "58.82",
+  "sector" : "Energy",
+  "industry" : "Electric Utilities: Central",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/mgee",
+  "marketCap" : 2040000000,
+  "ipo" : -1
+}, {
+  "symbol" : "CRZO",
+  "name" : "Carrizo Oil & Gas, Inc.",
+  "lastSale" : "34.21",
+  "sector" : "Energy",
+  "industry" : "Oil & Gas Production",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/crzo",
+  "marketCap" : 2020000000,
+  "ipo" : 1997
+}, {
+  "symbol" : "ARLP",
+  "name" : "Alliance Resource Partners, L.P.",
+  "lastSale" : "21.1999",
+  "sector" : "Energy",
+  "industry" : "Coal Mining",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/arlp",
+  "marketCap" : 1580000000,
+  "ipo" : 1999
+}, {
+  "symbol" : "AHGP",
+  "name" : "Alliance Holdings GP, L.P.",
+  "lastSale" : "25.25",
+  "sector" : "Energy",
+  "industry" : "Coal Mining",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ahgp",
+  "marketCap" : 1510000000,
+  "ipo" : 2006
+}, {
+  "symbol" : "VNOM",
+  "name" : "Viper Energy Partners LP",
+  "lastSale" : "16.2",
+  "sector" : "Energy",
+  "industry" : "Oil & Gas Production",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/vnom",
+  "marketCap" : 1410000000,
+  "ipo" : 2014
+}, {
+  "symbol" : "QQQ",
+  "name" : "PowerShares QQQ Trust, Series 1",
+  "lastSale" : "118.32",
+  "sector" : "n/a",
+  "industry" : "n/a",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/qqq",
+  "marketCap" : 39720000000,
+  "ipo" : -1
+}, {
+  "symbol" : "VCSH",
+  "name" : "Vanguard Short-Term Corporate Bond ETF",
+  "lastSale" : "80.54",
+  "sector" : "n/a",
+  "industry" : "n/a",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/vcsh",
+  "marketCap" : 14620000000,
+  "ipo" : -1
+}, {
+  "symbol" : "VCIT",
+  "name" : "Vanguard Intermediate-Term Corporate Bond ETF",
+  "lastSale" : "89.33",
+  "sector" : "n/a",
+  "industry" : "n/a",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/vcit",
+  "marketCap" : 10190000000,
+  "ipo" : -1
+}, {
+  "symbol" : "TLT",
+  "name" : "iShares 20+ Year Treasury Bond ETF",
+  "lastSale" : "136.8",
+  "sector" : "n/a",
+  "industry" : "n/a",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/tlt",
+  "marketCap" : 7800000000,
+  "ipo" : -1
+}, {
+  "symbol" : "IBB",
+  "name" : "iShares Nasdaq Biotechnology Index Fund",
+  "lastSale" : "298.14",
+  "sector" : "n/a",
+  "industry" : "n/a",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ibb",
+  "marketCap" : 7530000000,
+  "ipo" : -1
+}, {
+  "symbol" : "VXUS",
+  "name" : "Vanguard Total International Stock ETF",
+  "lastSale" : "47.26",
+  "sector" : "n/a",
+  "industry" : "n/a",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/vxus",
+  "marketCap" : 6480000000,
+  "ipo" : -1
+}, {
+  "symbol" : "SCZ",
+  "name" : "iShares MSCI EAFE Small-Cap ETF",
+  "lastSale" : "52.3",
+  "sector" : "n/a",
+  "industry" : "n/a",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/scz",
+  "marketCap" : 6120000000,
+  "ipo" : -1
+}, {
+  "symbol" : "BNDX",
+  "name" : "Vanguard Total International Bond ETF",
+  "lastSale" : "55.91",
+  "sector" : "n/a",
+  "industry" : "n/a",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/bndx",
+  "marketCap" : 5590000000,
+  "ipo" : -1
+}, {
+  "symbol" : "ACWI",
+  "name" : "iShares MSCI ACWI Index Fund",
+  "lastSale" : "59.13",
+  "sector" : "n/a",
+  "industry" : "n/a",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/acwi",
+  "marketCap" : 5310000000,
+  "ipo" : -1
+}, {
+  "symbol" : "ARCC",
+  "name" : "Ares Capital Corporation",
+  "lastSale" : "15.56",
+  "sector" : "n/a",
+  "industry" : "n/a",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/arcc",
+  "marketCap" : 4890000000,
+  "ipo" : 2004
+}, {
+  "symbol" : "PCLN",
+  "name" : "The Priceline Group Inc. ",
+  "lastSale" : "1456.76",
+  "sector" : "Miscellaneous",
+  "industry" : "Business Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/pcln",
+  "marketCap" : 72000000000,
+  "ipo" : 1999
+}, {
+  "symbol" : "PYPL",
+  "name" : "PayPal Holdings, Inc.",
+  "lastSale" : "40.07",
+  "sector" : "Miscellaneous",
+  "industry" : "Business Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/pypl",
+  "marketCap" : 48360000000,
+  "ipo" : -1
+}, {
+  "symbol" : "EBAY",
+  "name" : "eBay Inc.",
+  "lastSale" : "32.08",
+  "sector" : "Miscellaneous",
+  "industry" : "Business Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ebay",
+  "marketCap" : 36220000000,
+  "ipo" : 1998
+}, {
+  "symbol" : "NTES",
+  "name" : "NetEase, Inc.",
+  "lastSale" : "247.35",
+  "sector" : "Miscellaneous",
+  "industry" : "Business Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ntes",
+  "marketCap" : 32520000000,
+  "ipo" : -1
+}, {
+  "symbol" : "CTRP",
+  "name" : "Ctrip.com International, Ltd.",
+  "lastSale" : "46.01",
+  "sector" : "Miscellaneous",
+  "industry" : "Business Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ctrp",
+  "marketCap" : 21460000000,
+  "ipo" : 2003
+}, {
+  "symbol" : "AKAM",
+  "name" : "Akamai Technologies, Inc.",
+  "lastSale" : "52.2599",
+  "sector" : "Miscellaneous",
+  "industry" : "Business Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/akam",
+  "marketCap" : 9130000000,
+  "ipo" : 1999
+}, {
+  "symbol" : "CDK",
+  "name" : "CDK Global, Inc.",
+  "lastSale" : "57.76",
+  "sector" : "Miscellaneous",
+  "industry" : "Business Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/cdk",
+  "marketCap" : 8670000000,
+  "ipo" : -1
+}, {
+  "symbol" : "MELI",
+  "name" : "MercadoLibre, Inc.",
+  "lastSale" : "187.03",
+  "sector" : "Miscellaneous",
+  "industry" : "Business Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/meli",
+  "marketCap" : 8260000000,
+  "ipo" : 2007
+}, {
+  "symbol" : "CSGP",
+  "name" : "CoStar Group, Inc.",
+  "lastSale" : "218",
+  "sector" : "Miscellaneous",
+  "industry" : "Business Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/csgp",
+  "marketCap" : 7110000000,
+  "ipo" : 1998
+}, {
+  "symbol" : "Z",
+  "name" : "Zillow Group, Inc.",
+  "lastSale" : "35.21",
+  "sector" : "Miscellaneous",
+  "industry" : "Business Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/z",
+  "marketCap" : 6340000000,
+  "ipo" : -1
+}, {
+  "symbol" : "CSX",
+  "name" : "CSX Corporation",
+  "lastSale" : "29.64",
+  "sector" : "Transportation",
+  "industry" : "Railroads",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/csx",
+  "marketCap" : 28040000000,
+  "ipo" : -1
+}, {
+  "symbol" : "AAL",
+  "name" : "American Airlines Group, Inc.",
+  "lastSale" : "35.55",
+  "sector" : "Transportation",
+  "industry" : "Air Freight/Delivery Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/aal",
+  "marketCap" : 18840000000,
+  "ipo" : -1
+}, {
+  "symbol" : "RYAAY",
+  "name" : "Ryanair Holdings plc",
+  "lastSale" : "75.07",
+  "sector" : "Transportation",
+  "industry" : "Air Freight/Delivery Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ryaay",
+  "marketCap" : 18830000000,
+  "ipo" : 1997
+}, {
+  "symbol" : "CHRW",
+  "name" : "C.H. Robinson Worldwide, Inc.",
+  "lastSale" : "69.59",
+  "sector" : "Transportation",
+  "industry" : "Oil Refining/Marketing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/chrw",
+  "marketCap" : 9930000000,
+  "ipo" : 1997
+}, {
+  "symbol" : "EXPD",
+  "name" : "Expeditors International of Washington, Inc.",
+  "lastSale" : "50.88",
+  "sector" : "Transportation",
+  "industry" : "Oil Refining/Marketing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/expd",
+  "marketCap" : 9210000000,
+  "ipo" : -1
+}, {
+  "symbol" : "JBHT",
+  "name" : "J.B. Hunt Transport Services, Inc.",
+  "lastSale" : "78.82",
+  "sector" : "Transportation",
+  "industry" : "Trucking Freight/Courier Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/jbht",
+  "marketCap" : 8880000000,
+  "ipo" : -1
+}, {
+  "symbol" : "JBLU",
+  "name" : "JetBlue Airways Corporation",
+  "lastSale" : "17.27",
+  "sector" : "Transportation",
+  "industry" : "Air Freight/Delivery Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/jblu",
+  "marketCap" : 5590000000,
+  "ipo" : 2002
+}, {
+  "symbol" : "ODFL",
+  "name" : "Old Dominion Freight Line, Inc.",
+  "lastSale" : "66.98",
+  "sector" : "Transportation",
+  "industry" : "Trucking Freight/Courier Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/odfl",
+  "marketCap" : 5550000000,
+  "ipo" : 1991
+}, {
+  "symbol" : "LSTR",
+  "name" : "Landstar System, Inc.",
+  "lastSale" : "66.46",
+  "sector" : "Transportation",
+  "industry" : "Trucking Freight/Courier Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/lstr",
+  "marketCap" : 2800000000,
+  "ipo" : 1993
+}, {
+  "symbol" : "SAVE",
+  "name" : "Spirit Airlines, Inc.",
+  "lastSale" : "39.73",
+  "sector" : "Transportation",
+  "industry" : "Air Freight/Delivery Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/save",
+  "marketCap" : 2780000000,
+  "ipo" : 2011
+}, {
+  "symbol" : "KHC",
+  "name" : "The Kraft Heinz Company",
+  "lastSale" : "88.83",
+  "sector" : "Consumer Non-Durables",
+  "industry" : "Packaged Foods",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/khc",
+  "marketCap" : 108160000000,
+  "ipo" : -1
+}, {
+  "symbol" : "MDLZ",
+  "name" : "Mondelez International, Inc.",
+  "lastSale" : "43.16",
+  "sector" : "Consumer Non-Durables",
+  "industry" : "Packaged Foods",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/mdlz",
+  "marketCap" : 67140000000,
+  "ipo" : -1
+}, {
+  "symbol" : "MNST",
+  "name" : "Monster Beverage Corporation",
+  "lastSale" : "148.48",
+  "sector" : "Consumer Non-Durables",
+  "industry" : "Beverages (Production/Distribution)",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/mnst",
+  "marketCap" : 28260000000,
+  "ipo" : -1
+}, {
+  "symbol" : "CTAS",
+  "name" : "Cintas Corporation",
+  "lastSale" : "114.17",
+  "sector" : "Consumer Non-Durables",
+  "industry" : "Apparel",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ctas",
+  "marketCap" : 11900000000,
+  "ipo" : 1983
+}, {
+  "symbol" : "MAT",
+  "name" : "Mattel, Inc.",
+  "lastSale" : "31.97",
+  "sector" : "Consumer Non-Durables",
+  "industry" : "Recreational Products/Toys",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/mat",
+  "marketCap" : 10890000000,
+  "ipo" : -1
+}, {
+  "symbol" : "HAS",
+  "name" : "Hasbro, Inc.",
+  "lastSale" : "80.17",
+  "sector" : "Consumer Non-Durables",
+  "industry" : "Recreational Products/Toys",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/has",
+  "marketCap" : 10050000000,
+  "ipo" : -1
+}, {
+  "symbol" : "LULU",
+  "name" : "lululemon athletica inc.",
+  "lastSale" : "65.19",
+  "sector" : "Consumer Non-Durables",
+  "industry" : "Apparel",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/lulu",
+  "marketCap" : 8300000000,
+  "ipo" : 2007
+}, {
+  "symbol" : "WOOF",
+  "name" : "VCA Inc. ",
+  "lastSale" : "67.5",
+  "sector" : "Consumer Non-Durables",
+  "industry" : "Farming/Seeds/Milling",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/woof",
+  "marketCap" : 5460000000,
+  "ipo" : 2001
+}, {
+  "symbol" : "PPC",
+  "name" : "Pilgrim&#39;s Pride Corporation",
+  "lastSale" : "20.96",
+  "sector" : "Consumer Non-Durables",
+  "industry" : "Meat/Poultry/Fish",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/ppc",
+  "marketCap" : 5330000000,
+  "ipo" : -1
+}, {
+  "symbol" : "BUFF",
+  "name" : "Blue Buffalo Pet Products, Inc.",
+  "lastSale" : "23.75",
+  "sector" : "Consumer Non-Durables",
+  "industry" : "Packaged Foods",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/buff",
+  "marketCap" : 4670000000,
+  "ipo" : 2015
+}, {
+  "symbol" : "GT",
+  "name" : "The Goodyear Tire & Rubber Company",
+  "lastSale" : "32.3",
+  "sector" : "Consumer Durables",
+  "industry" : "Automotive Aftermarket",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/gt",
+  "marketCap" : 8480000000,
+  "ipo" : -1
+}, {
+  "symbol" : "CPRT",
+  "name" : "Copart, Inc.",
+  "lastSale" : "54.04",
+  "sector" : "Consumer Durables",
+  "industry" : "Automotive Aftermarket",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/cprt",
+  "marketCap" : 5910000000,
+  "ipo" : 1994
+}, {
+  "symbol" : "BEAV",
+  "name" : "B/E Aerospace, Inc.",
+  "lastSale" : "50",
+  "sector" : "Consumer Durables",
+  "industry" : "Industrial Specialties",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/beav",
+  "marketCap" : 5080000000,
+  "ipo" : 1990
+}, {
+  "symbol" : "CASY",
+  "name" : "Caseys General Stores, Inc.",
+  "lastSale" : "117.93",
+  "sector" : "Consumer Durables",
+  "industry" : "Automotive Aftermarket",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/casy",
+  "marketCap" : 4620000000,
+  "ipo" : 1983
+}, {
+  "symbol" : "POOL",
+  "name" : "Pool Corporation",
+  "lastSale" : "94.56",
+  "sector" : "Consumer Durables",
+  "industry" : "Industrial Specialties",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/pool",
+  "marketCap" : 3980000000,
+  "ipo" : 1995
+}, {
+  "symbol" : "VWR",
+  "name" : "VWR Corporation",
+  "lastSale" : "28.43",
+  "sector" : "Consumer Durables",
+  "industry" : "Diversified Electronic Products",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/vwr",
+  "marketCap" : 3740000000,
+  "ipo" : 2014
+}, {
+  "symbol" : "SLGN",
+  "name" : "Silgan Holdings Inc.",
+  "lastSale" : "49.86",
+  "sector" : "Consumer Durables",
+  "industry" : "Containers/Packaging",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/slgn",
+  "marketCap" : 3020000000,
+  "ipo" : 1997
+}, {
+  "symbol" : "LFUS",
+  "name" : "Littelfuse, Inc.",
+  "lastSale" : "126.59",
+  "sector" : "Consumer Durables",
+  "industry" : "Electrical Products",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/lfus",
+  "marketCap" : 2840000000,
+  "ipo" : -1
+}, {
+  "symbol" : "LITE",
+  "name" : "Lumentum Holdings Inc.",
+  "lastSale" : "40.97",
+  "sector" : "Consumer Durables",
+  "industry" : "Telecommunications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/lite",
+  "marketCap" : 2460000000,
+  "ipo" : -1
+}, {
+  "symbol" : "HELE",
+  "name" : "Helen of Troy Limited",
+  "lastSale" : "87.07",
+  "sector" : "Consumer Durables",
+  "industry" : "Home Furnishings",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/hele",
+  "marketCap" : 2420000000,
+  "ipo" : -1
+} ]

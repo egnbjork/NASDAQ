@@ -14,38 +14,47 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Export2Json {
 
 	private static Logger logger = LogManager.getLogger(Export2Json.class);
+
 	
-	public static Integer company2Json(List<Company> passedList, String fileName,
-			String filePath){
-		ObjectMapper mapper = new ObjectMapper();
+	
+	private static File createFile(String filePath){
 		try{
-			logger.debug("file will be saved to " +filePath + fileName);
-			File export = new File(filePath, fileName);
+			logger.debug("file will be saved to " +filePath);
+			File export = new File(filePath);
 			//file exists check
 			if(export.exists()){
 				logger.warn("file already exists in the file system");
 			}
 			else{
 				export.createNewFile();
-				logger.info("file " + fileName + " created in the " + filePath);
+				logger.info("file " + filePath + " created");
 			}
+			return export;
+		} catch (IOException e) {
+			logger.error("Cannot create JSON file " + e);
+		}
+		return null;
+	}
+
+	public static void company2Json(List<Company> passedList, String filePath){
+		ObjectMapper mapper = new ObjectMapper();
+		File export = createFile(filePath);
+		try{
 			
 			mapper.writerWithDefaultPrettyPrinter().writeValue(export, passedList);
-		
+
 			logger.info(passedList.size() + " items stored");
 			logger.debug(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(passedList));
-			logger.trace("JSON file saved to " + filePath +fileName);
-			
-			return 0;
+			logger.trace("JSON file saved to " + filePath);
 		}catch (JsonGenerationException e) {
 			logger.error("Cannot write JSON file " + e);
-			return 1;
+			return;
 		} catch (JsonMappingException e) {
 			logger.error("Cannot write JSON file " + e);
-			return 2;
+			return;
 		} catch (IOException e) {
 			logger.error("Cannot write JSON file " + e);
-			return 3;
+			return;
 		}
 	}
 }

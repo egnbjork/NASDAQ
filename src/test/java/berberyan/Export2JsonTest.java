@@ -18,7 +18,6 @@ public class Export2JsonTest {
 	private static final Logger logger = LogManager.getLogger(Export2JsonTest.class);
 
 	private List<Company> passedList;
-	private String fileName;
 	private String filePath;
 	File export;
 	
@@ -26,14 +25,13 @@ public class Export2JsonTest {
 	public void SetUp(){
 		passedList = new ArrayList<Company>();
 		passedList.add(new Company("PIH","1347 Property Insurance Holdings, Inc.","6.0079","$36.21M","2014","Finance","Property-Casualty Insurers","http://www.nasdaq.com/symbol/pih"));
-		fileName = "JacksonExportTest.json";
-		filePath = "src/test/";
+		filePath = "src/test/JacksonExportTest.json";
 		tearDown();
 	}
 
 	@After
 	public void tearDown(){
-		export = new File(filePath, fileName);
+		export = new File(filePath);
 		if(export.exists()){
 			logger.trace("file was deleted");
 			export.delete();
@@ -42,7 +40,7 @@ public class Export2JsonTest {
 	
 	@Test
 	public void test_jackson_json_file_created(){
-		Export2Json.company2Json(passedList, fileName, filePath);
+		Export2Json.company2Json(passedList, filePath);
 		assertTrue(export.exists());
 		
 	}
@@ -50,15 +48,15 @@ public class Export2JsonTest {
 	@Test
 	public void test_jackson_json_empty_file_export(){
 		List <Company> emptyList = new ArrayList<Company>();
-		Export2Json.company2Json(emptyList, fileName, filePath);
+		Export2Json.company2Json(emptyList, filePath);
 		boolean isEmpty = export.length() == 3 ? true : false;
 		assertTrue(isEmpty);
 	}
 	
 	@Test
 	public void test_jackson_json_file_export() throws IOException{
-		Export2Json.company2Json(passedList, fileName, filePath);
-		File example = new File(filePath,"json_company_verified.json");
+		Export2Json.company2Json(passedList, filePath);
+		File example = new File("src/test/json_company_verified.json");
 		boolean compareFiles = FileUtils.contentEquals(export,example);
 		assertTrue(compareFiles);
 	}
