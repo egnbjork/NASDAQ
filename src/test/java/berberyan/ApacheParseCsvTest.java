@@ -16,7 +16,7 @@ public class ApacheParseCsvTest
 	@Test
 	public void test_no_file_exists(){
 		logger.trace("no file exists test");
-		assertEquals(null, ApacheParseCsv.parseFile("wrong filename"));
+		assertEquals(new ArrayList<Company>(), ApacheParseCsv.parseFile("wrong filename"));
 	}
 
 	@Test

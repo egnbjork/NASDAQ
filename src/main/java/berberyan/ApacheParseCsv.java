@@ -23,7 +23,7 @@ public class ApacheParseCsv {
 
 		} catch (IOException e) {
 			logger.error(e.getMessage());
-			return null;
+			return new ArrayList<Company>();
 		}
 	}
 

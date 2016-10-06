@@ -6,43 +6,55 @@
     </Console>
   </Appenders>
   <Loggers>
-  <Logger name="berberyan.ApacheParseCsv" level="trace" additivity="false">
+  <Logger name="berberyan.ApacheParseCsv" level="info" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="error">
       <AppenderRef ref="Console"/>
     </Root>
-  <Logger name="berberyan.ApacheParseCsvTest" level="trace" additivity="false">
+  <Logger name="berberyan.ApacheParseCsvTest" level="info" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="error">
       <AppenderRef ref="Console"/>
     </Root>
-  <Logger name="berberyan.Export2Json" level="debug" additivity="false">
+  <Logger name="berberyan.Export2Json" level="info" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="error">
       <AppenderRef ref="Console"/>
     </Root>
-    <Logger name="berberyan.Export2JsonTest" level="trace" additivity="false">
+    <Logger name="berberyan.Export2JsonTest" level="info" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="error">
       <AppenderRef ref="Console"/>
     </Root>
-    <Logger name="berberyan.Nasdaq" level="debug" additivity="false">
+    <Logger name="berberyan.Nasdaq" level="info" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="error">
       <AppenderRef ref="Console"/>
     </Root>
-    <Logger name="berberyan.NasdaqTest" level="trace" additivity="false">
+    <Logger name="berberyan.NasdaqTest" level="info" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="error">
       <AppenderRef ref="Console"/>
     </Root>
-    <Logger name="berberyan.Tasks" level="trace" additivity="false">
+    <Logger name="berberyan.Tasks" level="info" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+    <Logger name="berberyan.CommandLine" level="info" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+    <Logger name="berberyan.Cli" level="info" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="error">

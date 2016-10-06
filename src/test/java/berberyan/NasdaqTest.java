@@ -24,7 +24,7 @@ public class NasdaqTest {
 		List<Company>companies = new ArrayList<Company>();
 		companies.add(new Company("PIH","1347 Property Insurance Holdings, Inc.","6.0079","$36.21M","2014","Finance","Property-Casualty Insurers","http://www.nasdaq.com/symbol/pih"));
 		List<String>processed = Nasdaq.extractSector(companies);
-		List<String> expected = new ArrayList();
+		List<String> expected = new ArrayList<String>();
 		expected.add("Finance");
 		
 		assertEquals(expected, processed);
@@ -36,7 +36,7 @@ public class NasdaqTest {
 		companies.add(new Company("PIH","1347 Property Insurance Holdings, Inc.","6.0079","$36.21M","2014","Finance","Property-Casualty Insurers","http://www.nasdaq.com/symbol/pih"));
 		companies.add(new Company("FLWS","1-800 FLOWERS.COM, Inc.","9.27","n/a","n/a","Consumer Services","Other Specialty Stores","http://www.nasdaq.com/symbol/flws"));
 		List<String>processed = Nasdaq.extractSector(companies);
-		List<String>expected = new ArrayList();
+		List<String>expected = new ArrayList<String>();
 		expected.add("Finance");
 		expected.add("Consumer Services");
 		assertEquals(expected, processed);
@@ -48,7 +48,7 @@ public class NasdaqTest {
 		companies.add(new Company("PIH","1347 Property Insurance Holdings, Inc.","6.0079","$36.21M","2014","Finance","Property-Casualty Insurers","http://www.nasdaq.com/symbol/pih"));
 		companies.add(new Company("FCCY","1st Constitution Bancorp (NJ)","13.525","$107.56M","n/a","Finance","Savings Institutions","http://www.nasdaq.com/symbol/fccy"));
 		List<String>processed = Nasdaq.extractSector(companies);
-		List<String> expected = new ArrayList();
+		List<String> expected = new ArrayList<String>();
 		expected.add("Finance");
 		
 		assertEquals(expected, processed);
