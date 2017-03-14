@@ -51,11 +51,11 @@ public @Data class Company {
 		}
 		else if(marketCap.endsWith("M")){
 			return BigInteger.valueOf((long) (Double.parseDouble(marketCap
-					.substring(1,marketCap.length()-1))*1000000));
+					.substring(1, marketCap.length()-1)) * 1000000));
 		}
 		else if(marketCap.endsWith("B")){
 			return BigInteger.valueOf((long) (Double.parseDouble(marketCap
-					.substring(1,marketCap.length()-1))*1000000000));
+					.substring(1, marketCap.length()-1)) * 1000000000));
 		}
 		return BigInteger.valueOf(0);
 	}
