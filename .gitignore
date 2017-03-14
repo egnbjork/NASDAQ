@@ -1,3 +1,6 @@
+# Mac
+.DS_Store
+
 # Maven
 target
 
@@ -5,3 +8,6 @@ target
 .project
 .settings
 .classpath
+
+#Sonar
+appcheck.sh

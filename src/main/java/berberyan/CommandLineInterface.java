@@ -13,12 +13,12 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Cli {
-	private static final Logger logger = LogManager.getLogger(Cli.class); 
+public class CommandLineInterface {
+	private static final Logger logger = LogManager.getLogger(CommandLineInterface.class); 
 	private String[] args = null;
 	private Options options = new Options();
 
-	public Cli(String[] args) {
+	public CommandLineInterface(String[] args) {
 		this.args = args;
 		options.addOption("h", "help", false, "show help.");
 		options.addOption("ci", true, "Count industries in each sector");

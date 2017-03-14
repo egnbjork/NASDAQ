@@ -96,7 +96,7 @@ public class Company {
 
 		public CompanyBuilder setMarketCap(String marketCap) {
 			if(marketCap == null ||
-					marketCap.equals("n/a")){
+					"n/a".equals(marketCap)){
 				LOGGER.debug("marketCap is empty");
 				this.marketCap = Optional.empty();
 			}
