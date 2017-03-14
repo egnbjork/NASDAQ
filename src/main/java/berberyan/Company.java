@@ -2,69 +2,139 @@ package berberyan;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Optional;
 
-import lombok.Data;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public @Data class Company {
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-	Company(String symbol, 
-			String name, 
-			String lastSale, 
-			String marketCap,
-			String ipo,
-			String sector, 
-			String industry,
-			String summaryQuote
-			){
-		this.symbol = symbol;
-		this.name = name;
-		this.lastSale = saleConvertion(lastSale);
-		this.marketCap = marketCapConvertion(marketCap);
-		this.ipo = yearConvertion(ipo);
-		this.sector = sector;
-		this.industry = industry;
-		this.summaryQuote = summaryQuote;
-	}
+public class Company {
+	private static final Logger LOGGER = LogManager.getLogger(Company.class); 
 
-	Company(){};
-
+	@Getter
 	private String symbol;
+	@Getter
 	private String name;
-	private BigDecimal lastSale;
+	@Getter
+	private Optional<BigDecimal> lastSale;
+	@Getter
 	private String sector;
+	@Getter
 	private String industry;
+	@Getter
 	private String summaryQuote;
-	private BigInteger marketCap;
-	private Integer ipo;
+	@Getter
+	private Optional<BigInteger> marketCap;
+	@Getter
+	private Optional<Integer> ipo;
 
-	private BigDecimal saleConvertion(String sale){
+	public Company(CompanyBuilder builder){
+		this.symbol = builder.symbol;
+		this.name = builder.name;
+		this.lastSale = builder.lastSale;
+		this.marketCap = builder.marketCap;
+		this.ipo = builder.ipo;
+		this.sector = builder.sector;
+		this.industry = builder.industry;
+		this.summaryQuote = builder.summaryQuote;
+		LOGGER.debug("new Company created");
+	}
+
+	@NoArgsConstructor
+	public static class CompanyBuilder {
+		private String symbol;
+		private String name;
+		private String sector;
+		private String industry;
+		private Optional<BigDecimal> lastSale;
+		private Optional<BigInteger> marketCap;
+		private Optional<Integer> ipo;
+		private String summaryQuote;
+
+		public CompanyBuilder(Company company) {
+			this.symbol = company.getSymbol();
+			this.name = company.getName();
+			this.sector = company.getSector();
+			this.industry = company.getIndustry();
+			this.lastSale = company.getLastSale();
+			this.marketCap = company.getMarketCap();
+			this.ipo = company.getIpo();
+			this.summaryQuote = company.getSummaryQuote();
+		}
+
+		public CompanyBuilder setSymbol(String symbol) {
+			this.symbol = symbol;
+			return this;
+		}
+
+		public CompanyBuilder setName (String name) {
+			this.name = name;
+			return this;
+		}
+
+		public CompanyBuilder setSector(String sector) {
+			this.sector = sector;
+			return this;
+		}
+
+		public CompanyBuilder setIndustry(String industry) {
+			this.industry = industry;
+			return this;
+		}
+
+		public CompanyBuilder setLastSale(String lastSale){
 			try{
-				return new BigDecimal(sale);
+				this.lastSale = Optional.of(new BigDecimal(lastSale));
 			} catch(NumberFormatException e){
-				return BigDecimal.valueOf(-1);
+				LOGGER.debug("last sale is null");
+				this.lastSale = Optional.empty();
 			}
-	}
+			return this;
+		}
 
-	private BigInteger marketCapConvertion(String marketCap){
-		if(marketCap.equals("n/a")){
-			return BigInteger.valueOf(-1);
+		public CompanyBuilder setMarketCap(String marketCap) {
+			if(marketCap == null ||
+					marketCap.equals("n/a")){
+				LOGGER.debug("marketCap is empty");
+				this.marketCap = Optional.empty();
+			}
+			//million
+			else if(marketCap.endsWith("M")){
+				LOGGER.debug("marketCap is millions");
+				this.marketCap = Optional.of(BigInteger.valueOf((long) (Double.parseDouble(marketCap
+						.substring(1, marketCap.length()-1)) * 1_000_000)));
+			}
+			//billion
+			else if(marketCap.endsWith("B")){
+				LOGGER.debug("marketCap is billions");
+				this.marketCap = Optional.of(BigInteger.valueOf((long) (Double.parseDouble(marketCap
+						.substring(1, marketCap.length()-1)) * 1_000_000_000)));
+			}
+			else {
+				this.marketCap = Optional.empty();
+			}
+			return this;
 		}
-		else if(marketCap.endsWith("M")){
-			return BigInteger.valueOf((long) (Double.parseDouble(marketCap
-					.substring(1, marketCap.length()-1)) * 1000000));
-		}
-		else if(marketCap.endsWith("B")){
-			return BigInteger.valueOf((long) (Double.parseDouble(marketCap
-					.substring(1, marketCap.length()-1)) * 1000000000));
-		}
-		return BigInteger.valueOf(0);
-	}
 
-	private Integer yearConvertion(String ipo){
-		try{
-			return Integer.parseInt(ipo);
-		} catch(NumberFormatException e){
-			return -1;
+		public CompanyBuilder setIpo(String ipo) {
+			try{
+				this.ipo = Optional.of(Integer.parseInt(ipo));
+			} catch(NumberFormatException e){
+				LOGGER.debug("IPO year is empty");
+				this.ipo = Optional.empty();
+			}
+			return this;
+		}
+		
+		public CompanyBuilder setSummaryQuote(String summaryQuote) {
+			this.summaryQuote = summaryQuote;
+			return this;
+		}
+
+		public Company build() {
+			return new Company(this);
 		}
 	}
 }

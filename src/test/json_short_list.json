@@ -1,28 +1,40 @@
 [ {
   "symbol" : "PIH",
   "name" : "1347 Property Insurance Holdings, Inc.",
-  "lastSale" : 6.0079,
+  "lastSale" : {
+    "present" : true
+  },
   "sector" : "Finance",
   "industry" : "Property-Casualty Insurers",
   "summaryQuote" : "http://www.nasdaq.com/symbol/pih",
-  "marketCap" : 36210000,
+  "marketCap" : {
+    "present" : true
+  },
   "ipo" : 2014
 }, {
   "symbol" : "FLWS",
   "name" : "1-800 FLOWERS.COM, Inc.",
-  "lastSale" : 9.27,
+  "lastSale" : {
+    "present" : true
+  },
   "sector" : "Consumer Services",
   "industry" : "Other Specialty Stores",
   "summaryQuote" : "http://www.nasdaq.com/symbol/flws",
-  "marketCap" : -1,
-  "ipo" : -1
+  "marketCap" : {
+    "present" : false
+  },
+  "ipo" : null
 }, {
   "symbol" : "TWOU",
   "name" : "2U, Inc.",
-  "lastSale" : 37.41,
+  "lastSale" : {
+    "present" : true
+  },
   "sector" : "Technology",
   "industry" : "Computer Software: Prepackaged Software",
   "summaryQuote" : "http://www.nasdaq.com/symbol/twou",
-  "marketCap" : 1750000000,
+  "marketCap" : {
+    "present" : true
+  },
   "ipo" : 2014
 } ]

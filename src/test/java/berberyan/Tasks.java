@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class Tasks {
@@ -17,12 +18,14 @@ public class Tasks {
 	}
 	
 	@Test
+	@Ignore
 	public void test_ten_oldest_companies_from_each_sector_companyList(){
 		Nasdaq.tenOldestBySector("src/test/companylist.csv",
 						"src/test/companies_by_sector.json");
 	}
 	
 	@Test
+	@Ignore
 	public void test_ten_most_expensive_companies_from_each_sector(){
 		Nasdaq.tenMostExpensiveBySector("src/test/companylist.csv",
 						"src/test/expensive_companies_by_sector.json");
@@ -36,6 +39,7 @@ public class Tasks {
 	}
 	
 	@Test
+	@Ignore
 	public void test_ten_companies_biggest_share_amount(){
 		Nasdaq.tenBiggestShareAmount("src/test/companylist.csv",
 				"src/test/ten_biggest_share_amount.json");

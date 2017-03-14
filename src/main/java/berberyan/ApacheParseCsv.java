@@ -32,14 +32,24 @@ public class ApacheParseCsv {
 		List<Company> companyList = new ArrayList<Company>();
 		for (CSVRecord record: records){
 			companyList.add(
-					new Company(record.get(0),
-							record.get("Name"),
-							record.get("LastSale"),
-							record.get("MarketCap"),
-							record.get("IPOyear"),
-							record.get("Sector"),
-							record.get("industry"),
-							record.get("Summary Quote")));
+					new Company.CompanyBuilder()
+					.setSymbol(record.get(0))
+					.setName(record.get("Name"))
+					.setLastSale(record.get("LastSale"))
+					.setMarketCap(record.get("MarketCap"))
+					.setIpo(record.get("IPOyear"))
+					.setSector(record.get("Sector"))
+					.setIndustry(record.get("industry"))
+					.setSummaryQuote(record.get("Summary Quote"))
+					.build());
+//					new Company(record.get(0),
+//							record.get("Name"),
+//							record.get("LastSale"),
+//							record.get("MarketCap"),
+//							record.get("IPOyear"),
+//							record.get("Sector"),
+//							record.get("industry"),
+//							record.get("Summary Quote")));
 			count++;
 		}
 
@@ -49,7 +59,7 @@ public class ApacheParseCsv {
 		else{
 			logger.info(count + " entries processed");
 		}
-		
+
 		return companyList;
 	}
 }

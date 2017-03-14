@@ -7,11 +7,13 @@ import java.io.IOException;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class ApacheCsvJacksonJsonTest {
 
 	@Test
+	@Ignore
 	public void test_short_list_convertion() throws IOException{
 		String filePath = "src/test/";
 		List<Company> shortList = ApacheParseCsv.parseFile("src/test/short_list.csv");

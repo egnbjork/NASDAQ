@@ -94,7 +94,7 @@ public class Nasdaq {
 			tenExpensive.addAll(
 					companies.stream()
 					.filter(n->n.getSector().equals(sector))
-					.filter(n-> n.getMarketCap().signum() == 1)
+					.filter(n -> n.getMarketCap().isPresent())
 					.sorted(Nasdaq::sortByMarketCap)
 					.limit(10)
 					.collect(Collectors.toList()));
@@ -149,18 +149,18 @@ public class Nasdaq {
 
 		return companies
 				.stream()
-				.filter(n->n.getIpo()>0)
+				.filter(n->n.getIpo().get()>0)
 				.sorted(Nasdaq::sortByYear)
-				.filter(n -> n.getIpo() <= lastOldestYear)
+				.filter(n -> n.getIpo().get() <= lastOldestYear)
 				.collect(Collectors.toList());
 	}
 
 	private static int sortByYear(Company c1, Company c2){
-		return c1.getIpo().compareTo(c2.getIpo());
+		return c1.getIpo().get().compareTo(c2.getIpo().get());
 	}
 
 	private static int sortByMarketCap(Company c1, Company c2){
-		return c2.getMarketCap().compareTo(c1.getMarketCap());
+		return c2.getMarketCap().get().compareTo(c1.getMarketCap().get());
 	}
 
 	private static int sortBySharesAmount(Company c1, Company c2){
@@ -174,15 +174,15 @@ public class Nasdaq {
 	}
 
 	private static BigDecimal getSharesAmount(Company company){
-		return new BigDecimal(company.getMarketCap())
-				.divide(company.getLastSale(), RoundingMode.CEILING);
+		return new BigDecimal(company.getMarketCap().get())
+				.divide(company.getLastSale().get(), RoundingMode.CEILING);
 	}
 	
 	public static Integer getYoungestYear(List<Company> companies, Integer limit){
 		return companies
 				.stream()
 				.sorted(Nasdaq::sortByYear)
-				.map(n->n.getIpo())
+				.map(n->n.getIpo().get())
 				.filter(n -> n > 0)  //n/a statements
 				.collect(Collectors.toList())
 				.get(limit-1);
@@ -221,7 +221,7 @@ public class Nasdaq {
 			System.out.println("\n SECTOR " + sector);
 				companies.stream()
 					.filter(n->n.getSector().equals(sector))
-					.filter(n-> n.getMarketCap().signum() == 1)
+					.filter(n-> n.getMarketCap().get().signum() == 1)
 					.sorted(Nasdaq::sortByMarketCap)
 					.limit(10)
 					.forEach(n->
