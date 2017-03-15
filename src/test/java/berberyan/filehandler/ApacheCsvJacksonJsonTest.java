@@ -1,4 +1,4 @@
-package berberyan;
+package berberyan.filehandler;
 
 import static org.junit.Assert.assertTrue;
 
@@ -9,6 +9,10 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import berberyan.engine.Company;
+import berberyan.filehandler.ApacheParseCsv;
+import berberyan.filehandler.Export2Json;
 
 public class ApacheCsvJacksonJsonTest {
 

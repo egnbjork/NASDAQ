@@ -1,4 +1,4 @@
-package berberyan;
+package berberyan.filehandler;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,8 +12,9 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class ApacheParseCsv {
+import berberyan.engine.Company;
 
+public class ApacheParseCsv {
 	private static final Logger logger = LogManager.getLogger(ApacheParseCsv.class); 
 
 	public static List<Company> parseFile(String filePath){
@@ -42,14 +43,6 @@ public class ApacheParseCsv {
 					.setIndustry(record.get("industry"))
 					.setSummaryQuote(record.get("Summary Quote"))
 					.build());
-//					new Company(record.get(0),
-//							record.get("Name"),
-//							record.get("LastSale"),
-//							record.get("MarketCap"),
-//							record.get("IPOyear"),
-//							record.get("Sector"),
-//							record.get("industry"),
-//							record.get("Summary Quote")));
 			count++;
 		}
 

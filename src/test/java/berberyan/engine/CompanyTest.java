@@ -1,4 +1,4 @@
-package berberyan;
+package berberyan.engine;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,8 @@ import java.math.BigInteger;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import berberyan.engine.Company;
 
 public class CompanyTest {
 
@@ -23,6 +25,7 @@ public class CompanyTest {
 				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
 				.build();	
 	}
+
 	@Test
 	public void test_company_constructor_symbol(){
 		String symbol = company.getSymbol();

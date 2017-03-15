@@ -1,4 +1,4 @@
-package berberyan;
+package berberyan.filehandler;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,6 +9,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import berberyan.engine.Company;
+import berberyan.filehandler.ApacheParseCsv;
 
 public class ApacheParseCsvTest 
 {

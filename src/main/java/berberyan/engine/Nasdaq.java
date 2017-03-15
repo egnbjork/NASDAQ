@@ -1,4 +1,4 @@
-package berberyan;
+package berberyan.engine;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -13,6 +13,9 @@ import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import berberyan.filehandler.ApacheParseCsv;
+import berberyan.filehandler.Export2Json;
 
 public class Nasdaq {
 	private static Logger logger = LogManager.getLogger(Nasdaq.class);

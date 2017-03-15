@@ -7,6 +7,8 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import berberyan.engine.Nasdaq;
+
 public class Tasks {
 	private static final Logger logger = LogManager.getLogger(Tasks.class);
 	

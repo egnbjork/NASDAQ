@@ -1,4 +1,4 @@
-package berberyan;
+package berberyan.filehandler;
 
 import static org.junit.Assert.assertTrue;
 
@@ -14,6 +14,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import berberyan.engine.Company;
+import berberyan.filehandler.Export2Json;
 
 public class Export2JsonTest {
 	private static final Logger logger = LogManager.getLogger(Export2JsonTest.class);
