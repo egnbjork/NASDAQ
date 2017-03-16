@@ -2,7 +2,7 @@ package berberyan.filehandler;
 
 import static org.junit.Assert.assertEquals;
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
@@ -10,8 +10,8 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import berberyan.engine.Company;
-import berberyan.filehandler.ApacheParseCsv;
+import berberyan.model.Company;
+import berberyan.service.impl.ApacheParseCsv;
 
 public class ApacheParseCsvTest 
 {
@@ -93,16 +93,16 @@ public class ApacheParseCsvTest
 	@Test
 	public void test_marketCap_parsing_millions(){
 		logger.trace("market cap parsing test");
-		BigInteger parsed = ApacheParseCsv.parseFile("src/test/short_list.csv").get(0).getMarketCap().get();
-		BigInteger marketCap = BigInteger.valueOf(36210000);
+		BigDecimal parsed = ApacheParseCsv.parseFile("src/test/short_list.csv").get(0).getMarketCap().get();
+		BigDecimal marketCap = BigDecimal.valueOf(36210000);
 		assertEquals(marketCap, parsed);
 	}
 	
 	@Test
 	public void test_marketCap_parsing_billions(){
 		logger.trace("market cap parsing test");
-		BigInteger parsed = ApacheParseCsv.parseFile("src/test/short_list.csv").get(2).getMarketCap().get();
-		BigInteger marketCap = BigInteger.valueOf(1750000000);
+		BigDecimal parsed = ApacheParseCsv.parseFile("src/test/short_list.csv").get(2).getMarketCap().get();
+		BigDecimal marketCap = BigDecimal.valueOf(1750000000);
 		assertEquals(marketCap, parsed);
 	}
 
@@ -110,8 +110,8 @@ public class ApacheParseCsvTest
 	@Ignore
 	public void test_marketCap_not_available_parsing(){
 		logger.trace("market cap n\\a parsing test");
-		BigInteger parsed = ApacheParseCsv.parseFile("src/test/short_list.csv").get(1).getMarketCap().get();
-		BigInteger marketCap = BigInteger.valueOf(-1);
+		BigDecimal parsed = ApacheParseCsv.parseFile("src/test/short_list.csv").get(1).getMarketCap().get();
+		BigDecimal marketCap = BigDecimal.valueOf(-1);
 		assertEquals(marketCap, parsed);
 	}
 	

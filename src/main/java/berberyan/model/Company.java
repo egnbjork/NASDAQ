@@ -1,7 +1,6 @@
-package berberyan.engine;
+package berberyan.model;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
@@ -26,9 +25,12 @@ public class Company {
 	@Getter
 	private String summaryQuote;
 	@Getter
-	private Optional<BigInteger> marketCap;
+	private Optional<BigDecimal> marketCap;
 	@Getter
 	private Optional<Integer> ipo;
+	private final static String NOT_AVAILABLE = "n/a";
+	private final static BigDecimal BILLION = BigDecimal.valueOf((long)1_000_000_000); 
+	private final static BigDecimal MILLION = BigDecimal.valueOf((long)1_000_000); 
 
 	public Company(CompanyBuilder builder){
 		this.symbol = builder.symbol;
@@ -42,6 +44,37 @@ public class Company {
 		LOGGER.debug("new Company created");
 	}
 
+	public String getLastSaleString() {
+		if(lastSale.isPresent()) {
+			return lastSale.get().toString();
+		}
+		return NOT_AVAILABLE;
+	}
+
+	public String getMarketCapString() {
+		if(marketCap.isPresent()) {
+			String mcString = "$";
+			if(marketCap.get().compareTo(BILLION) >= 0) {
+				mcString += marketCap.get().divide(BILLION) + "B"; 
+			}
+			else if(marketCap.get().compareTo(MILLION) >= 0) {
+				mcString += marketCap.get().divide(MILLION) + "M";
+			}
+			else {
+				mcString += marketCap.get();
+			}
+			return mcString;
+		}
+		return NOT_AVAILABLE;
+	}
+
+	public String getIpoString() {
+		if(ipo.isPresent()) {
+			return ipo.get().toString();
+		}
+		return NOT_AVAILABLE;
+	}
+
 	@NoArgsConstructor
 	public static class CompanyBuilder {
 		private String symbol;
@@ -49,7 +82,7 @@ public class Company {
 		private String sector;
 		private String industry;
 		private Optional<BigDecimal> lastSale;
-		private Optional<BigInteger> marketCap;
+		private Optional<BigDecimal> marketCap;
 		private Optional<Integer> ipo;
 		private String summaryQuote;
 
@@ -103,13 +136,13 @@ public class Company {
 			//million
 			else if(marketCap.endsWith("M")){
 				LOGGER.debug("marketCap is millions");
-				this.marketCap = Optional.of(BigInteger.valueOf((long) (Double.parseDouble(marketCap
+				this.marketCap = Optional.of(BigDecimal.valueOf((long) (Double.parseDouble(marketCap
 						.substring(1, marketCap.length()-1)) * 1_000_000)));
 			}
 			//billion
 			else if(marketCap.endsWith("B")){
 				LOGGER.debug("marketCap is billions");
-				this.marketCap = Optional.of(BigInteger.valueOf((long) (Double.parseDouble(marketCap
+				this.marketCap = Optional.of(BigDecimal.valueOf((long) (Double.parseDouble(marketCap
 						.substring(1, marketCap.length()-1)) * 1_000_000_000)));
 			}
 			else {
@@ -120,6 +153,7 @@ public class Company {
 
 		public CompanyBuilder setIpo(String ipo) {
 			try{
+				LOGGER.debug("year is " + ipo);
 				this.ipo = Optional.of(Integer.parseInt(ipo));
 			} catch(NumberFormatException e){
 				LOGGER.debug("IPO year is empty");
@@ -127,7 +161,7 @@ public class Company {
 			}
 			return this;
 		}
-		
+
 		public CompanyBuilder setSummaryQuote(String summaryQuote) {
 			this.summaryQuote = summaryQuote;
 			return this;

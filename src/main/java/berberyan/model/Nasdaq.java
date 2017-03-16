@@ -1,4 +1,4 @@
-package berberyan.engine;
+package berberyan.model;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import berberyan.filehandler.ApacheParseCsv;
-import berberyan.filehandler.Export2Json;
+import berberyan.service.impl.ApacheParseCsv;
+import berberyan.service.impl.Export2Json;
 
 public class Nasdaq {
 	private static Logger logger = LogManager.getLogger(Nasdaq.class);
@@ -177,10 +177,10 @@ public class Nasdaq {
 	}
 
 	private static BigDecimal getSharesAmount(Company company){
-		return new BigDecimal(company.getMarketCap().get())
+		return company.getMarketCap().get()
 				.divide(company.getLastSale().get(), RoundingMode.CEILING);
 	}
-	
+
 	public static Integer getYoungestYear(List<Company> companies, Integer limit){
 		return companies
 				.stream()
@@ -190,17 +190,17 @@ public class Nasdaq {
 				.collect(Collectors.toList())
 				.get(limit-1);
 	}
-	
+
 	//for cli class
 	public static void tenBiggestShareAmount(String importPath){
 		List<Company>companies = ApacheParseCsv.parseFile(importPath);
 		companies
-				.stream()
-				.sorted(Nasdaq::sortBySharesAmount)
-				.limit(10)
-				.forEach(n -> System.out.println(n.getSymbol() + " " + n.getName() + " " + 
-					new DecimalFormat("#,###").format(getSharesAmount(n))));
-		
+		.stream()
+		.sorted(Nasdaq::sortBySharesAmount)
+		.limit(10)
+		.forEach(n -> System.out.println(n.getSymbol() + " " + n.getName() + " " + 
+				new DecimalFormat("#,###").format(getSharesAmount(n))));
+
 	}
 
 	//for cli class
@@ -215,23 +215,23 @@ public class Nasdaq {
 			.forEach(n->System.out.println(n.getSymbol() + " " + n.getName() + " " + n.getIpo()));;
 		}
 	}
-	
+
 	//for cli class
 	public static void tenMostExpensiveBySector(String importPath) {
 		List<Company> companies = ApacheParseCsv.parseFile(importPath);
 		List<String> sectors = extractSector(companies);
 		for(String sector : sectors){
 			System.out.println("\n SECTOR " + sector);
-				companies.stream()
-					.filter(n->n.getSector().equals(sector))
-					.filter(n-> n.getMarketCap().get().signum() == 1)
-					.sorted(Nasdaq::sortByMarketCap)
-					.limit(10)
-					.forEach(n->
-					System.out.println(n.getSymbol() + " " + n.getName() + " " + 
-							new DecimalFormat("$#,###").format(n.getMarketCap()))
+			companies.stream()
+			.filter(n->n.getSector().equals(sector))
+			.filter(n-> n.getMarketCap().get().signum() == 1)
+			.sorted(Nasdaq::sortByMarketCap)
+			.limit(10)
+			.forEach(n->
+			System.out.println(n.getSymbol() + " " + n.getName() + " " + 
+					new DecimalFormat("$#,###").format(n.getMarketCap()))
 					);
 		}
-		
+
 	}
 }

@@ -15,8 +15,8 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import berberyan.engine.Company;
-import berberyan.filehandler.Export2Json;
+import berberyan.model.Company;
+import berberyan.service.impl.Export2Json;
 
 public class Export2JsonTest {
 	private static final Logger logger = LogManager.getLogger(Export2JsonTest.class);

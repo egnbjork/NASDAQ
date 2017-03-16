@@ -1,4 +1,4 @@
-package berberyan.filehandler;
+package berberyan.service.impl;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import berberyan.engine.Company;
+import berberyan.model.Company;
 
 public class Export2Json {
 

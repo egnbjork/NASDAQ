@@ -1,4 +1,4 @@
-package berberyan.engine;
+package berberyan.model;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,10 +10,10 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import berberyan.engine.Company;
-import berberyan.engine.Nasdaq;
-import berberyan.filehandler.ApacheParseCsv;
 import berberyan.filehandler.Export2JsonTest;
+import berberyan.model.Company;
+import berberyan.model.Nasdaq;
+import berberyan.service.impl.ApacheParseCsv;
 
 public class NasdaqTest {
 	private static final Logger logger = LogManager.getLogger(Export2JsonTest.class);

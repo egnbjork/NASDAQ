@@ -10,9 +10,9 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import berberyan.engine.Company;
-import berberyan.filehandler.ApacheParseCsv;
-import berberyan.filehandler.Export2Json;
+import berberyan.model.Company;
+import berberyan.service.impl.ApacheParseCsv;
+import berberyan.service.impl.Export2Json;
 
 public class ApacheCsvJacksonJsonTest {
 

@@ -1,4 +1,4 @@
-package berberyan.filehandler;
+package berberyan.service.impl;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import berberyan.engine.Company;
+import berberyan.model.Company;
 
 public class ApacheParseCsv {
 	private static final Logger logger = LogManager.getLogger(ApacheParseCsv.class); 

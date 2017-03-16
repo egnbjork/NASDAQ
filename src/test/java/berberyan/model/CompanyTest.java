@@ -1,13 +1,12 @@
-package berberyan.engine;
+package berberyan.model;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import berberyan.engine.Company;
 
 public class CompanyTest {
 
@@ -61,8 +60,8 @@ public class CompanyTest {
 				.setIndustry("Property-Casualty Insurers")
 				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
 				.build();
-		BigInteger marketCap = company.getMarketCap().get();
-		assertEquals(BigInteger.valueOf(1000000), marketCap);
+		BigDecimal marketCap = company.getMarketCap().get();
+		assertEquals(BigDecimal.valueOf(1000000), marketCap);
 	}
 
 	@Test
@@ -76,8 +75,8 @@ public class CompanyTest {
 				.setIndustry("Property-Casualty Insurers")
 				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
 				.build();
-		BigInteger marketCap = company.getMarketCap().get();
-		assertEquals(BigInteger.valueOf(1000000000), marketCap);
+		BigDecimal marketCap = company.getMarketCap().get();
+		assertEquals(BigDecimal.valueOf(1000000000), marketCap);
 	}
 
 	@Test
