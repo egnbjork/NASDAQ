@@ -24,15 +24,15 @@ public class ApacheParser implements CsvParser<Company> {
 			return parseRecords(CSVFormat.RFC4180.withFirstRecordAsHeader().parse(reader));
 		} catch (IOException e) {
 			ParseException parseException = new ParseException("Cannot parse file from stream\n" + e);
-			LOGGER.warn(parseException);
+			LOGGER.error(parseException);
 			throw parseException;
 		}
 	}
 
 	private List<Company> parseRecords(CSVParser records) {
 		LOGGER.debug("Start parsing records");
-		Integer count = 0;
-		List<Company> companyList = new ArrayList<Company>();
+		int count = 0;
+		List<Company> companyList = new ArrayList<>();
 		for (CSVRecord record: records){
 			companyList.add(
 					new Company.CompanyBuilder()
@@ -48,12 +48,7 @@ public class ApacheParser implements CsvParser<Company> {
 			count++;
 		}
 
-		if(companyList.isEmpty()){
-			LOGGER.info("empty stream passed");
-		}
-		else{
-			LOGGER.info(count + " entries processed");
-		}
+		LOGGER.debug(count + " entries processed");
 
 		return companyList;
 	}

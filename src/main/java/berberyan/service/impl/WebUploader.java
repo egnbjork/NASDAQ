@@ -19,7 +19,7 @@ public class WebUploader implements FileUploader {
 	@Override
 	public Reader upload(URL url) throws UploadException {
 		try {
-			Reader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+			reader = new BufferedReader(new InputStreamReader(url.openStream()));
 			LOGGER.info("file uploaded successfully");
 			return reader;
 		} catch (IOException e) {
@@ -27,9 +27,10 @@ public class WebUploader implements FileUploader {
 				reader.close();
 			} catch (IOException e1) {
 				LOGGER.error("cannot close reader");
+				throw new UploadException("Cannot close reader", e1);
 			}
 			UploadException uploadException = new UploadException("Cannot upload file from url\n" + e);
-			LOGGER.warn(uploadException);
+			LOGGER.error(uploadException);
 			throw uploadException;
 		}
 	}

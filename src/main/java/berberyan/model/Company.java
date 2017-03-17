@@ -28,9 +28,9 @@ public class Company {
 	private Optional<BigDecimal> marketCap;
 	@Getter
 	private Optional<Integer> ipo;
-	private final static String NOT_AVAILABLE = "n/a";
-	private final static BigDecimal BILLION = BigDecimal.valueOf((long)1_000_000_000); 
-	private final static BigDecimal MILLION = BigDecimal.valueOf((long)1_000_000); 
+	private static final String NOT_AVAILABLE = "n/a";
+	private static final BigDecimal BILLION = BigDecimal.valueOf((long)1_000_000_000); 
+	private static final BigDecimal MILLION = BigDecimal.valueOf((long)1_000_000); 
 
 	public Company(CompanyBuilder builder){
 		this.symbol = builder.symbol;
@@ -45,10 +45,11 @@ public class Company {
 	}
 
 	public String getLastSaleString() {
-		if(lastSale.isPresent()) {
-			return lastSale.get().toString();
-		}
-		return NOT_AVAILABLE;
+		return lastSale.map(BigDecimal::toString).orElse(NOT_AVAILABLE);
+	}
+
+	public String getIpoString() {
+		return ipo.map(String::valueOf).orElse(NOT_AVAILABLE);
 	}
 
 	public String getMarketCapString() {
@@ -64,13 +65,6 @@ public class Company {
 				mcString += marketCap.get();
 			}
 			return mcString;
-		}
-		return NOT_AVAILABLE;
-	}
-
-	public String getIpoString() {
-		if(ipo.isPresent()) {
-			return ipo.get().toString();
 		}
 		return NOT_AVAILABLE;
 	}

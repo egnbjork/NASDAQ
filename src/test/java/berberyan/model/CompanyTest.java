@@ -144,4 +144,148 @@ public class CompanyTest {
 		boolean year = company.getIpo().isPresent();
 		assertFalse(year);
 	}
+	
+	@Test
+	public void getLastSaleString_NullTest() {
+			company = new Company.CompanyBuilder().setSymbol("PIH")
+				.setName("1347 Property Insurance Holdings, Inc.")
+				.setLastSale("n/a")
+				.setMarketCap("36")
+				.setIpo("false")
+				.setSector("Finance")
+				.setIndustry("Property-Casualty Insurers")
+				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
+				.build();	
+		
+			String expected = "n/a";
+			String actual = company.getLastSaleString();
+			
+			assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void getLastSaleString_NotNullTest() {
+			company = new Company.CompanyBuilder().setSymbol("PIH")
+				.setName("1347 Property Insurance Holdings, Inc.")
+				.setLastSale("6.0079")
+				.setMarketCap("36")
+				.setIpo("false")
+				.setSector("Finance")
+				.setIndustry("Property-Casualty Insurers")
+				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
+				.build();	
+			
+			String expected = "6.0079";
+			String actual = company.getLastSaleString();
+			
+			assertEquals(expected, actual);
+	}
+
+	@Test
+	public void getIpoString_NullTest() {
+			company = new Company.CompanyBuilder().setSymbol("PIH")
+				.setName("1347 Property Insurance Holdings, Inc.")
+				.setLastSale("6.0079")
+				.setMarketCap("36")
+				.setIpo("false")
+				.setSector("Finance")
+				.setIndustry("Property-Casualty Insurers")
+				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
+				.build();	
+			
+			String expected = "n/a";
+			String actual = company.getIpoString();
+			
+			assertEquals(expected, actual);
+	}
+
+	@Test
+	public void getIpoString_NotNullTest() {
+			company = new Company.CompanyBuilder().setSymbol("PIH")
+				.setName("1347 Property Insurance Holdings, Inc.")
+				.setLastSale("6.0079")
+				.setMarketCap("36")
+				.setIpo("1996")
+				.setSector("Finance")
+				.setIndustry("Property-Casualty Insurers")
+				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
+				.build();	
+			
+			String expected = "1996";
+			String actual = company.getIpoString();
+			
+			assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void getMarketCapString_NullTest() {
+			company = new Company.CompanyBuilder().setSymbol("PIH")
+				.setName("1347 Property Insurance Holdings, Inc.")
+				.setLastSale("6.0079")
+				.setMarketCap("n/a")
+				.setIpo("false")
+				.setSector("Finance")
+				.setIndustry("Property-Casualty Insurers")
+				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
+				.build();	
+			
+			String expected = "n/a";
+			String actual = company.getMarketCapString();
+			
+			assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void getMarketCapString_WrongInput() {
+			company = new Company.CompanyBuilder().setSymbol("PIH")
+				.setName("1347 Property Insurance Holdings, Inc.")
+				.setLastSale("6.0079")
+				.setMarketCap("36")
+				.setIpo("false")
+				.setSector("Finance")
+				.setIndustry("Property-Casualty Insurers")
+				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
+				.build();	
+			
+			String expected = "n/a";
+			String actual = company.getMarketCapString();
+			
+			assertEquals(expected, actual);
+	}	
+	
+	@Test
+	public void getMarketCapString_MillionTest() {
+			company = new Company.CompanyBuilder().setSymbol("PIH")
+				.setName("1347 Property Insurance Holdings, Inc.")
+				.setLastSale("6.0079")
+				.setMarketCap("$36M")
+				.setIpo("false")
+				.setSector("Finance")
+				.setIndustry("Property-Casualty Insurers")
+				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
+				.build();	
+
+			String expected = "$36M";
+			String actual = company.getMarketCapString();
+			
+			assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void getMarketCapString_BillionTest() {
+			company = new Company.CompanyBuilder().setSymbol("PIH")
+				.setName("1347 Property Insurance Holdings, Inc.")
+				.setLastSale("6.0079")
+				.setMarketCap("$36B")
+				.setIpo("false")
+				.setSector("Finance")
+				.setIndustry("Property-Casualty Insurers")
+				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
+				.build();	
+
+			String expected = "$36B";
+			String actual = company.getMarketCapString();
+			
+			assertEquals(expected, actual);
+	}
 }

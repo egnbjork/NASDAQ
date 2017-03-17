@@ -30,7 +30,7 @@ public class IndexController {
 		LOGGER.debug("index() invoked");
 		FileUploader uploader = new WebUploader();
 		CsvParser<Company> parser = new ApacheParser();
-		URL url = null;
+		URL url;
 		url = new URL("http://www.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=nasdaq&render=download");
 		Reader reader = uploader.upload(url);
 		parser.parse(reader);
