@@ -18,7 +18,7 @@ import berberyan.exceptions.UploadException;
 import berberyan.model.Company;
 import berberyan.service.CsvParser;
 import berberyan.service.FileUploader;
-import berberyan.service.impl.ApacheParser;
+import berberyan.service.impl.NasdaqParser;
 import berberyan.service.impl.WebUploader;
 
 @Controller
@@ -29,7 +29,7 @@ public class IndexController {
 	public String index(Model model, HttpSession session) throws MalformedURLException, ParseException, UploadException {
 		LOGGER.debug("index() invoked");
 		FileUploader uploader = new WebUploader();
-		CsvParser<Company> parser = new ApacheParser();
+		CsvParser<Company> parser = new NasdaqParser();
 		URL url;
 		url = new URL("http://www.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=nasdaq&render=download");
 		Reader reader = uploader.upload(url);

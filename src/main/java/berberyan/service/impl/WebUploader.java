@@ -8,10 +8,12 @@ import java.net.URL;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Service;
 
 import berberyan.exceptions.UploadException;
 import berberyan.service.FileUploader;
 
+@Service
 public class WebUploader implements FileUploader {
 	private static final Logger LOGGER = LogManager.getLogger(WebUploader.class); 
 	Reader reader;

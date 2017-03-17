@@ -34,9 +34,9 @@
 			<tr>
 				<td>${company.getSymbol()}</td>
 				<td>${company.getName()}</td>
-				<td>${company.getLastSaleString()}</td>
-				<td>${company.getMarketCapString()}</td>
-				<td>${company.getIpoString()}</td>
+				<td>${company.lastSaleAsString()}</td>
+				<td>${company.marketCapAsString()}</td>
+				<td>${company.ipoAsString()}</td>
 				<td>${company.getSector()}</td>
 				<td>${company.getIndustry()}</td>
 				<td>${company.getSummaryQuote()}</td>

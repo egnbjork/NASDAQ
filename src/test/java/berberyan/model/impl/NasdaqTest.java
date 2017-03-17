@@ -1,4 +1,4 @@
-package berberyan.model;
+package berberyan.model.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -8,13 +8,15 @@ import java.math.BigDecimal;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CompanyTest {
+import berberyan.model.Company;
+
+public class NasdaqTest {
 
 	private Company company;
 
 	@Before
 	public void setUp() {
-		company = new Company.CompanyBuilder().setSymbol("PIH")
+		company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("$36.21M")
@@ -51,7 +53,7 @@ public class CompanyTest {
 
 	@Test
 	public void test_market_cap_millions(){
-		company = new Company.CompanyBuilder().setSymbol("PIH")
+		company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("$1M")
@@ -66,7 +68,7 @@ public class CompanyTest {
 
 	@Test
 	public void test_market_cap_billions(){
-		company = new Company.CompanyBuilder().setSymbol("PIH")
+		company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("$1B")
@@ -81,7 +83,7 @@ public class CompanyTest {
 
 	@Test
 	public void test_market_cap_not_available(){
-		company = new Company.CompanyBuilder().setSymbol("PIH")
+		company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("n/a")
@@ -96,7 +98,7 @@ public class CompanyTest {
 
 	@Test
 	public void test_market_cap_wrong(){
-		company = new Company.CompanyBuilder().setSymbol("PIH")
+		company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("36")
@@ -117,7 +119,7 @@ public class CompanyTest {
 
 	@Test
 	public void test_year_not_available(){
-		company = new Company.CompanyBuilder().setSymbol("PIH")
+		company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("36")
@@ -132,7 +134,7 @@ public class CompanyTest {
 
 	@Test
 	public void test_year_wrong_format(){
-		company = new Company.CompanyBuilder().setSymbol("PIH")
+		company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("36")
@@ -146,8 +148,8 @@ public class CompanyTest {
 	}
 	
 	@Test
-	public void getLastSaleString_NullTest() {
-			company = new Company.CompanyBuilder().setSymbol("PIH")
+	public void lastSaleAsString_NullTest() {
+			company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("n/a")
 				.setMarketCap("36")
@@ -158,14 +160,14 @@ public class CompanyTest {
 				.build();	
 		
 			String expected = "n/a";
-			String actual = company.getLastSaleString();
+			String actual = company.lastSaleAsString();
 			
 			assertEquals(expected, actual);
 	}
 	
 	@Test
-	public void getLastSaleString_NotNullTest() {
-			company = new Company.CompanyBuilder().setSymbol("PIH")
+	public void lastSaleAsString_NotNullTest() {
+			company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("36")
@@ -176,14 +178,14 @@ public class CompanyTest {
 				.build();	
 			
 			String expected = "6.0079";
-			String actual = company.getLastSaleString();
+			String actual = company.lastSaleAsString();
 			
 			assertEquals(expected, actual);
 	}
 
 	@Test
-	public void getIpoString_NullTest() {
-			company = new Company.CompanyBuilder().setSymbol("PIH")
+	public void ipoAsString_NullTest() {
+			company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("36")
@@ -194,14 +196,14 @@ public class CompanyTest {
 				.build();	
 			
 			String expected = "n/a";
-			String actual = company.getIpoString();
+			String actual = company.ipoAsString();
 			
 			assertEquals(expected, actual);
 	}
 
 	@Test
-	public void getIpoString_NotNullTest() {
-			company = new Company.CompanyBuilder().setSymbol("PIH")
+	public void ipoAsString_NotNullTest() {
+			company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("36")
@@ -212,14 +214,14 @@ public class CompanyTest {
 				.build();	
 			
 			String expected = "1996";
-			String actual = company.getIpoString();
+			String actual = company.ipoAsString();
 			
 			assertEquals(expected, actual);
 	}
 	
 	@Test
-	public void getMarketCapString_NullTest() {
-			company = new Company.CompanyBuilder().setSymbol("PIH")
+	public void marketCapAsString_NullTest() {
+			company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("n/a")
@@ -230,14 +232,14 @@ public class CompanyTest {
 				.build();	
 			
 			String expected = "n/a";
-			String actual = company.getMarketCapString();
+			String actual = company.marketCapAsString();
 			
 			assertEquals(expected, actual);
 	}
 	
 	@Test
-	public void getMarketCapString_WrongInput() {
-			company = new Company.CompanyBuilder().setSymbol("PIH")
+	public void marketCapAsString_WrongInput() {
+			company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("36")
@@ -248,14 +250,14 @@ public class CompanyTest {
 				.build();	
 			
 			String expected = "n/a";
-			String actual = company.getMarketCapString();
+			String actual = company.marketCapAsString();
 			
 			assertEquals(expected, actual);
 	}	
 	
 	@Test
-	public void getMarketCapString_MillionTest() {
-			company = new Company.CompanyBuilder().setSymbol("PIH")
+	public void marketCapAsString_MillionTest() {
+			company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("$36M")
@@ -266,14 +268,14 @@ public class CompanyTest {
 				.build();	
 
 			String expected = "$36M";
-			String actual = company.getMarketCapString();
+			String actual = company.marketCapAsString();
 			
 			assertEquals(expected, actual);
 	}
 	
 	@Test
-	public void getMarketCapString_BillionTest() {
-			company = new Company.CompanyBuilder().setSymbol("PIH")
+	public void marketCapAsString_BillionTest() {
+			company = new Nasdaq.CompanyBuilder().setSymbol("PIH")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
 				.setMarketCap("$36B")
@@ -284,7 +286,7 @@ public class CompanyTest {
 				.build();	
 
 			String expected = "$36B";
-			String actual = company.getMarketCapString();
+			String actual = company.marketCapAsString();
 			
 			assertEquals(expected, actual);
 	}

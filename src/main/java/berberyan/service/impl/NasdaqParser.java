@@ -1,41 +1,30 @@
 package berberyan.service.impl;
 
-import java.io.IOException;
-import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Service;
 
-import berberyan.exceptions.ParseException;
 import berberyan.model.Company;
+import berberyan.model.impl.Nasdaq;
 import berberyan.service.CsvParser;
 
-public class ApacheParser implements CsvParser<Company> {
-	private static final Logger LOGGER = LogManager.getLogger(ApacheParser.class); 
+@Service
+public class NasdaqParser implements CsvParser<Company> {
+	private static final Logger LOGGER = LogManager.getLogger(NasdaqParser.class); 
 
 	@Override
-	public List<Company> parse(Reader reader) throws ParseException {
-		try {
-			return parseRecords(CSVFormat.RFC4180.withFirstRecordAsHeader().parse(reader));
-		} catch (IOException e) {
-			ParseException parseException = new ParseException("Cannot parse file from stream\n" + e);
-			LOGGER.error(parseException);
-			throw parseException;
-		}
-	}
-
-	private List<Company> parseRecords(CSVParser records) {
-		LOGGER.debug("Start parsing records");
+	public List<Company> parseRecords(CSVParser records) {
+		LOGGER.debug("parseRecords() invoked");
 		int count = 0;
 		List<Company> companyList = new ArrayList<>();
 		for (CSVRecord record: records){
 			companyList.add(
-					new Company.CompanyBuilder()
+					new Nasdaq.CompanyBuilder()
 					.setSymbol(record.get(0))
 					.setName(record.get("Name"))
 					.setLastSale(record.get("LastSale"))
@@ -48,7 +37,7 @@ public class ApacheParser implements CsvParser<Company> {
 			count++;
 		}
 
-		LOGGER.debug(count + " entries processed");
+		LOGGER.info(count + " entries processed");
 
 		return companyList;
 	}
