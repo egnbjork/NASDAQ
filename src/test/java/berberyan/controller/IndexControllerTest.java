@@ -1,5 +1,9 @@
 package berberyan.controller;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,10 +14,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import berberyan.config.AppConfig;
 import berberyan.config.AppInitializer;
 
@@ -36,5 +37,19 @@ public class IndexControllerTest {
 		mockMvc.perform(get("/"))
 		.andExpect(status().isOk())
 		.andExpect(view().name("index"));
+	}
+	
+	@Test
+	public void listall_noData_test() throws Exception {
+		mockMvc.perform(get("/all"))
+		.andExpect(status().isOk())
+		.andExpect(view().name("error"));
+	}
+	
+	@Test
+	public void oldest_noData_test() throws Exception {
+		mockMvc.perform(get("/old"))
+		.andExpect(status().isOk())
+		.andExpect(view().name("error"));
 	}
 }

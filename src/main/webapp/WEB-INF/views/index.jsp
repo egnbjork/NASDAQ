@@ -5,43 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NASDAQ</title>
-<style>
-	h2 {
-		text-align: center
-	}
-	
-	table, th, td {
-		font-family: Arial;
-		border-collapse: collapse;
-    		border: 1px solid black;
-	}
-</style>
+<link rel="stylesheet" href="/resources/css/main.css">
 </head>
 <body>
 	<h2>NASDAQ</h2>
-	<table>
-		<tr>
-			<th>Symbol</th>
-			<th>Name</th>
-			<th>Last Sale</th>
-			<th>MarketCap</th>
-			<th>IPO year</th>
-			<th>Sector</th>
-			<th>Industry</th>
-			<th>Summary Quote</th>
-		</tr>
-		<c:forEach var="company" items="${nasdaq}">
-			<tr>
-				<td>${company.getSymbol()}</td>
-				<td>${company.getName()}</td>
-				<td>${company.lastSaleAsString()}</td>
-				<td>${company.marketCapAsString()}</td>
-				<td>${company.ipoAsString()}</td>
-				<td>${company.getSector()}</td>
-				<td>${company.getIndustry()}</td>
-				<td>${company.getSummaryQuote()}</td>
-			</tr>
-		</c:forEach>
-	</table>
+<a href="all">All companies</a>	
+<br />
+<a href="old">Oldest companies in each sector</a>	
 </body>
 </html>
