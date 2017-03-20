@@ -10,5 +10,5 @@ import berberyan.exceptions.UploadException;
 @FunctionalInterface
 @Configuration
 public interface FileUploader {
-	public Reader upload(URL url) throws UploadException;
+	Reader upload(URL url) throws UploadException;
 }

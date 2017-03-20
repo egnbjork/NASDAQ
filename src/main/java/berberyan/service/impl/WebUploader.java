@@ -24,7 +24,7 @@ public class WebUploader implements FileUploader {
 			reader = new BufferedReader(new InputStreamReader(url.openStream()));
 			LOGGER.info("file uploaded successfully");
 			return reader;
-		} catch (IOException e) {
+		} catch (Exception e) {
 			try {
 				reader.close();
 			} catch (IOException e1) {

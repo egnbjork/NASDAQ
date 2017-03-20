@@ -14,7 +14,7 @@ import berberyan.exceptions.ParseException;
 @FunctionalInterface
 public interface CsvParser<T> {
 
-	public default List<T> parse(Reader reader) throws ParseException {
+	default List<T> parse(Reader reader) throws ParseException {
 		if(reader == null) {
 			throw new ParseException("Cannot parse file: reader stream is null");
 		}
@@ -26,5 +26,5 @@ public interface CsvParser<T> {
 		}
 	}
 
-	public List<T> parseRecords(CSVParser parse);
+	List<T> parseRecords(CSVParser parse);
 }
