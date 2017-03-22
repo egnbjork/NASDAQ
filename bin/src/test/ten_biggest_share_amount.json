@@ -1,0 +1,91 @@
+[ {
+  "symbol" : "MSFT",
+  "name" : "Microsoft Corporation",
+  "lastSale" : 57.43,
+  "sector" : "Technology",
+  "industry" : "Computer Software: Prepackaged Software",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/msft",
+  "marketCap" : 447520000000,
+  "ipo" : 1986
+}, {
+  "symbol" : "AAPL",
+  "name" : "Apple Inc.",
+  "lastSale" : 112.7,
+  "sector" : "Technology",
+  "industry" : "Computer Manufacturing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/aapl",
+  "marketCap" : 607280000000,
+  "ipo" : 1980
+}, {
+  "symbol" : "CSCO",
+  "name" : "Cisco Systems, Inc.",
+  "lastSale" : 31.34,
+  "sector" : "Technology",
+  "industry" : "Computer Communications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/csco",
+  "marketCap" : 157150000000,
+  "ipo" : 1990
+}, {
+  "symbol" : "SIRI",
+  "name" : "Sirius XM Holdings Inc.",
+  "lastSale" : 4.2,
+  "sector" : "Consumer Services",
+  "industry" : "Broadcasting",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/siri",
+  "marketCap" : 20490000000,
+  "ipo" : -1
+}, {
+  "symbol" : "INTC",
+  "name" : "Intel Corporation",
+  "lastSale" : 37.19,
+  "sector" : "Technology",
+  "industry" : "Semiconductors",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/intc",
+  "marketCap" : 175950000000,
+  "ipo" : -1
+}, {
+  "symbol" : "AMOV",
+  "name" : "America Movil, S.A.B. de C.V.",
+  "lastSale" : 11.5081,
+  "sector" : "Public Utilities",
+  "industry" : "Telecommunications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/amov",
+  "marketCap" : 37980000000,
+  "ipo" : -1
+}, {
+  "symbol" : "ERIC",
+  "name" : "Ericsson",
+  "lastSale" : 6.94,
+  "sector" : "Technology",
+  "industry" : "Radio And Television Broadcasting And Communications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/eric",
+  "marketCap" : 22800000000,
+  "ipo" : -1
+}, {
+  "symbol" : "FB",
+  "name" : "Facebook, Inc.",
+  "lastSale" : 127.96,
+  "sector" : "Technology",
+  "industry" : "Computer Software: Programming, Data Processing",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/fb",
+  "marketCap" : 367460000000,
+  "ipo" : 2012
+}, {
+  "symbol" : "VOD",
+  "name" : "Vodafone Group Plc",
+  "lastSale" : 29.15,
+  "sector" : "Public Utilities",
+  "industry" : "Telecommunications Equipment",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/vod",
+  "marketCap" : 77420000000,
+  "ipo" : -1
+}, {
+  "symbol" : "CMCSA",
+  "name" : "Comcast Corporation",
+  "lastSale" : 67.15,
+  "sector" : "Consumer Services",
+  "industry" : "Television Services",
+  "summaryQuote" : "http://www.nasdaq.com/symbol/cmcsa",
+  "marketCap" : 161950000000,
+  "ipo" : -1
+} ]

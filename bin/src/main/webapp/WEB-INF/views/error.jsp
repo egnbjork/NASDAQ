@@ -8,6 +8,6 @@
 </head>
 <body>
 <h2>Error</h2>
-Please try again later
+Cannot download data, please try again later
 </body>
 </html>

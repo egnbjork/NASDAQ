@@ -10,21 +10,21 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.Configuration;
 
-import berberyan.exceptions.ParseException;
+import berberyan.exceptions.CompanyParseException;
 
 @Configuration
 @FunctionalInterface
 public interface CsvParser<T> {
-	default List<T> parse(Reader reader) throws ParseException {
+	default List<T> parse(Reader reader) throws CompanyParseException {
 		if(reader == null) {
-			throw new ParseException("Cannot parse file: reader stream is null");
+			throw new CompanyParseException("Cannot parse file: reader stream is null");
 		}
 		try {
 			return parseRecords(CSVFormat.RFC4180.withFirstRecordAsHeader().parse(reader));
 		} catch (Exception e) {
 			String err = "cannot parse file from reader stream" ;
 			LogHolder.LOGGER.error(err, e);
-			throw new ParseException(err, e);
+			throw new CompanyParseException(err, e);
 		} finally {
 				try {
 					reader.close();

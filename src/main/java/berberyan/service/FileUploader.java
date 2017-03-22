@@ -5,10 +5,10 @@ import java.net.URL;
 
 import org.springframework.context.annotation.Configuration;
 
-import berberyan.exceptions.UploadException;
+import berberyan.exceptions.CompanyUploadException;
 
 @FunctionalInterface
 @Configuration
 public interface FileUploader {
-	Reader upload(URL url) throws UploadException;
+	Reader upload(URL url) throws CompanyUploadException;
 }

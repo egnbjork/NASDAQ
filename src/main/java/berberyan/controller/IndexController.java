@@ -12,8 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import berberyan.exceptions.ParseException;
-import berberyan.exceptions.UploadException;
+import berberyan.exceptions.DataProcessingException;
 import berberyan.model.Company;
 import berberyan.service.CsvParser;
 import berberyan.service.FileUploader;
@@ -32,23 +31,19 @@ public class IndexController {
 	@Value("${companylist}")
 	URL url;
 	List<Company> nasdaq;
-	private static final String ERROR = "error";
 	private static final String HEADER = "topname";
 	private static final String BODY = "toplist";
 
 	@GetMapping("/")
-	public String index(Model model) { 
-		try {
-			nasdaq = parser.parse(uploader.upload(url));
-		} catch (ParseException | UploadException e) {
-			LOGGER.error("Cannot parse data", e);
-			return ERROR;
-		}
+	public String index(Model model) throws DataProcessingException { 
+		LOGGER.trace("index invoked");
+		nasdaq = parser.parse(uploader.upload(url));
 		return "index";
 	}
 
 	@GetMapping("/all")
-	public String showAll(Model model) { 
+	public String showAll(Model model) throws DataProcessingException { 
+		LOGGER.trace("showAll() invoked");
 		if(nasdaq == null) {
 			index(model);
 		}
@@ -57,7 +52,8 @@ public class IndexController {
 	}
 
 	@GetMapping("/old")
-	public String getOldest(Model model) {
+	public String getOldest(Model model) throws DataProcessingException {
+		LOGGER.trace("getOldest() invoked");
 		if(nasdaq == null) {
 			index(model);
 		}
@@ -66,9 +62,10 @@ public class IndexController {
 		model.addAttribute(BODY, old);
 		return "top";
 	}
-	
+
 	@GetMapping("/expensive")
-	public String getMostExpensive(Model model) {
+	public String getMostExpensive(Model model) throws DataProcessingException {
+		LOGGER.trace("getMostExpensive() invoked");
 		if(nasdaq == null) {
 			index(model);
 		}
@@ -77,9 +74,10 @@ public class IndexController {
 		model.addAttribute(BODY, expensive);
 		return "top";
 	}
-	
+
 	@GetMapping("/biggestshare")
-	public String getBiggestVolume(Model model) {
+	public String getBiggestVolume(Model model) throws DataProcessingException {
+		LOGGER.trace("getBiggestVolume() invoked");
 		if(nasdaq == null) {
 			index(model);
 		}

@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import berberyan.config.AppConfig;
-import berberyan.exceptions.ParseException;
+import berberyan.exceptions.CompanyParseException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=AppConfig.class)
@@ -26,14 +26,14 @@ public class NasdaqParserTest {
 	@Mock
 	Reader reader;
 	
-	@Test (expected = ParseException.class)
-	public void parseRecords_StreamNull() throws ParseException {
+	@Test (expected = CompanyParseException.class)
+	public void parseRecords_StreamNull() throws CompanyParseException {
 		parser.parse(null);
 	}
 	
 	@SuppressWarnings("unchecked")
-	@Test (expected = ParseException.class)
-	public void parseRecords_IOException() throws ParseException {
+	@Test (expected = CompanyParseException.class)
+	public void parseRecords_IOException() throws CompanyParseException {
 		when(parser.parse(reader)).thenThrow(IOException.class);
 		parser.parse(reader);
 	}

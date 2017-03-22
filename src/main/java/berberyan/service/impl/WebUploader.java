@@ -10,7 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import berberyan.exceptions.UploadException;
+import berberyan.exceptions.CompanyUploadException;
 import berberyan.service.FileUploader;
 
 @Service
@@ -19,7 +19,7 @@ public class WebUploader implements FileUploader {
 	Reader reader;
 
 	@Override
-	public Reader upload(URL url) throws UploadException {
+	public Reader upload(URL url) throws CompanyUploadException {
 		try {
 			reader = new BufferedReader(new InputStreamReader(url.openStream()));
 			LOGGER.info("file uploaded successfully");
@@ -31,9 +31,9 @@ public class WebUploader implements FileUploader {
 				}
 			} catch (IOException e1) {
 				LOGGER.error("cannot close reader");
-				throw new UploadException("Cannot close reader", e1);
+				throw new CompanyUploadException("Cannot close reader", e1);
 			}
-			UploadException uploadException = new UploadException("Cannot upload file from url\n" + e);
+			CompanyUploadException uploadException = new CompanyUploadException("Cannot upload file from url\n" + e);
 			LOGGER.error(uploadException);
 			throw uploadException;
 		}
