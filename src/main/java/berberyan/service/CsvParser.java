@@ -26,15 +26,11 @@ public interface CsvParser<T> {
 			LogHolder.LOGGER.error(err, e);
 			throw new ParseException(err, e);
 		} finally {
-			if (reader != null) {
 				try {
 					reader.close();
 				} catch (IOException e) {
-					String err = "Cannot close reader";
-					LogHolder.LOGGER.error(err, e);
-					throw new ParseException(err, e);
+					LogHolder.LOGGER.error("Error while closing stream", e);
 				}
-			}
 		}
 	}
 
@@ -42,5 +38,6 @@ public interface CsvParser<T> {
 
 	final class LogHolder {
 		static final Logger LOGGER = LogManager.getLogger(CsvParser.class); 
+		private LogHolder(){}
 	}
 }

@@ -1,6 +1,7 @@
 package berberyan.model.impl;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
@@ -60,10 +61,10 @@ public class Nasdaq implements Company{
 		if(marketCap.isPresent()) {
 			String mcString = "$";
 			if(marketCap.get().compareTo(BILLION) >= 0) {
-				mcString += marketCap.get().divide(BILLION) + "B"; 
+				mcString += marketCap.get().divide(BILLION).setScale(2, RoundingMode.HALF_UP).stripTrailingZeros() + "B"; 
 			}
 			else if(marketCap.get().compareTo(MILLION) >= 0) {
-				mcString += marketCap.get().divide(MILLION) + "M";
+				mcString += marketCap.get().divide(MILLION).setScale(2, RoundingMode.HALF_UP).stripTrailingZeros() + "M";
 			}
 			else {
 				mcString += marketCap.get();
@@ -71,6 +72,15 @@ public class Nasdaq implements Company{
 			return mcString;
 		}
 		return NOT_AVAILABLE;
+	}
+	
+	@Override
+	public Optional<BigDecimal> getSharesAmount() {
+		if (this.getMarketCap().isPresent() && this.getLastSale().isPresent()) {
+			return Optional.of(this.getMarketCap().get()
+					.divide(this.getLastSale().get(), 0, RoundingMode.HALF_UP));
+		}
+		return Optional.empty();
 	}
 
 	@NoArgsConstructor

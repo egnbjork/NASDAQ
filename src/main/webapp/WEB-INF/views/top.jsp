@@ -9,9 +9,9 @@
 <link rel="stylesheet" href="/resources/css/main.css">
 </head>
 <body>
-	<h2>Ten Oldest Companies In Each Sector</h2>
+	<h2>${topname}</h2>
 
-	<c:forEach var="sector" items="${old}">
+	<c:forEach var="sector" items="${toplist}">
 		<h4>${sector.key}</h4>
 		<table>
 			<tr>

@@ -23,4 +23,6 @@ public interface Company {
 
 	public Optional<Integer> getIpo();
 	public String ipoAsString();
+	
+	public Optional<BigDecimal> getSharesAmount();
 }

@@ -33,6 +33,8 @@ public class IndexController {
 	URL url;
 	List<Company> nasdaq;
 	private static final String ERROR = "error";
+	private static final String HEADER = "topname";
+	private static final String BODY = "toplist";
 
 	@GetMapping("/")
 	public String index(Model model) { 
@@ -48,7 +50,7 @@ public class IndexController {
 	@GetMapping("/all")
 	public String showAll(Model model) { 
 		if(nasdaq == null) {
-			return ERROR;
+			index(model);
 		}
 		model.addAttribute("nasdaq", nasdaq);
 		return "listall";
@@ -57,10 +59,33 @@ public class IndexController {
 	@GetMapping("/old")
 	public String getOldest(Model model) {
 		if(nasdaq == null) {
-			return ERROR;
+			index(model);
 		}
-		Map<String, List<Company>> old = operations.oldest(nasdaq, 10);
-		model.addAttribute("old", old);
-		return "oldest";
+		Map<String, List<Company>> old = operations.getOldest(nasdaq, 10);
+		model.addAttribute(HEADER, "Ten Oldest Companies In Each Sector");
+		model.addAttribute(BODY, old);
+		return "top";
+	}
+	
+	@GetMapping("/expensive")
+	public String getMostExpensive(Model model) {
+		if(nasdaq == null) {
+			index(model);
+		}
+		Map<String, List<Company>> expensive = operations.getMostExpensive(nasdaq, 10);
+		model.addAttribute(HEADER, "Ten Most Expensive Companies In Each Sector");
+		model.addAttribute(BODY, expensive);
+		return "top";
+	}
+	
+	@GetMapping("/biggestshare")
+	public String getBiggestVolume(Model model) {
+		if(nasdaq == null) {
+			index(model);
+		}
+		Map<String, List<Company>> biggestVolume = operations.getBiggestVolume(nasdaq, 10);
+		model.addAttribute(HEADER, "Ten Companies With Biggest Volume");
+		model.addAttribute(BODY, biggestVolume);
+		return "top";
 	}
 }

@@ -6,4 +6,5 @@ table, th, td {
 	font-family: Arial;
 	border-collapse: collapse;
 	border: 1px solid black;
+	text-align: center;
 }

@@ -1,6 +1,7 @@
 package berberyan.service.impl;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -24,7 +25,7 @@ public class TopNasdaqOperationsTest {
 		Company c1 = new Nasdaq.CompanyBuilder().setSymbol("YOUNG")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
-				.setMarketCap("$36.21M")
+				.setMarketCap("$26.21M")
 				.setIpo("2014")
 				.setSector("Finance")
 				.setIndustry("Property-Casualty Insurers")
@@ -34,7 +35,7 @@ public class TopNasdaqOperationsTest {
 		Company c2 = new Nasdaq.CompanyBuilder().setSymbol("OLD")
 				.setName("1347 Property Insurance Holdings, Inc.")
 				.setLastSale("6.0079")
-				.setMarketCap("$36.21M")
+				.setMarketCap(".21M")
 				.setIpo("1999")
 				.setSector("Finance")
 				.setIndustry("Property-Casualty Insurers")
@@ -43,7 +44,7 @@ public class TopNasdaqOperationsTest {
 
 		Company c3 = new Nasdaq.CompanyBuilder().setSymbol("MED")
 				.setName("1347 Property Insurance Holdings, Inc.")
-				.setLastSale("6.0079")
+				.setLastSale("1.0079")
 				.setMarketCap("$36.21M")
 				.setIpo("2001")
 				.setSector("Finance")
@@ -53,8 +54,8 @@ public class TopNasdaqOperationsTest {
 
 		Company c4 = new Nasdaq.CompanyBuilder().setSymbol("NOYEAR")
 				.setName("1347 Property Insurance Holdings, Inc.")
-				.setLastSale("6.0079")
-				.setMarketCap("$36.21M")
+				.setLastSale("0.0079")
+				.setMarketCap("$16.21M")
 				.setIpo("n/a")
 				.setSector("Finance")
 				.setIndustry("Property-Casualty Insurers")
@@ -64,26 +65,26 @@ public class TopNasdaqOperationsTest {
 		companies = Arrays.asList(c1, c2, c3, c4);
 		twoOldest = new HashMap<>();
 		twoOldest.put("Finance", Arrays.asList(companies.get(1), companies.get(2)));
-		
+
 		operations = new TopNasdaqOperations();
 	}
 
 	@Test
 	public void getOldestCompanies_count() {
 		int expected = 2;
-		int actual = operations.oldest(companies, 2).get("Finance").size();
-		
+		int actual = operations.getOldest(companies, 2).get("Finance").size();
+
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void getOldestCompanies_sectorCountTest() {
 		int expected = 1;
 		int actual = twoOldest.size();
-		
+
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void getOldestCompanies_sectorNameTest() {
 		assertNotNull(twoOldest.containsKey("Finance"));
@@ -94,7 +95,28 @@ public class TopNasdaqOperationsTest {
 		List<Company> list = Arrays.asList(companies.get(1), companies.get(2));
 		Map<String, List<Company>> expected = new HashMap<>();
 		expected.put("Finance", list);
-		
+
 		assertEquals(expected, twoOldest);
+	}
+
+	@Test
+	public void getMostExpensive_test() {
+		List<Company> list = Arrays.asList(companies.get(2), companies.get(0));
+		Map<String, List<Company>> expected = new HashMap<>();
+		expected.put("Finance", list);
+		Map<String, List<Company>> actual = operations.getMostExpensive(list, 2);
+
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void getBiggestShareAmount_test() {
+		List<Company> list = Arrays.asList(companies.get(2), companies.get(3));
+		Map<String, List<Company>> expected = new HashMap<>();
+		expected.put("Finance", list);
+		Map<String, List<Company>> actual = operations.getMostExpensive(list, 2);
+
+		assertEquals(expected, actual);
+
 	}
 }

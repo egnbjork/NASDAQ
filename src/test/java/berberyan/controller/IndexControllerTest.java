@@ -40,16 +40,30 @@ public class IndexControllerTest {
 	}
 	
 	@Test
-	public void listall_noData_test() throws Exception {
+	public void listall_test() throws Exception {
 		mockMvc.perform(get("/all"))
 		.andExpect(status().isOk())
-		.andExpect(view().name("error"));
+		.andExpect(view().name("listall"));
 	}
 	
 	@Test
-	public void oldest_noData_test() throws Exception {
+	public void oldest_test() throws Exception {
 		mockMvc.perform(get("/old"))
 		.andExpect(status().isOk())
-		.andExpect(view().name("error"));
+		.andExpect(view().name("top"));
+	}
+	
+	@Test
+	public void expensive_test() throws Exception {
+		mockMvc.perform(get("/expensive"))
+		.andExpect(status().isOk())
+		.andExpect(view().name("top"));
+	}
+	
+	@Test
+	public void biggestVolume_test() throws Exception {
+		mockMvc.perform(get("/biggestshare"))
+		.andExpect(status().isOk())
+		.andExpect(view().name("top"));
 	}
 }

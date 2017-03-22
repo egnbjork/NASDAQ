@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 import berberyan.exceptions.UploadException;
 
+@FunctionalInterface
 @Configuration
 public interface FileUploader {
 	Reader upload(URL url) throws UploadException;

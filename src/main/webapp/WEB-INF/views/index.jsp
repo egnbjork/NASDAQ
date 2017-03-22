@@ -12,5 +12,9 @@
 <a href="all">All companies</a>	
 <br />
 <a href="old">Oldest companies in each sector</a>	
-</body>
+<br />
+<a href="expensive">Most expensive companies in each sector</a>
+<br />
+<a href="biggestshare">Companies with biggest volume</a>
+<body>
 </html>
