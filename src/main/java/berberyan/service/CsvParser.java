@@ -13,16 +13,22 @@ import berberyan.exceptions.ParseException;
 @Configuration
 @FunctionalInterface
 public interface CsvParser<T> {
-
 	default List<T> parse(Reader reader) throws ParseException {
 		if(reader == null) {
 			throw new ParseException("Cannot parse file: reader stream is null");
 		}
-
 		try {
 			return parseRecords(CSVFormat.RFC4180.withFirstRecordAsHeader().parse(reader));
-		} catch (IOException e) {
+		} catch (Exception e) {
 			throw new ParseException("Cannot parse file from stream\n" + e);
+		} finally {
+			if (reader != null) {
+				try {
+					reader.close();
+				} catch (IOException e) {
+					throw new ParseException("Cannot close reader", e);
+				}
+			}
 		}
 	}
 
