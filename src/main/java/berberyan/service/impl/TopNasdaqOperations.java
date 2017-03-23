@@ -31,8 +31,9 @@ public class TopNasdaqOperations implements TopOperations {
 					.sorted(TopNasdaqOperations::sortByYear)
 					.limit(howMany)
 					.collect(Collectors.toList());
-
-			oldest.put(sector, topOldest);
+			if(!topOldest.isEmpty()) {
+				oldest.put(sector, topOldest);
+			}
 			LOGGER.debug(topOldest.size() + " found companies in sector " + sector);
 		}
 
@@ -94,7 +95,6 @@ public class TopNasdaqOperations implements TopOperations {
 
 	@Override
 	public List<Company> getBiggestVolumeFromList(List<Company> companies, int howMany) {
-		// TODO Auto-generated method stub
 		return companies.stream()
 				.sorted(TopNasdaqOperations::sortByShareAmount)
 				.limit(howMany)
@@ -102,6 +102,44 @@ public class TopNasdaqOperations implements TopOperations {
 
 	}
 
+	@Override
+	public int countCompanies(List<Company> companies) {
+		return companies.size();
+	}
+
+	@Override
+	public int countSectors(List<Company> companies) {
+		return (int) companies.stream()
+				.map(Company::getSector)
+				.distinct()
+				.count();
+	}
+
+	@Override
+	public Map<String, Integer> countCompaniesEachSector(List<Company> companies) {
+		Map<String, Integer> companiesInSector = new TreeMap<>();
+		List<String> sectors = companies.stream()
+				.map(Company::getSector)
+				.collect(Collectors.toList());
+
+		for(String sector : sectors) {
+			int count = (int) companies.stream()
+					.filter(n->n.getSector().equals(sector))
+					.count();
+
+			companiesInSector.put(sector, count);
+		}
+		return companiesInSector;
+	}
+
+	@Override
+	public int countIndustries(List<Company> companies) {
+		return (int) companies.stream()
+				.map(Company::getIndustry)
+				.distinct()
+				.count();
+	}
+	
 	private List<String> getAllSectors(List<Company> companies) {
 		return companies.stream()
 				.map(Company::getSector)

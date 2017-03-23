@@ -43,27 +43,27 @@ public class IndexControllerTest {
 	public void listall_test() throws Exception {
 		mockMvc.perform(get("/all"))
 		.andExpect(status().isOk())
-		.andExpect(view().name("listall"));
+		.andExpect(view().name("index"));
 	}
 	
 	@Test
 	public void oldest_test() throws Exception {
 		mockMvc.perform(get("/old"))
 		.andExpect(status().isOk())
-		.andExpect(view().name("top"));
+		.andExpect(view().name("index"));
 	}
 	
 	@Test
 	public void expensive_test() throws Exception {
 		mockMvc.perform(get("/expensive"))
 		.andExpect(status().isOk())
-		.andExpect(view().name("top"));
+		.andExpect(view().name("index"));
 	}
 	
 	@Test
 	public void biggestVolume_test() throws Exception {
 		mockMvc.perform(get("/biggestshare"))
 		.andExpect(status().isOk())
-		.andExpect(view().name("top"));
+		.andExpect(view().name("index"));
 	}
 }

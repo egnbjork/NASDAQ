@@ -58,7 +58,7 @@ public class TopNasdaqOperationsTest {
 				.setMarketCap("$16.21M")
 				.setIpo("n/a")
 				.setSector("Finance")
-				.setIndustry("Property-Casualty Insurers")
+				.setIndustry("Marketing")
 				.setSummaryQuote("http://www.nasdaq.com/symbol/pih")
 				.build();	
 
@@ -117,6 +117,31 @@ public class TopNasdaqOperationsTest {
 		Map<String, List<Company>> actual = operations.getMostExpensive(list, 2);
 
 		assertEquals(expected, actual);
-
+	}
+	
+	@Test
+	public void countSectors_test() {
+		int expected = 1;
+		int actual = operations.countSectors(companies);
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void howManyCompaniesInSector_test() {
+		Map<String, Integer> expected = new HashMap<>();
+		expected.put("Finance", Integer.valueOf(4));
+		
+		Map<String, Integer> actual = operations.countCompaniesEachSector(companies);
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void countIndustries_test() {
+		int expected = 2;
+		int actual = operations.countIndustries(companies);
+		
+		assertEquals(expected, actual);
 	}
 }

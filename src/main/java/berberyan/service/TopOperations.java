@@ -27,4 +27,16 @@ public interface TopOperations {
 	
 	//ten with the biggest volume
 	List<Company> getBiggestVolumeFromList(List<Company> companies, int howMany);
+	
+	//count all companies
+	int countCompanies(List<Company> companies);
+
+	//count all sectors
+	int countSectors(List<Company> companies);
+	
+	//how many companies in each sector
+	Map<String, Integer> countCompaniesEachSector(List<Company> companies);
+	
+	//count industries
+	int countIndustries(List<Company> companies);
 }

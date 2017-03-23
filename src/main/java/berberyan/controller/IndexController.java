@@ -32,14 +32,23 @@ public class IndexController {
 	URL url;
 	List<Company> nasdaq;
 	private static final String HEADER = "topname";
-	private static final String BODY_MAP = "toplist";
-	private static final String BODY_LIST = "topcompanieslist";
+	private static final String BODY_MAP = "listbysector";
+	private static final String BODY_LIST = "companieslist";
+	private static final String INDEX = "index";
 
 	@GetMapping("/")
 	public String index(Model model) throws DataProcessingException { 
 		LOGGER.trace("index invoked");
 		nasdaq = parser.parse(uploader.upload(url));
-		return "index";
+		int countCompanies = operations.countCompanies(nasdaq);
+		model.addAttribute("countcompanies", countCompanies);
+		int countSectors = operations.countSectors(nasdaq);
+		model.addAttribute("countsectors", countSectors);
+		int countIndustries = operations.countIndustries(nasdaq);
+		model.addAttribute("countindustries", countIndustries);
+		Map<String, Integer> countEachSector = operations.countCompaniesEachSector(nasdaq);
+		model.addAttribute("countcompanieseachsector", countEachSector);
+		return INDEX;
 	}
 
 	@GetMapping("/all")
@@ -48,8 +57,9 @@ public class IndexController {
 		if(nasdaq == null) {
 			index(model);
 		}
-		model.addAttribute("nasdaq", nasdaq);
-		return "listall";
+		model.addAttribute(HEADER, "Nasdaq Companies");
+		model.addAttribute(BODY_LIST, nasdaq);
+		return INDEX;
 	}
 
 	@GetMapping("/old")
@@ -64,7 +74,7 @@ public class IndexController {
 
 		List<Company> oldest = operations.getOldestFromList(nasdaq, 10);
 		model.addAttribute(BODY_LIST, oldest);
-		return "top";
+		return INDEX;
 	}
 
 	@GetMapping("/expensive")
@@ -79,7 +89,7 @@ public class IndexController {
 
 		List<Company> mostExpensive = operations.getMostExpensiveFromList(nasdaq, 10);
 		model.addAttribute(BODY_LIST, mostExpensive);
-		return "top";
+		return INDEX;
 	}
 
 	@GetMapping("/biggestshare")
@@ -95,6 +105,6 @@ public class IndexController {
 		List<Company> biggest = operations.getMostExpensiveFromList(nasdaq, 10);
 		model.addAttribute(BODY_LIST, biggest);
 
-		return "top";
+		return INDEX;
 	}
 }
