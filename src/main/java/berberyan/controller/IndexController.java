@@ -32,7 +32,8 @@ public class IndexController {
 	URL url;
 	List<Company> nasdaq;
 	private static final String HEADER = "topname";
-	private static final String BODY = "toplist";
+	private static final String BODY_MAP = "toplist";
+	private static final String BODY_LIST = "topcompanieslist";
 
 	@GetMapping("/")
 	public String index(Model model) throws DataProcessingException { 
@@ -58,8 +59,11 @@ public class IndexController {
 			index(model);
 		}
 		Map<String, List<Company>> old = operations.getOldest(nasdaq, 10);
-		model.addAttribute(HEADER, "Ten Oldest Companies In Each Sector");
-		model.addAttribute(BODY, old);
+		model.addAttribute(HEADER, "Ten Oldest Companies");
+		model.addAttribute(BODY_MAP, old);
+
+		List<Company> oldest = operations.getOldestFromList(nasdaq, 10);
+		model.addAttribute(BODY_LIST, oldest);
 		return "top";
 	}
 
@@ -70,8 +74,11 @@ public class IndexController {
 			index(model);
 		}
 		Map<String, List<Company>> expensive = operations.getMostExpensive(nasdaq, 10);
-		model.addAttribute(HEADER, "Ten Most Expensive Companies In Each Sector");
-		model.addAttribute(BODY, expensive);
+		model.addAttribute(HEADER, "Ten Most Expensive Companies");
+		model.addAttribute(BODY_MAP, expensive);
+
+		List<Company> mostExpensive = operations.getMostExpensiveFromList(nasdaq, 10);
+		model.addAttribute(BODY_LIST, mostExpensive);
 		return "top";
 	}
 
@@ -83,7 +90,11 @@ public class IndexController {
 		}
 		Map<String, List<Company>> biggestVolume = operations.getBiggestVolume(nasdaq, 10);
 		model.addAttribute(HEADER, "Ten Companies With Biggest Volume");
-		model.addAttribute(BODY, biggestVolume);
+		model.addAttribute(BODY_MAP, biggestVolume);
+
+		List<Company> biggest = operations.getMostExpensiveFromList(nasdaq, 10);
+		model.addAttribute(BODY_LIST, biggest);
+
 		return "top";
 	}
 }
