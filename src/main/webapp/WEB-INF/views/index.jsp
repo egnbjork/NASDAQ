@@ -1,64 +1,72 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<link href="resources/css/bootstrap.css" rel="stylesheet">
 		<title>NASDAQ</title>
-		<link rel="stylesheet" href="/resources/css/main.css">
 	</head>
 	<body>
-		<h2>NASDAQ</h2>
-		<div>
-			<a href="all">List all companies</a>
-			<br />
-			<a href="old">Oldest in each sector</a>
-			<br />
-			<a href="expensive">Most expensive in each sector</a>
-			<br />
-			<a href="biggestshare">With biggest volume</a>
+		<div class="header">
+			<a href="/">
+				<img src="resources/img/nasdaq-logo.png">
+			</a>
+			<h2 class="page-header">NASDAQ <small>Top</small></h2>
 		</div>
-		<hr/>	
-		<div>
+		<ul class="list-inline text-capitalize text-center">
+			<li><a href="all" class="btn btn-primary btn-lg" role="button">List all</a></li>
+			<li><a href="old" class="btn btn-primary btn-lg" role="button">Oldest</a></li>
+			<li><a href="expensive" class="btn btn-primary btn-lg" role="button">Most expensive</a></li>
+			<li><a href="biggestshare" class="btn btn-primary btn-lg" role="button">biggest volume</a></li>
+		</ul>
+		<hr/>
+		<div class="container">
 			<c:choose>
 				<c:when test="${companieslist == null }">
-					<p>
-						<c:out value="${countcompanies}"/> companies in <c:out value="${countsectors}"/> sectors and <c:out value="${countindustries}" /> industries
-					</p>
-					<ul>
-						<c:forEach items="${countcompanieseachsector}" var="sector" >
-							<li><c:out value="${sector.key}"/>: <c:out value="${sector.value}"/> companies</li>
-						</c:forEach>
-					</ul>
+					<div class="well well-lg">
+						<p>
+							<c:out value="${countcompanies}"/> companies in <c:out value="${countsectors}"/> sectors and <c:out value="${countindustries}" /> industries
+						</p>
+						<ul>
+							<c:forEach items="${countcompanieseachsector}" var="sector" >
+								<li><c:out value="${sector.key}"/>: <fmt:formatNumber value="${sector.value/countcompanies*100}" maxFractionDigits="1"/>%</li>
+							</c:forEach>
+						</ul>
+					</div>
 				</c:when>
 				<c:otherwise>
-					<h2><c:out value="${topname}"/></h2>
-					<table>
-						<tr>
-							<th>Symbol</th>
-							<th>Name</th>
-							<th>Last Sale</th>
-							<th>MarketCap</th>
-							<th>IPO year</th>
-							<th>Sector</th>
-							<th>Industry</th>
-						</tr>
-						<c:forEach var="company" items="${companieslist}">
+					<div class="container">
+						<h3 class="page-header"><c:out value="${topname}"/></h3>
+						<table class="table table-striped table-bordered table-hover table-condensed">
 							<tr>
-								<td><a href="${company.getSummaryQuote()}"><c:out value="${company.getSymbol()}" /></a></td>
-								<td><c:out value="${company.getName()}" /></td>
-								<td><c:out value="${company.lastSaleAsString()}" /></td>
-								<td><c:out value="${company.marketCapAsString()}" /></td>
-								<td><c:out value="${company.ipoAsString()}" /></td>
-								<td><c:out value="${company.getSector()}" /></td>
-								<td><c:out value="${company.getIndustry()}" /></td>
+								<th>Symbol</th>
+								<th>Name</th>
+								<th>Last Sale</th>
+								<th>MarketCap</th>
+								<th>IPO year</th>
+								<th>Sector</th>
+								<th>Industry</th>
 							</tr>
-						</c:forEach>
-					</table>
-					<c:if test ="${listbysector != null}">
+							<c:forEach var="company" items="${companieslist}">
+								<tr>
+									<td><a href="${company.getSummaryQuote()}"><c:out value="${company.getSymbol()}" /></a></td>
+									<td><c:out value="${company.getName()}" /></td>
+									<td><c:out value="${company.lastSaleAsString()}" /></td>
+									<td><c:out value="${company.marketCapAsString()}" /></td>
+									<td><c:out value="${company.ipoAsString()}" /></td>
+									<td><c:out value="${company.getSector()}" /></td>
+									<td><c:out value="${company.getIndustry()}" /></td>
+								</tr>
+							</c:forEach>
+						</table>
+						<c:if test ="${listbysector != null}">
 							<c:forEach var="sector" items="${listbysector}">
-								<h4>${sector.key}</h4>
-								<table>
+								<h4 class="page-header">${sector.key}</h4>
+								<table class="table table-striped table-bordered table-hover table-condensed">
 									<tr>
 										<th>Symbol</th>
 										<th>Name</th>
@@ -82,6 +90,7 @@
 								</table>
 							</c:forEach>
 						</c:if>
+					</div>
 				</c:otherwise>
 			</c:choose>
 		</div>

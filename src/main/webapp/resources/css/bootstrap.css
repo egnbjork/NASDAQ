@@ -1115,6 +1115,14 @@ figure {
 img {
   vertical-align: middle;
 }
+.header img{
+  position: absolute;
+  background:black;
+  top:7px;
+  left:5px;
+  width: 70px;
+  height: 70px;
+}
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -1408,6 +1416,7 @@ a.bg-danger:focus {
   background-color: #e4b9b9;
 }
 .page-header {
+  text-align: center;
   padding-bottom: 9px;
   margin: 40px 0 20px;
   border-bottom: 1px solid #eee;
@@ -3003,7 +3012,7 @@ select[multiple].input-lg {
 .btn {
   display: inline-block;
   padding: 6px 12px;
-  margin-bottom: 0;
+  margin-bottom: 5;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -5243,7 +5252,7 @@ a.thumbnail.active {
 }
 .list-group {
   padding-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .list-group-item {
   position: relative;
