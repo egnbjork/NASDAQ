@@ -5,18 +5,12 @@
 		<Console name="Console" target="SYSTEM_OUT">
 			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
 		</Console>
-		<RollingFile name="RollingFileAppender" fileName="${sys:catalina.home}/logs/nasdaq/nasdaq.log"
-                     filePattern="${sys:catalina.home}/logs/nasdaq/$${date:yyyy-MM}/nasdaq-%d{yyyy-MM-dd}-%i.log.gz">
-            <PatternLayout>
-                <pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
-            </PatternLayout>
-            <Policies>
-                <TimeBasedTriggeringPolicy /><!-- Rotated everyday -->
-                <SizeBasedTriggeringPolicy size="10 MB"/> <!-- Or every 10 MB -->
-            </Policies>
-        </RollingFile>
 	</Appenders>
 	<Loggers>
+		<Logger name="berberyan.model.impl.Nasdaq" level="info"
+			additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
 		<Root level="debug">
 			<AppenderRef ref="Console" />
 		</Root>
