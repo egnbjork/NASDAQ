@@ -2,8 +2,10 @@ package berberyan.service.impl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 
 import org.apache.logging.log4j.LogManager;
@@ -21,7 +23,13 @@ public class WebUploader implements FileUploader {
 	@Override
 	public Reader upload(URL url) throws CompanyUploadException {
 		try {
-			reader = new BufferedReader(new InputStreamReader(url.openStream()));
+			HttpURLConnection connection = ((HttpURLConnection)url.openConnection());
+            connection.addRequestProperty("User-Agent", "Mozilla/4.0");
+            InputStream input;
+            if (connection.getResponseCode() == 200)  // this must be called before 'getErrorStream()' works
+                input = connection.getInputStream();
+            else input = connection.getErrorStream();
+			reader = new BufferedReader(new InputStreamReader(input));
 			LOGGER.info("file uploaded successfully");
 			return reader;
 		} catch (IOException e) {
