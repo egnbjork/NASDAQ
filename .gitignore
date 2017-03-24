@@ -4,6 +4,7 @@
 # Maven
 target
 bin
+${sys:catalina.home}
 
 # Eclipse
 .project
