@@ -102,7 +102,7 @@ public class IndexController {
 		model.addAttribute(HEADER, "Ten Companies With Biggest Volume");
 		model.addAttribute(BODY_MAP, biggestVolume);
 
-		List<Company> biggest = operations.getMostExpensiveFromList(nasdaq, 10);
+		List<Company> biggest = operations.getBiggestVolumeFromList(nasdaq, 10);
 		model.addAttribute(BODY_LIST, biggest);
 
 		return INDEX;
