@@ -16,8 +16,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import berberyan.config.AppConfig;
+import berberyan.entity.Company;
 import berberyan.exceptions.CompanyParseException;
-import berberyan.model.Company;
 import berberyan.service.impl.NasdaqParser;
 
 @RunWith(SpringJUnit4ClassRunner.class)

@@ -11,8 +11,8 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
-import berberyan.model.Company;
-import berberyan.model.impl.Nasdaq;
+import berberyan.entity.Company;
+import berberyan.entity.impl.Nasdaq;
 
 public class TopNasdaqOperationsTest {
 

@@ -13,3 +13,6 @@ ${sys:catalina.home}
 
 #Sonar
 appcheck.sh
+
+#Security
+#src/main/resources/hibernate.cfg.xml

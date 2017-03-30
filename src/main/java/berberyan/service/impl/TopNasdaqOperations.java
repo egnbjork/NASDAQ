@@ -9,7 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import berberyan.model.Company;
+import berberyan.entity.Company;
 import berberyan.service.TopOperations;
 
 @Service

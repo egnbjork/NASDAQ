@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.springframework.context.annotation.Configuration;
 
-import berberyan.model.Company;
+import berberyan.entity.Company;
 
 @Configuration
 public interface TopOperations {
