@@ -12,9 +12,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import berberyan.entity.Company;
+import berberyan.entity.impl.Nasdaq;
 import berberyan.exceptions.DataProcessingException;
-import berberyan.model.Company;
 import berberyan.service.CsvParser;
+import berberyan.service.DbCompanyUploader;
 import berberyan.service.FileUploader;
 import berberyan.service.TopOperations;
 
@@ -23,13 +25,20 @@ public class IndexController {
 	private static final Logger LOGGER = LogManager.getLogger(IndexController.class); 
 
 	@Autowired
-	FileUploader uploader;
+	FileUploader webUploader;
+	
+	@Autowired
+	DbCompanyUploader dbUploader;
+
 	@Autowired
 	CsvParser<Company> parser;
+
 	@Autowired
 	TopOperations operations;
+
 	@Value("${companylist}")
 	URL url;
+
 	List<Company> nasdaq;
 	private static final String HEADER = "topname";
 	private static final String BODY_MAP = "listbysector";
@@ -39,7 +48,8 @@ public class IndexController {
 	@GetMapping("/")
 	public String index(Model model) throws DataProcessingException { 
 		LOGGER.trace("index invoked");
-		nasdaq = parser.parse(uploader.upload(url));
+//		nasdaq = parser.parse(webUploader.upload(url));
+		nasdaq = dbUploader.getCompanies();
 		int countCompanies = operations.countCompanies(nasdaq);
 		model.addAttribute("countcompanies", countCompanies);
 		int countSectors = operations.countSectors(nasdaq);

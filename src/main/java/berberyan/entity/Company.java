@@ -1,4 +1,4 @@
-package berberyan.model;
+package berberyan.entity;
 
 import java.math.BigDecimal;
 import java.util.Optional;
