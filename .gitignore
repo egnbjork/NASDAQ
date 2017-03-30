@@ -15,4 +15,4 @@ ${sys:catalina.home}
 appcheck.sh
 
 #Security
-#src/main/resources/hibernate.cfg.xml
+src/main/resources/hibernate.cfg.xml
