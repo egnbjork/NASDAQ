@@ -2,8 +2,11 @@ package berberyan.service;
 
 import java.net.URL;
 
+import org.springframework.context.annotation.Configuration;
+
 import berberyan.exceptions.DataProcessingException;
 
+@Configuration
 public interface DbSynchroziner {
 	public void syncData() throws DataProcessingException;
 	
