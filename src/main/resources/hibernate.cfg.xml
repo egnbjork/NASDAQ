@@ -4,7 +4,7 @@
   'http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd'>
 <hibernate-configuration>
   <session-factory>
-    <property name="hibernate.connection.url">jdbc:postgresql://url</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://ec2-107-22-244-62.compute-1.amazonaws.com:5432/d74rqh8idppiep?user=okoyuttwsdddze&amp;password=47cdb32852b8fbe842b4cb3e72d4d953c5647f3891f3a830bcb5a696a8cb6cd1&amp;ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory</property>
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 

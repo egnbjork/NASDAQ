@@ -13,7 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import berberyan.entity.Company;
-import berberyan.entity.impl.Nasdaq;
 import berberyan.exceptions.DataProcessingException;
 import berberyan.service.CsvParser;
 import berberyan.service.DbCompanyUploader;
