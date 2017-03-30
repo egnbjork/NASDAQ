@@ -9,8 +9,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import berberyan.model.Company;
-import berberyan.model.impl.Nasdaq;
+import berberyan.entity.Company;
+import berberyan.entity.impl.Nasdaq;
 import berberyan.service.CsvParser;
 
 @Service

@@ -1,14 +1,16 @@
-package berberyan.model.impl;
+package berberyan.entity.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 import java.math.BigDecimal;
+import java.net.URISyntaxException;
+import java.sql.SQLException;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import berberyan.model.Company;
+import berberyan.entity.Company;
 
 public class NasdaqTest {
 
@@ -28,7 +30,7 @@ public class NasdaqTest {
 	}
 
 	@Test
-	public void test_company_constructor_symbol(){
+	public void test_company_constructor_symbol() throws SQLException, URISyntaxException{
 		String symbol = company.getSymbol();
 		assertEquals(symbol, "PIH");
 	}

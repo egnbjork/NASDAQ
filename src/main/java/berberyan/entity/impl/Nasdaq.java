@@ -1,35 +1,58 @@
-package berberyan.model.impl;
+package berberyan.entity.impl;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Optional;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import berberyan.model.Company;
+import berberyan.entity.Company;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Entity
+@Table(name="companies")
+@NoArgsConstructor
 public class Nasdaq implements Company{
 	private static final Logger LOGGER = LogManager.getLogger(Nasdaq.class); 
 
+	@Id
 	@Getter
 	private String symbol;
+
 	@Getter
 	private String name;
+
+	@Column(name="last_sale")
+	private BigDecimal lastSale;
+
 	@Getter
-	private Optional<BigDecimal> lastSale;
-	@Getter
+	@Column(name="sector")
 	private String sector;
+
 	@Getter
+	@Column(name="industry")
 	private String industry;
+
 	@Getter
+	@Column(name="summary_quote")
 	private String summaryQuote;
-	@Getter
-	private Optional<BigDecimal> marketCap;
-	@Getter
-	private Optional<Integer> ipo;
+
+	@Column(name="market_cap")
+	private BigDecimal marketCap;
+
+	@Column(name="ipo_year")
+	private Integer ipo;
+	
+	@Column
+	private String stock_exch="Nasdaq";
+	
 	private static final String NOT_AVAILABLE = "n/a";
 	private static final BigDecimal BILLION = BigDecimal.valueOf((long)1_000_000_000); 
 	private static final BigDecimal MILLION = BigDecimal.valueOf((long)1_000_000); 
@@ -48,32 +71,33 @@ public class Nasdaq implements Company{
 
 	@Override
 	public String lastSaleAsString() {
-		return lastSale.map(BigDecimal::toString).orElse(NOT_AVAILABLE);
+		return getLastSale().map(BigDecimal::toString).orElse(NOT_AVAILABLE);
 	}
 
 	@Override
 	public String ipoAsString() {
-		return ipo.map(String::valueOf).orElse(NOT_AVAILABLE);
+		return getIpo().map(String::valueOf).orElse(NOT_AVAILABLE);
 	}
 
 	@Override
 	public String marketCapAsString() {
-		if(marketCap.isPresent()) {
-			String mcString = "$";
-			if(marketCap.get().compareTo(BILLION) >= 0) {
-				mcString += marketCap.get().divide(BILLION).setScale(2, RoundingMode.HALF_UP).stripTrailingZeros() + "B"; 
-			}
-			else if(marketCap.get().compareTo(MILLION) >= 0) {
-				mcString += marketCap.get().divide(MILLION).setScale(2, RoundingMode.HALF_UP).stripTrailingZeros() + "M";
-			}
-			else {
-				mcString += marketCap.get();
-			}
-			return mcString;
+		if(marketCap == null) {
+			return NOT_AVAILABLE;
 		}
-		return NOT_AVAILABLE;
+
+		String mcString = "$";
+		if(marketCap.compareTo(BILLION) >= 0) {
+			mcString += marketCap.divide(BILLION).setScale(2, RoundingMode.HALF_UP).stripTrailingZeros() + "B"; 
+		}
+		else if(marketCap.compareTo(MILLION) >= 0) {
+			mcString += marketCap.divide(MILLION).setScale(2, RoundingMode.HALF_UP).stripTrailingZeros() + "M";
+		}
+		else {
+			mcString += marketCap;
+		}
+		return mcString;
 	}
-	
+
 	@Override
 	public Optional<BigDecimal> getSharesAmount() {
 		if (this.getMarketCap().isPresent() && this.getLastSale().isPresent()) {
@@ -83,15 +107,47 @@ public class Nasdaq implements Company{
 		return Optional.empty();
 	}
 
+	public Optional<BigDecimal> getLastSale() {
+		if(lastSale == null) {
+			return Optional.empty();
+		}
+		return Optional.of(lastSale);
+	}
+
+	public Optional<Integer> getIpo() {
+		if(ipo == null) {
+			return Optional.empty();
+		}
+		return Optional.of(ipo);
+	}
+
+	public Optional<BigDecimal> getMarketCap() {
+		if(marketCap == null) {
+			return Optional.empty();
+		}
+		return Optional.of(marketCap);
+	}
+
+	@Column(name="stock_exch")
+	public String getStickExchange() {
+		return "Nasdaq";
+	}
 	@NoArgsConstructor
 	public static class CompanyBuilder {
 		private String symbol;
+
 		private String name;
+
 		private String sector;
+
 		private String industry;
-		private Optional<BigDecimal> lastSale;
-		private Optional<BigDecimal> marketCap;
-		private Optional<Integer> ipo;
+
+		private BigDecimal lastSale;
+
+		private BigDecimal marketCap;
+
+		private Integer ipo;
+
 		private String summaryQuote;
 
 		public CompanyBuilder(Nasdaq company) {
@@ -99,9 +155,18 @@ public class Nasdaq implements Company{
 			this.name = company.getName();
 			this.sector = company.getSector();
 			this.industry = company.getIndustry();
-			this.lastSale = company.getLastSale();
-			this.marketCap = company.getMarketCap();
-			this.ipo = company.getIpo();
+			Optional<BigDecimal> sale = company.getLastSale();
+			if(sale.isPresent()) {
+				this.lastSale = sale.get();
+			}
+			Optional<BigDecimal> mc = company.getMarketCap();
+			if(mc.isPresent()) {
+				this.marketCap = mc.get();
+			}
+			Optional<Integer> ipo = company.getIpo();
+			if(ipo.isPresent()) {
+				this.ipo = ipo.get();
+			}
 			this.summaryQuote = company.getSummaryQuote();
 		}
 
@@ -127,10 +192,9 @@ public class Nasdaq implements Company{
 
 		public CompanyBuilder setLastSale(String lastSale){
 			try{
-				this.lastSale = Optional.of(new BigDecimal(lastSale));
-			} catch(NumberFormatException e){
-				LOGGER.debug("last sale is null");
-				this.lastSale = Optional.empty();
+				this.lastSale = new BigDecimal(lastSale);
+			} catch (NumberFormatException e) {
+				//not a number
 			}
 			return this;
 		}
@@ -138,34 +202,28 @@ public class Nasdaq implements Company{
 		public CompanyBuilder setMarketCap(String marketCap) {
 			if(marketCap == null ||
 					"n/a".equals(marketCap)){
-				LOGGER.debug("marketCap is empty");
-				this.marketCap = Optional.empty();
+				//equals to null
 			}
 			//million
 			else if(marketCap.endsWith("M")){
 				LOGGER.debug("marketCap is millions");
-				this.marketCap = Optional.of(BigDecimal.valueOf((long) (Double.parseDouble(marketCap
-						.substring(1, marketCap.length()-1)) * 1_000_000)));
+				this.marketCap = BigDecimal.valueOf((long) (Double.parseDouble(marketCap
+						.substring(1, marketCap.length()-1)) * 1_000_000));
 			}
 			//billion
 			else if(marketCap.endsWith("B")){
 				LOGGER.debug("marketCap is billions");
-				this.marketCap = Optional.of(BigDecimal.valueOf((long) (Double.parseDouble(marketCap
-						.substring(1, marketCap.length()-1)) * 1_000_000_000)));
-			}
-			else {
-				this.marketCap = Optional.empty();
+				this.marketCap = BigDecimal.valueOf((long) (Double.parseDouble(marketCap
+						.substring(1, marketCap.length()-1)) * 1_000_000_000));
 			}
 			return this;
 		}
 
 		public CompanyBuilder setIpo(String ipo) {
 			try{
-				LOGGER.debug("year is " + ipo);
-				this.ipo = Optional.of(Integer.parseInt(ipo));
+				this.ipo = Integer.parseInt(ipo);
 			} catch(NumberFormatException e){
-				LOGGER.debug("IPO year is empty");
-				this.ipo = Optional.empty();
+				//value is not a number
 			}
 			return this;
 		}
