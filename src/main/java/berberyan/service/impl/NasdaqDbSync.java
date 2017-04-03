@@ -7,12 +7,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import berberyan.entity.Company;
-import berberyan.entity.impl.Nasdaq;
-import berberyan.exceptions.DataProcessingException;
+import berberyan.exceptions.DataSyncException;
 import berberyan.service.CsvParser;
 import berberyan.service.DbCompanyUploader;
 import berberyan.service.DbSynchroziner;
@@ -37,20 +37,27 @@ public class NasdaqDbSync implements DbSynchroziner {
 
 	@Setter
 	private URL url;
-	
+
 	@Setter
 	private String tableName;
 
-	private Session session;
-
 	@Override
-	public void syncData() throws DataProcessingException {
-		session = sessionFactory.getCurrentSession();
-		LOGGER.info("syncData() invoked");
-		List<Company> webCompanies = parser.parse(webUploader.upload(url));
-		session.beginTransaction();
-		for(Company company : webCompanies)
-			session.saveOrUpdate(company);
-		session.getTransaction().commit();
+	public void syncData() {
+		try {
+			Session session = sessionFactory.getCurrentSession();
+			if( session == null )
+				session = sessionFactory.openSession();
+			LOGGER.info("syncData() invoked");
+			List<Company> webCompanies = parser.parse(webUploader.upload(url));
+			Transaction tx = session.beginTransaction();
+			for(Company company : webCompanies) {
+				session.merge(company);
+			}
+			tx.commit();
+		} catch(Exception e) {
+			String errorMsg = "error while sync with db";
+			LOGGER.error(errorMsg, e);
+			throw new DataSyncException(errorMsg, e);
+		}
 	}
 }

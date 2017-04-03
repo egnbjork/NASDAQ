@@ -13,7 +13,7 @@ import berberyan.exceptions.DataProcessingException;
 
 @Service
 public class ScheduledTasks {
-	private static final Logger LOGGER = LogManager.getLogger(ScheduledTasks.class); 
+	private static final Logger LOGGER = LogManager.getLogger(ScheduledTasks.class);
 
 	@Autowired
 	DbSynchroziner sync;

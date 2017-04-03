@@ -5,7 +5,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +21,6 @@ import berberyan.config.AppInitializer;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {AppConfig.class, AppInitializer.class})
 @WebAppConfiguration
-//skipped because of hidden jdbc connection url
-@Ignore
 public class IndexControllerTest {
 	@Autowired
 	private WebApplicationContext wac;

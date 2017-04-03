@@ -13,7 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import berberyan.entity.Company;
-import berberyan.entity.impl.Nasdaq;
 import berberyan.exceptions.DataProcessingException;
 import berberyan.service.CsvParser;
 import berberyan.service.DbCompanyUploader;
@@ -48,7 +47,6 @@ public class IndexController {
 	@GetMapping("/")
 	public String index(Model model) throws DataProcessingException { 
 		LOGGER.trace("index invoked");
-//		nasdaq = parser.parse(webUploader.upload(url));
 		nasdaq = dbUploader.getCompanies();
 		int countCompanies = operations.countCompanies(nasdaq);
 		model.addAttribute("countcompanies", countCompanies);

@@ -23,7 +23,7 @@ public class WebUploader implements FileUploader {
 	@Override
 	public Reader upload(URL url) throws CompanyUploadException {
 		try {
-			HttpURLConnection connection = ((HttpURLConnection)url.openConnection());
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.addRequestProperty("User-Agent", "Mozilla/4.0");
             InputStream input;
             if (connection.getResponseCode() == 200)  // this must be called before 'getErrorStream()' works

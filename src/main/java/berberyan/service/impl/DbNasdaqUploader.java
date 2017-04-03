@@ -17,16 +17,12 @@ public class DbNasdaqUploader implements DbCompanyUploader{
 	@Autowired
 	SessionFactory sessionFactory;
 
-	Session session;
-
 	@Override
 	public List<Company> getCompanies() {
-		session = sessionFactory.openSession();
 		String hql = "from Nasdaq";
 		Session session = sessionFactory.openSession();
 		@SuppressWarnings("unchecked")
 		Query<Company> query = session.createQuery(hql);
-		List<Company> companies = query.list();
-		return companies;
+		return query.list();
 	}
 }
