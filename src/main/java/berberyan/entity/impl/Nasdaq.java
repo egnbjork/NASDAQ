@@ -50,9 +50,6 @@ public class Nasdaq implements Company{
 	@Column(name="ipo_year")
 	private Integer ipo;
 	
-	@Column
-	private String stock_exch="Nasdaq";
-	
 	private static final String NOT_AVAILABLE = "n/a";
 	private static final BigDecimal BILLION = BigDecimal.valueOf((long)1_000_000_000); 
 	private static final BigDecimal MILLION = BigDecimal.valueOf((long)1_000_000); 
@@ -107,6 +104,7 @@ public class Nasdaq implements Company{
 		return Optional.empty();
 	}
 
+	@Override
 	public Optional<BigDecimal> getLastSale() {
 		if(lastSale == null) {
 			return Optional.empty();
@@ -114,6 +112,7 @@ public class Nasdaq implements Company{
 		return Optional.of(lastSale);
 	}
 
+	@Override
 	public Optional<Integer> getIpo() {
 		if(ipo == null) {
 			return Optional.empty();
@@ -121,17 +120,14 @@ public class Nasdaq implements Company{
 		return Optional.of(ipo);
 	}
 
+	@Override
 	public Optional<BigDecimal> getMarketCap() {
 		if(marketCap == null) {
 			return Optional.empty();
 		}
 		return Optional.of(marketCap);
 	}
-
-	@Column(name="stock_exch")
-	public String getStickExchange() {
-		return "Nasdaq";
-	}
+	
 	@NoArgsConstructor
 	public static class CompanyBuilder {
 		private String symbol;
@@ -163,9 +159,9 @@ public class Nasdaq implements Company{
 			if(mc.isPresent()) {
 				this.marketCap = mc.get();
 			}
-			Optional<Integer> ipo = company.getIpo();
-			if(ipo.isPresent()) {
-				this.ipo = ipo.get();
+			Optional<Integer> year = company.getIpo();
+			if(year.isPresent()) {
+				this.ipo = year.get();
 			}
 			this.summaryQuote = company.getSummaryQuote();
 		}

@@ -18,10 +18,10 @@
 			<h2 class="page-header">NASDAQ <small>Top</small></h2>
 		</div>
 		<ul class="list-inline text-capitalize text-center">
-			<li><a href="all" class="btn btn-primary btn-lg" role="button">List all</a></li>
 			<li><a href="old" class="btn btn-primary btn-lg" role="button">Oldest</a></li>
 			<li><a href="expensive" class="btn btn-primary btn-lg" role="button">Most expensive</a></li>
 			<li><a href="biggestshare" class="btn btn-primary btn-lg" role="button">biggest volume</a></li>
+			<li><a href="all" class="btn btn-primary btn-lg" role="button">List all</a></li>
 		</ul>
 		<hr/>
 		<div class="container">

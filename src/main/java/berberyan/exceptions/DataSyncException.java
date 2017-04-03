@@ -7,4 +7,8 @@ public class DataSyncException extends RuntimeException {
 	public DataSyncException(String message) {
 		super(ERROR_MSG + ": " + message);
 	}
+	
+	public DataSyncException(String message, Exception e) {
+		super(ERROR_MSG + ": " + message, e);
+	}
 }
