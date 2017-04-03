@@ -167,7 +167,7 @@ public class Nasdaq implements Company{
 		}
 
 		public CompanyBuilder setSymbol(String symbol) {
-			this.symbol = symbol;
+			this.symbol = symbol.trim();
 			return this;
 		}
 
