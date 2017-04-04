@@ -21,6 +21,7 @@ public class ScheduledTasks {
 	@Value("${companylist}")
 	URL url;
 
+	//set for every six hours
 	@Scheduled(fixedDelay=6000*60*60)
 	public void syncDb() {
 		try {
