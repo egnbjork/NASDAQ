@@ -24,9 +24,6 @@ import berberyan.service.impl.NasdaqParser;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=AppConfig.class)
 @WebAppConfiguration
-//hibernate config file removed from open repository
-//ApplicationContext cannot be loaded
-@Ignore
 public class CsvParserTest {
 
 	@Autowired
