@@ -21,7 +21,7 @@ public class ScheduledTasks {
 	@Value("${companylist}")
 	URL url;
 
-	@Scheduled(fixedDelay=6000*60*60*6)
+	@Scheduled(fixedDelay=6000*60*60)
 	public void syncDb() {
 		try {
 			sync.setUrl(url);
