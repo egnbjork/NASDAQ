@@ -42,7 +42,7 @@ public class NasdaqDbSync implements DbSynchroziner {
 	private String tableName;
 
 	@Override
-	public void syncData() {
+	public void syncData() throws DataSyncException {
 		try {
 			Session session = sessionFactory.getCurrentSession();
 			if( session == null )
