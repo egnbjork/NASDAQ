@@ -23,7 +23,7 @@ import berberyan.config.AppInitializer;
 @ContextConfiguration(classes = {AppConfig.class, AppInitializer.class})
 @WebAppConfiguration
 //skipped because of hidden jdbc connection url
-@Ignore
+//@Ignore
 public class IndexControllerTest {
 	@Autowired
 	private WebApplicationContext wac;

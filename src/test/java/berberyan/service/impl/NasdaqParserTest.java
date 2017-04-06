@@ -22,7 +22,7 @@ import berberyan.exceptions.CompanyParseException;
 @WebAppConfiguration
 //hibernate config file removed from open repository
 //ApplicationContext cannot be loaded
-@Ignore
+//@Ignore
 public class NasdaqParserTest {
 
 	@Autowired

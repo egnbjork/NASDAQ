@@ -17,7 +17,7 @@ import berberyan.config.AppConfig;
 @WebAppConfiguration
 //hibernate config file removed from open repository
 //ApplicationContext cannot be loaded
-@Ignore
+//@Ignore
 public class TopOperationsTest {
 
 	@Autowired

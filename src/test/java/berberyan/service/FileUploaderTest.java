@@ -19,7 +19,7 @@ import berberyan.service.impl.WebUploader;
 @WebAppConfiguration
 //hibernate config file removed from open repository
 //ApplicationContext cannot be loaded
-@Ignore
+//@Ignore
 public class FileUploaderTest {
 
 	@Autowired

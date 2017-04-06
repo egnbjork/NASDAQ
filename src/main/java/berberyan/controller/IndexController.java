@@ -25,7 +25,7 @@ public class IndexController {
 
 	@Autowired
 	FileUploader webUploader;
-	
+
 	@Autowired
 	DbCompanyUploader dbUploader;
 
@@ -34,6 +34,9 @@ public class IndexController {
 
 	@Autowired
 	TopOperations operations;
+	
+	@Autowired
+	FileUploader uploader;
 
 	@Value("${companylist}")
 	URL url;
@@ -47,7 +50,11 @@ public class IndexController {
 	@GetMapping("/")
 	public String index(Model model) throws DataProcessingException { 
 		LOGGER.trace("index invoked");
-		nasdaq = dbUploader.getCompanies();
+		try{
+			nasdaq = dbUploader.getCompanies();
+		} catch(Exception e) {
+			nasdaq = parser.parse(uploader.upload(url));
+		}
 		int countCompanies = operations.countCompanies(nasdaq);
 		model.addAttribute("countcompanies", countCompanies);
 		int countSectors = operations.countSectors(nasdaq);
