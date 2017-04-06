@@ -8,9 +8,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.support.PagedListHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import berberyan.entity.Company;
 import berberyan.exceptions.DataProcessingException;
@@ -34,7 +36,7 @@ public class IndexController {
 
 	@Autowired
 	TopOperations operations;
-	
+
 	@Autowired
 	FileUploader uploader;
 
@@ -65,15 +67,23 @@ public class IndexController {
 		model.addAttribute("countcompanieseachsector", countEachSector);
 		return INDEX;
 	}
+	
+	@GetMapping("all")
+	public String redirectToPages(Model model) {
+		return "redirect:all/0";
+	}
 
-	@GetMapping("/all")
-	public String showAll(Model model) throws DataProcessingException { 
+	@GetMapping("all/{page}")
+	public String showAll(@PathVariable("page") int page, Model model) throws DataProcessingException { 
 		LOGGER.trace("showAll() invoked");
 		if(nasdaq == null) {
 			index(model);
 		}
+		PagedListHolder<Company> pagedListHolder = new PagedListHolder<>(nasdaq);
+		pagedListHolder.setPageSize(20);
+		pagedListHolder.setPage(page);
 		model.addAttribute(HEADER, "Nasdaq Companies");
-		model.addAttribute(BODY_LIST, nasdaq);
+		model.addAttribute(BODY_LIST, pagedListHolder.getPageList());
 		return INDEX;
 	}
 

@@ -7,21 +7,21 @@
 		<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     		<meta name="viewport" content="width=device-width, initial-scale=1">
-    		<link href="resources/css/bootstrap.css" rel="stylesheet">
+    		<link href="/resources/css/bootstrap.css" rel="stylesheet">
 		<title>NASDAQ</title>
 	</head>
 	<body>
 		<div class="header">
 			<a href="/">
-				<img src="resources/img/nasdaq-logo.png">
+				<img src="/resources/img/nasdaq-logo.png">
 			</a>
 			<h2 class="page-header">NASDAQ <small>Top</small></h2>
 		</div>
 		<ul class="list-inline text-capitalize text-center">
-			<li><a href="old" class="btn btn-primary btn-lg" role="button">Oldest</a></li>
-			<li><a href="expensive" class="btn btn-primary btn-lg" role="button">Most expensive</a></li>
-			<li><a href="biggestshare" class="btn btn-primary btn-lg" role="button">biggest volume</a></li>
-			<li><a href="all" class="btn btn-primary btn-lg" role="button">List all</a></li>
+			<li><a href="/old" class="btn btn-primary btn-lg" role="button">Oldest</a></li>
+			<li><a href="/expensive" class="btn btn-primary btn-lg" role="button">Most expensive</a></li>
+			<li><a href="/biggestshare" class="btn btn-primary btn-lg" role="button">biggest volume</a></li>
+			<li><a href="/all" class="btn btn-primary btn-lg" role="button">List all</a></li>
 		</ul>
 		<hr/>
 		<div class="container">
