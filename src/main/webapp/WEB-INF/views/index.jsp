@@ -73,15 +73,15 @@
 										<c:when test="${currentpage > (totalpages - 10)}">
 											<li><a href="/all/${totalpages - 11}">&lt;&lt;</a></li>
 										</c:when>
-										<c:when test="${currentpage > 1}">
+										<c:when test="${currentpage > 0}">
 											<li><a href="/all/${currentpage - 1}">&lt;&lt;</a></li>
-											<li><a href="/all/${currentpage}"><c:out value="${currentpage}"/></a></li>
 										</c:when>
 									</c:choose>
+										<li class="currentpage"><a href="/all/${currentpage}">${currentpage + 1}</a></li>
 									<c:choose>
 									 	<c:when test="${(currentpage + 8) < (totalpages - 1) }">
 											<c:forEach begin="1" end="9" var="i">
-												<li><a href="/all/${currentpage + i}">${currentpage + i}</a></li>
+												<li><a href="/all/${currentpage + i}">${currentpage + 1 + i}</a></li>
 											</c:forEach>
 											<li><a href="/all/${currentpage + 8}">&gt;&gt;</a></li>
 										</c:when>
