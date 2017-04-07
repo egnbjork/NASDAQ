@@ -8,9 +8,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.support.PagedListHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import berberyan.entity.Company;
 import berberyan.exceptions.DataProcessingException;
@@ -25,7 +27,7 @@ public class IndexController {
 
 	@Autowired
 	FileUploader webUploader;
-	
+
 	@Autowired
 	DbCompanyUploader dbUploader;
 
@@ -35,6 +37,9 @@ public class IndexController {
 	@Autowired
 	TopOperations operations;
 
+	@Autowired
+	FileUploader uploader;
+
 	@Value("${companylist}")
 	URL url;
 
@@ -42,12 +47,17 @@ public class IndexController {
 	private static final String HEADER = "topname";
 	private static final String BODY_MAP = "listbysector";
 	private static final String BODY_LIST = "companieslist";
-	private static final String INDEX = "index";
+	private static final String INDEX = "/index";
 
 	@GetMapping("/")
 	public String index(Model model) throws DataProcessingException { 
 		LOGGER.trace("index invoked");
-		nasdaq = dbUploader.getCompanies();
+		try{
+			nasdaq = dbUploader.getCompanies();
+		} catch(Exception e) {
+			LOGGER.error("db is unavailable, data is downloaded",e);
+			nasdaq = parser.parse(uploader.upload(url));
+		}
 		int countCompanies = operations.countCompanies(nasdaq);
 		model.addAttribute("countcompanies", countCompanies);
 		int countSectors = operations.countSectors(nasdaq);
@@ -60,13 +70,28 @@ public class IndexController {
 	}
 
 	@GetMapping("/all")
-	public String showAll(Model model) throws DataProcessingException { 
+	public String redirectToPages(Model model) {
+		return "redirect:/all/0";
+	}
+
+	@GetMapping("/all/{page}")
+	public String showAll(@PathVariable("page") int page, Model model) throws DataProcessingException { 
 		LOGGER.trace("showAll() invoked");
 		if(nasdaq == null) {
 			index(model);
 		}
+		PagedListHolder<Company> pagedListHolder = new PagedListHolder<>(nasdaq);
+		pagedListHolder.setPageSize(10);
+		if(page > pagedListHolder.getPageCount()) {
+			pagedListHolder.setPage(pagedListHolder.getPageCount());
+		}
+		else {
+			pagedListHolder.setPage(page);
+		}
 		model.addAttribute(HEADER, "Nasdaq Companies");
-		model.addAttribute(BODY_LIST, nasdaq);
+		model.addAttribute(BODY_LIST, pagedListHolder.getPageList());
+		model.addAttribute("totalpages", pagedListHolder.getPageCount());
+		model.addAttribute("currentpage", page);
 		return INDEX;
 	}
 

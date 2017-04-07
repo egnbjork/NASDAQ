@@ -2,7 +2,6 @@ package berberyan.service;
 
 import static org.junit.Assert.assertNotNull;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +14,6 @@ import berberyan.config.AppConfig;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=AppConfig.class)
 @WebAppConfiguration
-//hibernate config file removed from open repository
-//ApplicationContext cannot be loaded
-@Ignore
 public class TopOperationsTest {
 
 	@Autowired

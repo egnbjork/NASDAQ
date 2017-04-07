@@ -5,7 +5,6 @@ import static org.mockito.Mockito.when;
 import java.io.IOException;
 import java.io.Reader;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
