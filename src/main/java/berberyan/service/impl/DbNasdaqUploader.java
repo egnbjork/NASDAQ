@@ -19,7 +19,7 @@ public class DbNasdaqUploader implements DbCompanyUploader{
 
 	@Override
 	public List<Company> getCompanies() {
-		String hql = "from Nasdaq";
+		String hql = "from Nasdaq order by symbol";
 		Session session = sessionFactory.openSession();
 		@SuppressWarnings("unchecked")
 		Query<Company> query = session.createQuery(hql);

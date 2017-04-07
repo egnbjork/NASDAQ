@@ -47,7 +47,7 @@ public class IndexController {
 	private static final String HEADER = "topname";
 	private static final String BODY_MAP = "listbysector";
 	private static final String BODY_LIST = "companieslist";
-	private static final String INDEX = "index";
+	private static final String INDEX = "/index";
 
 	@GetMapping("/")
 	public String index(Model model) throws DataProcessingException { 
@@ -55,6 +55,7 @@ public class IndexController {
 		try{
 			nasdaq = dbUploader.getCompanies();
 		} catch(Exception e) {
+			LOGGER.error("db is unavailable, data is downloaded",e);
 			nasdaq = parser.parse(uploader.upload(url));
 		}
 		int countCompanies = operations.countCompanies(nasdaq);
@@ -67,23 +68,30 @@ public class IndexController {
 		model.addAttribute("countcompanieseachsector", countEachSector);
 		return INDEX;
 	}
-	
-	@GetMapping("all")
+
+	@GetMapping("/all")
 	public String redirectToPages(Model model) {
-		return "redirect:all/0";
+		return "redirect:/all/0";
 	}
 
-	@GetMapping("all/{page}")
+	@GetMapping("/all/{page}")
 	public String showAll(@PathVariable("page") int page, Model model) throws DataProcessingException { 
 		LOGGER.trace("showAll() invoked");
 		if(nasdaq == null) {
 			index(model);
 		}
 		PagedListHolder<Company> pagedListHolder = new PagedListHolder<>(nasdaq);
-		pagedListHolder.setPageSize(20);
-		pagedListHolder.setPage(page);
+		pagedListHolder.setPageSize(10);
+		if(page > pagedListHolder.getPageCount()) {
+			pagedListHolder.setPage(pagedListHolder.getPageCount());
+		}
+		else {
+			pagedListHolder.setPage(page);
+		}
 		model.addAttribute(HEADER, "Nasdaq Companies");
 		model.addAttribute(BODY_LIST, pagedListHolder.getPageList());
+		model.addAttribute("totalpages", pagedListHolder.getPageCount());
+		model.addAttribute("currentpage", page);
 		return INDEX;
 	}
 

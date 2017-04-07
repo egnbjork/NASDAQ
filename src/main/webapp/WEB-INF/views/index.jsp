@@ -18,9 +18,9 @@
 			<h2 class="page-header">NASDAQ <small>Top</small></h2>
 		</div>
 		<ul class="list-inline text-capitalize text-center">
-			<li><a href="/old" class="btn btn-primary btn-lg" role="button">Oldest</a></li>
 			<li><a href="/expensive" class="btn btn-primary btn-lg" role="button">Most expensive</a></li>
 			<li><a href="/biggestshare" class="btn btn-primary btn-lg" role="button">biggest volume</a></li>
+			<li><a href="/old" class="btn btn-primary btn-lg" role="button">Oldest</a></li>
 			<li><a href="/all" class="btn btn-primary btn-lg" role="button">List all</a></li>
 		</ul>
 		<hr/>
@@ -63,6 +63,40 @@
 								</tr>
 							</c:forEach>
 						</table>
+						<c:if test="${totalpages != null}">
+							<div class="text-center">
+								<ul class="pagination">
+									<c:if test="${currentpage != 0}">
+										<li><a href="/all/0">First</a></li>
+									</c:if>
+									<c:choose>
+										<c:when test="${currentpage > (totalpages - 10)}">
+											<li><a href="/all/${totalpages - 11}">&lt;&lt;</a></li>
+										</c:when>
+										<c:when test="${currentpage > 1}">
+											<li><a href="/all/${currentpage - 1}">&lt;&lt;</a></li>
+											<li><a href="/all/${currentpage}"><c:out value="${currentpage}"/></a></li>
+										</c:when>
+									</c:choose>
+									<c:choose>
+									 	<c:when test="${(currentpage + 8) < (totalpages - 1) }">
+											<c:forEach begin="1" end="9" var="i">
+												<li><a href="/all/${currentpage + i}">${currentpage + i}</a></li>
+											</c:forEach>
+											<li><a href="/all/${currentpage + 8}">&gt;&gt;</a></li>
+										</c:when>
+										<c:otherwise>
+											<c:forEach begin="${totalpages-10}" end="${totalpages}" var="i">
+												<li><a href="/all/${i}"><c:out value="${i}"/></a></li>
+											</c:forEach>	
+										</c:otherwise>
+									</c:choose>
+									<c:if test="${currentpage < (totalpages - 10)}">
+										<li><a href="/all/${totalpages}">Last</a></li>
+									</c:if>
+								</ul>	
+							</div>
+						</c:if>
 						<c:if test ="${listbysector != null}">
 							<c:forEach var="sector" items="${listbysector}">
 								<h4 class="page-header">${sector.key}</h4>
