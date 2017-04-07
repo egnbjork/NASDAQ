@@ -77,7 +77,7 @@
 											<li><a href="/all/${currentpage - 1}">&lt;&lt;</a></li>
 										</c:when>
 									</c:choose>
-										<li class="currentpage"><a href="/all/${currentpage}">${currentpage + 1}</a></li>
+											<li class="active"><a href="/all/${currentpage}">${currentpage + 1}</a></li>
 									<c:choose>
 									 	<c:when test="${(currentpage + 8) < (totalpages - 1) }">
 											<c:forEach begin="1" end="9" var="i">
