@@ -4,11 +4,14 @@
 
 <html>
 	<head>
+		<title>NASDAQ</title>
+		<meta name="author" content="Yevgen Berberyan"/>
+        <meta name="description" content="Top companies of NASDAQ"/>
 		<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     		<meta name="viewport" content="width=device-width, initial-scale=1">
     		<link href="/resources/css/bootstrap.css" rel="stylesheet">
-		<title>NASDAQ</title>
+    		<link rel="shortcut icon" href="/resources/img/nasdaq-logo.ico" type="image/x-icon" />
 	</head>
 	<body>
 		<div class="header">
@@ -53,7 +56,11 @@
 							</tr>
 							<c:forEach var="company" items="${companieslist}">
 								<tr>
-									<td><a href="${company.getSummaryQuote()}"><c:out value="${company.getSymbol()}" /></a></td>
+									<td>
+										<nav>
+											<a target="_blank" href="${company.getSummaryQuote()}"><c:out value="${company.getSymbol()}" /></a>
+										</nav>
+									</td>	
 									<td><c:out value="${company.getName()}" /></td>
 									<td><c:out value="${company.lastSaleAsString()}" /></td>
 									<td><c:out value="${company.marketCapAsString()}" /></td>
