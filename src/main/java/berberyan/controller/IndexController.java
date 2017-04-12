@@ -82,6 +82,9 @@ public class IndexController {
 		}
 		PagedListHolder<Company> pagedListHolder = new PagedListHolder<>(nasdaq);
 		pagedListHolder.setPageSize(10);
+		if(page < 1) {
+			pagedListHolder.setPage(0);
+		}
 		if(page > pagedListHolder.getPageCount()) {
 			pagedListHolder.setPage(pagedListHolder.getPageCount());
 		}

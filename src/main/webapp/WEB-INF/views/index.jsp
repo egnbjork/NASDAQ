@@ -77,29 +77,55 @@
 										<li><a href="/all/0">First</a></li>
 									</c:if>
 									<c:choose>
-										<c:when test="${currentpage > (totalpages - 10)}">
+										<c:when test="${currentpage > (totalpages - 11)}">
 											<li><a href="/all/${totalpages - 11}">&lt;&lt;</a></li>
 										</c:when>
-										<c:when test="${currentpage > 0}">
+										<c:when test="${currentpage > 8}">
 											<li><a href="/all/${currentpage - 1}">&lt;&lt;</a></li>
 										</c:when>
 									</c:choose>
-											<li class="active"><a href="/all/${currentpage}">${currentpage + 1}</a></li>
 									<c:choose>
-									 	<c:when test="${(currentpage + 8) < (totalpages - 1) }">
-											<c:forEach begin="1" end="9" var="i">
-												<li><a href="/all/${currentpage + i}">${currentpage + 1 + i}</a></li>
+									 	<c:when test="${currentpage < 9}">
+									 		<c:forEach begin="0" end="9" var="i">
+									 			<c:choose>
+									 				<c:when test="${currentpage == i}">
+									 					<li class="active"><a href="/all/${currentpage}">${currentpage + 1}</a>	
+									 				</c:when>
+									 				<c:otherwise>
+									 					<li><a href="/all/${i}">${i+1}</a></li>
+									 				</c:otherwise>
+									 			</c:choose>
+									 		</c:forEach>
+											<li><a href="/all/${currentpage + 10}">&gt;&gt;</a></li>
+									 	</c:when>
+									 	<c:when test="${(currentpage + 9) < (totalpages - 1) }">
+											<c:forEach var="i" begin="0" end="9">
+												<c:choose>
+													<c:when test="${i == 5}">
+														<li class="active"><a href="/all/${currentpage}">${currentpage + 1}</a></li>
+													</c:when>
+													<c:otherwise>
+														<li><a href="/all/${currentpage - 5 + i}">${currentpage - 4 + i}</a></li>
+													</c:otherwise>
+												</c:choose>
 											</c:forEach>
-											<li><a href="/all/${currentpage + 8}">&gt;&gt;</a></li>
+											<li><a href="/all/${currentpage + 1}">&gt;&gt;</a></li>
 										</c:when>
 										<c:otherwise>
-											<c:forEach begin="${totalpages-10}" end="${totalpages}" var="i">
-												<li><a href="/all/${i}"><c:out value="${i}"/></a></li>
+											<c:forEach begin="${totalpages - 10}" end="${totalpages - 1}" var="i">
+												<c:choose>
+													<c:when test="${currentpage == i}">
+														<li class="active"><a href="/all/${i}"><c:out value="${i + 1}"/></a></li>
+													</c:when>
+													<c:otherwise>
+														<li><a href="/all/${i}"><c:out value="${i + 1}"/></a></li>
+													</c:otherwise>
+												</c:choose>
 											</c:forEach>	
 										</c:otherwise>
 									</c:choose>
-									<c:if test="${currentpage < (totalpages - 10)}">
-										<li><a href="/all/${totalpages}">Last</a></li>
+									<c:if test="${currentpage !=  (totalpages - 1)}">
+										<li><a href="/all/${totalpages - 1}">Last</a></li>
 									</c:if>
 								</ul>	
 							</div>
