@@ -57,7 +57,7 @@
 				<configuration>
 					<url>http://localhost:8080/manager/text</url>
 					<server>TomcatServer</server>
-					<path>/nasdaq</path>
+					<path>/</path>
 				</configuration>
 			</plugin>
 		</plugins>
