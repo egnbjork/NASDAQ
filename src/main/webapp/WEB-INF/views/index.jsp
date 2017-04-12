@@ -75,15 +75,8 @@
 								<ul class="pagination">
 									<c:if test="${currentpage != 0}">
 										<li><a href="/all/0">First</a></li>
+										<li><a href="/all/${currentpage - 1}">&lt;&lt;</a></li>
 									</c:if>
-									<c:choose>
-										<c:when test="${currentpage > (totalpages - 11)}">
-											<li><a href="/all/${totalpages - 11}">&lt;&lt;</a></li>
-										</c:when>
-										<c:when test="${currentpage > 8}">
-											<li><a href="/all/${currentpage - 1}">&lt;&lt;</a></li>
-										</c:when>
-									</c:choose>
 									<c:choose>
 									 	<c:when test="${currentpage < 9}">
 									 		<c:forEach begin="0" end="9" var="i">
@@ -96,7 +89,6 @@
 									 				</c:otherwise>
 									 			</c:choose>
 									 		</c:forEach>
-											<li><a href="/all/${currentpage + 10}">&gt;&gt;</a></li>
 									 	</c:when>
 									 	<c:when test="${(currentpage + 9) < (totalpages - 1) }">
 											<c:forEach var="i" begin="0" end="9">
@@ -109,7 +101,6 @@
 													</c:otherwise>
 												</c:choose>
 											</c:forEach>
-											<li><a href="/all/${currentpage + 1}">&gt;&gt;</a></li>
 										</c:when>
 										<c:otherwise>
 											<c:forEach begin="${totalpages - 10}" end="${totalpages - 1}" var="i">
@@ -125,6 +116,7 @@
 										</c:otherwise>
 									</c:choose>
 									<c:if test="${currentpage !=  (totalpages - 1)}">
+										<li><a href="/all/${currentpage + 1}">&gt;&gt;</a></li>
 										<li><a href="/all/${totalpages - 1}">Last</a></li>
 									</c:if>
 								</ul>	
