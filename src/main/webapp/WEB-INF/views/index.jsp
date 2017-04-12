@@ -90,7 +90,7 @@
 									 			</c:choose>
 									 		</c:forEach>
 									 	</c:when>
-									 	<c:when test="${(currentpage + 9) < (totalpages - 1) }">
+									 	<c:when test="${(currentpage + 8) < (totalpages - 1) }">
 											<c:forEach var="i" begin="0" end="9">
 												<c:choose>
 													<c:when test="${i == 5}">
