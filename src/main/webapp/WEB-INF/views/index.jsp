@@ -17,11 +17,9 @@
 	</head>
 	<body>
 		<div class="container">
-			<header class="main_header">
+			<header id="main_header">
 				<a href="/">
-					<img src="/resources/img/nasdaq-logo.png">
-					<h2>NASDAQ <small>Top</small></h2>
-				</a>
+					<img src="/resources/img/nasdaq-top-logo.png" width="232" height="50">				</a>
 			</header>
 			<nav>
 				<ul class="list-inline text-capitalize text-center">

@@ -83,10 +83,10 @@ sup {
 sub {
   bottom: -.25em;
 }
-img {
+/*img {
   border: 0;
 }
-svg:not(:root) {
+*/svg:not(:root) {
   overflow: hidden;
 }
 figure {
@@ -186,6 +186,8 @@ table {
 td,
 th {
   padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -1112,10 +1114,10 @@ a:focus {
 figure {
   margin: 0;
 }
-img {
+/*img {
   vertical-align: middle;
 }
-.header img{
+*/.header img{
   position: absolute;
   background:black;
   top:7px;
@@ -1418,7 +1420,7 @@ a.bg-danger:focus {
 .page-header {
   text-align: center;
   padding-bottom: 9px;
-  margin: 40px 0 20px;
+  /*margin: 40px 0 20px;*/
   border-bottom: 1px solid #eee;
 }
 ul,
@@ -4738,6 +4740,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #ddd;
+  width: 50px;
 }
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {
