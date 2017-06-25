@@ -106,26 +106,17 @@ public class Nasdaq implements Company{
 
 	@Override
 	public Optional<BigDecimal> getLastSale() {
-		if(lastSale == null) {
-			return Optional.empty();
-		}
-		return Optional.of(lastSale);
+		return Optional.ofNullable(lastSale);
 	}
 
 	@Override
 	public Optional<Integer> getIpo() {
-		if(ipo == null) {
-			return Optional.empty();
-		}
-		return Optional.of(ipo);
+		return Optional.ofNullable(ipo);
 	}
 
 	@Override
 	public Optional<BigDecimal> getMarketCap() {
-		if(marketCap == null) {
-			return Optional.empty();
-		}
-		return Optional.of(marketCap);
+		return Optional.ofNullable(marketCap);
 	}
 	
 	@NoArgsConstructor
